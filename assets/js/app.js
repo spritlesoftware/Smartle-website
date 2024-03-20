@@ -52,8 +52,8 @@ var swiper = new Swiper("#owl-carousell", {
   slidesPerGroup: 1,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      spaceBetween: 16,
+      slidesPerView: 2,
+      spaceBetween: 10,
       slidesPerGroup: 1,
     },
     768: {
@@ -62,6 +62,9 @@ var swiper = new Swiper("#owl-carousell", {
     991: {
       slidesPerView: 3,
     },
+    1500:{
+      slidesPerView:4
+    }
   },
 });
 var swiper = new Swiper(".digi-logo-slider", {
