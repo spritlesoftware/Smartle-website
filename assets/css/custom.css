@@ -419,3 +419,17 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+         
+.btn-dark-blue {
+  background: #00356b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00356b,#00356b,#348AC7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #348AC7, #00356b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border: 0px solid #00356b;
+  padding:10px 25px 10px 25px;
+}
+
+.btn-rounded {
+  border-radius: 20px;
+}
