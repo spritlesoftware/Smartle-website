@@ -1,4 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot1, .dot2, .dot3 {
+  width: 5px;
+  height: 5px;
+  background-color: #00356b;
+  border-radius: 50%;
+  margin: 0 3px;
+  animation-delay: 2.5s;
+  animation: dot-animation 1s infinite ease-in-out; /* Adjust duration and animation type */
+}
+
+.dot2 {
+  animation-delay: 0.3s; /* Delay the animation for dot2 */
+}
+
+.dot3 {
+  animation-delay: .6s; /* Delay the animation for dot3 */
+}
+
+@keyframes dot-animation {
+  0%, 100% {
+    transform: translateY(0); /* Initial and final position */
+  }
+  50% {
+    transform: translateY(-5px); /* Peak position */
+  }
+}
+
+
+.typing-animation {
+  overflow: hidden;
+  /* border-right: .1em solid black; Adjust the color and thickness as needed */
+  white-space: nowrap;
+  margin: 0 auto; /* Center the element */
+  animation: typing 2s steps(15, end); /* Adjust the duration and timing function as needed */
+}
+
+.contentfade {
+  opacity: 0;
+  animation: fadeup 1s ease forwards;
+  animation-delay: 3.5s;
+/*  
+  transform: translateY(70px);
+  transition: opacity 1s, transform 1s; */
+}
+
+.sentence {
+  font-size: 16px; /* Initial font size */
+  color: black; /* Color of the text */
+  /* position: relative; */
+ 
+  animation: scaleSentence 1s  forwards ;
+  animation-delay: 4.5s; /* Animation duration and repetition */
+}
+
+@keyframes fadeup {
+  0% {
+      opacity: 0; /* Initial opacity */
+      transform: translateY(40px); /* Initial position */
+  }
+  100% {
+      opacity: 1; /* Final opacity */
+      transform: translateY(0); /* Final position */
+  }
+}
+
+@keyframes scaleSentence {
+  0% {
+    transform: scale(1); /* Initial scale of the sentence */
+  }
+  100% {
+    transform: scale(1.155); /* Final scale of the sentence */
+  }
+}
+
+
+
+/* .line {
+  width: 100%;
+  height: 2px;
+  background-color: blue;
+  transform: scaleX(0);
+  transition: transform 0.5s, background-color 0.5s;
+} */
+
+.contentfade.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.contentfade.active .line {
+  transform: scaleX(1.4);
+  background-color: orange;
+}
+
+
 body {
   font-family: "Inter", sans-serif !important;
 }
