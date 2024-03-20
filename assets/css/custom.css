@@ -4,12 +4,32 @@
   from { width: 0 }
   to { width: 100% }
 }
+input{
+  width: 100%; /* Make the input field fill its container */
+  padding: 6px; /* Add padding for better appearance */
+  border: .5px solid #ccc; /* Add border */
+  border-radius: 15%; /* Add border radius for rounded corners */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+label{
+  font-size: 15px;
+}
 
 .loading-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+textarea {
+  width: 100%; /* Make the textarea fill its container */
+  padding: 10px; /* Add padding for better appearance */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  box-sizing: border-box;
+  height: 150px; /* Ensure padding and border are included in the width */
+}
+
 
 .dot1, .dot2, .dot3 {
   width: 5px;
