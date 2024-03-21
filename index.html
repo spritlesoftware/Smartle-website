@@ -110,10 +110,10 @@
               class="navbar-brand d-flex align-items-center mb-md-0 text-decoration-none"
             >
               <img
-                src="assets/img/logo/logo.png"
+                src="assets/img/logo/new_logo.png"
                 alt="logo"
                 class="img-fluid logo-color"
-                style="width: 155px; height: 56px"
+                style="width: 205px; height: 56px"
               />
             </a>
           </div>
@@ -817,7 +817,7 @@
 window.addEventListener('scroll', function() {
   var trigger = document.querySelector('.trigger');
   var content = document.querySelector('.contentfade');
-  var contentRect = content.getBoundingClientRect();
+  var contentRect = trigger.getBoundingClientRect();
   var typing = document.querySelector(".typing")
   var text = document.querySelector(".text")
   var dots = document.querySelector(".dots")
@@ -825,7 +825,7 @@ window.addEventListener('scroll', function() {
   var loading = document.querySelector(".loading")
   // Check if the trigger element is visible
   let animationTriggered = false;
-
+  
   if (contentRect.top < window.innerHeight && !animationTriggered) {
     // content.classList.add('active');
     animationTriggered = true;
