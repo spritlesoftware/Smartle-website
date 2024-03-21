@@ -351,8 +351,8 @@
       <div class="row align-items-center justify-content-evenly ">
         <div class="col-lg-5 "><h2 class="txt-blk mb-3  w-lg-60 fs-30 fw-600 ">Each Conversation Trains The AI</h2>
           <p class="txt-blk mb-3 w-100  fs-18 fw-300">Chat, learn, convert. Smartle AI gets better with every interaction and instruction you give, driving sales like a seasoned pro</p></div>
-        <div class="col-lg-6 py-5 px-4 d-flex align-items-center flex-column rounded-3" style="height: 500px;box-shadow: 0px 16px 48px 0px #D9D9D9;flex-wrap: wrap;"> 
-          <div class="trigger"></div>
+        <div class="col-lg-6 py-5 px-4 d-flex align-items-center flex-column rounded-3" style="height: 500px;box-shadow: 0px 16px 48px 0px #D9D9D9;flex-wrap: wrap;overflow: hidden;"> 
+         
           <div class="p-1 gradient-card rounded-5 flex-lg-row d-flex typing" style="height:8%;">
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;padding-top:2px;"/>
             <div class="pt-2 container" style="padding-top: 5px;margin: 0;">
@@ -377,7 +377,7 @@
              </div>
           </div> 
           
-
+          <div class="trigger"></div>
           <div class="col-lg-8 pt-5">
             <div class="contentfade">
               <h4 class="text-center" style="color: #00356b;font-size: medium;margin-bottom: 20px;">Human feedback ranking</h4>
@@ -817,16 +817,20 @@
 window.addEventListener('scroll', function() {
   var trigger = document.querySelector('.trigger');
   var content = document.querySelector('.contentfade');
-  var contentRect = trigger.getBoundingClientRect();
+  var contentRect = content.getBoundingClientRect();
   var typing = document.querySelector(".typing")
   var text = document.querySelector(".text")
   var dots = document.querySelector(".dots")
   var sentence = document.querySelector(".sentence")
   var loading = document.querySelector(".loading")
   // Check if the trigger element is visible
-  if (contentRect.top < window.innerHeight) {
-    // content.classList.add('active');
+  let animationTriggered = false;
 
+  if (contentRect.top < window.innerHeight && !animationTriggered) {
+    // content.classList.add('active');
+    animationTriggered = true;
+
+    text.classList.add('no-display')
     typing.classList.add('typing-animation');
     content.classList.add('contentfadeanimation');
     sentence.classList.add('sentenceanimation')
@@ -842,7 +846,11 @@ window.addEventListener('scroll', function() {
                 text.classList.add('display')
                 text.classList.remove('no-display')   
             }, 7000); 
-
+            setTimeout(() => {
+                content.classList.add("fadedown")
+                content.classList.remove("contentfadeanimation")
+            }, 8000); 
+         
     
   }
 });

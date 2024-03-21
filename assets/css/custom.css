@@ -12,6 +12,10 @@ input{
   border-radius: 15%; /* Add border radius for rounded corners */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+.fadedown {
+  opacity: 0;
+  animation: fadedown 1s ease forwards; /* Animation after 4 seconds */
+}
 
 .display{
   height: 9%;
@@ -108,6 +112,18 @@ textarea {
   100% {
       opacity: 1; /* Final opacity */
       transform: translateY(0); /* Final position */
+  }
+}
+
+
+@keyframes fadedown {
+  0% {
+      opacity: 1; /* Initial opacity */
+      /* transform: translateY(-40px); Initial position */
+  }
+  100%{
+      opacity: 0;
+      transform: translateY(20px); /* Final opacity */
   }
 }
 
