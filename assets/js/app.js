@@ -142,14 +142,17 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("error");
     } else {
       var conversationsPerMonth = parseFloat(
-        ((visitPM / 3333.33) * 100).toFixed(0)
+        // ((visitPM / 3333.33) * 100).toFixed(0)
+        (visitPM  * 0.015).toFixed(0)
       );
       var potentialAdditionalSales = parseFloat(
-        ((orderPM / 769.23) * 100).toFixed(0)
+        // ((orderPM / 769.23) * 100).toFixed(0)
+         (orderPM * 0.16).toFixed(0)
       );
-      var potentialAOV = parseFloat(((aOV / 90.9) * 100).toFixed(0));
+      var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
       var addUnlockSales = parseFloat(
-        ((potentialAOV / 76.92) * 100).toFixed(0)
+        // ((potentialAOV / 76.92) * 100).toFixed(0)
+        potentialAdditionalSales * potentialAOV
       );
       var monthlyROI = parseFloat(
         (((addUnlockSales - 15) / 15) * 100).toFixed(0)

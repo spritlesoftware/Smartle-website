@@ -277,7 +277,7 @@
                 <input type="number" oninput="change(aov)" class="w-100 lh-22 input ps-3" required id="aov" />
               </div>
               <div class="mt-5">
-                <button class="col btn btn-dark-blue btn-rounded w-100">Calculate</button>
+                <button class="col btn btn-dark-blue btn-rounded w-100 mt-2"id="myButton">Calculate</button>
               </div>
             </form>
           </div>
@@ -411,8 +411,9 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+    <script src="assets/js/app.js"></script>
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
   // Your JavaScript code here
   function btnClick(e) {
     e.preventDefault();
@@ -426,14 +427,17 @@
       console.log("error");
     } else {
       var conversationsPerMonth = parseFloat(
-        ((visitPM / 3333.33) * 100).toFixed(0)
+        // ((visitPM / 3333.33) * 100).toFixed(0)
+        (visitPM  * 0.015).toFixed(0)
       );
       var potentialAdditionalSales = parseFloat(
-        ((orderPM / 769.23) * 100).toFixed(0)
+        // ((orderPM / 769.23) * 100).toFixed(0)
+         (orderPM * 0.16).toFixed(0)
       );
-      var potentialAOV = parseFloat(((aOV / 90.9) * 100).toFixed(0));
+      var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
       var addUnlockSales = parseFloat(
-        ((potentialAOV / 76.92) * 100).toFixed(0)
+        // ((potentialAOV / 76.92) * 100).toFixed(0)
+        potentialAdditionalSales * potentialAOV
       );
       var monthlyROI = parseFloat(
         (((addUnlockSales - 15) / 15) * 100).toFixed(0)
@@ -452,6 +456,6 @@
   document.getElementById("myButton").addEventListener("click", btnClick);
 });
     </script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script> 
   </body>
 </html>
