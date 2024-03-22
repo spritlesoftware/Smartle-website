@@ -351,31 +351,66 @@
       <div class="row align-items-center justify-content-evenly ">
         <div class="col-lg-5 "><h2 class="txt-blk mb-3  w-lg-60 fs-30 fw-600 ">Each Conversation Trains The AI</h2>
           <p class="txt-blk mb-3 w-100  fs-18 fw-300">Chat, learn, convert. Smartle AI gets better with every interaction and instruction you give, driving sales like a seasoned pro</p></div>
-        <div class="p-5 col-lg-6 d-flex flex-column rounded-3" style="box-shadow: 0px 16px 48px 0px #D9D9D9;height: 450px;">
+        <div class="p-5 col-lg-6 d-flex flex-column rounded-3" style="box-shadow: 0px 16px 48px 0px #D9D9D9;height:550px;">
            <div class="rounded-5 p-1 no-display convo">
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
-            <p class="typing">Hi! Hello</p>
+            <p class="typing" style="margin-left: 5px;">Hi! Hello</p>
+          </div>
+          <!-- <div class="p-1 no-display rounded-5 loading">
+            <div class="dots">
+              <div class="dot1"></div>
+              <div class="dot2"></div>
+              <div class="dot3"></div>
+            </div>
+            <p class="text no">Hello, Welcome to Smartle AI, How can I help you</p>
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+          </div> -->
+          <div class="rounded-5 p-1 no-display convo"> 
+            <p class="typing" style="margin-right: 6px;">Hello, Welcome to Smartle AI, How can I help you</p>
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
           </div>
 
-          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;;" >
+          <div class="rounded-5 p-1 no-display convo" style="margin-top: 2%;;" >
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
-            <p class="typing"> Who are you? </p>
+            <p class="typing" style="margin-left: 5px;"> Who are you? </p>
           </div>
 
-          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+          <div class="rounded-5 p-1 no-display convo">
+            <p class="typing" style="margin-right: 6px;"> I am Smartle AI, a human-like AI, here to help you with conversational</p>
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
-            <p class="typing">How can you help me?</p>
           </div>
 
-          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+          <div class="rounded-5 p-1 no-display convo" style="margin-top:2%;">
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
-            <p class="typing">That’s interesting
+            <p class="typing" style="margin-left: 5px;">How can you help me?</p>
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo">
+            <p class="typing" style="margin-right: 6px;">I can integrate with your current website and talk to your customers</p>
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo" style="margin-top:2%;">
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing" style="margin-left: 5px;">That’s interesting
             </p>
           </div>  
-          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+
+          <div class="rounded-5 p-1 no-display convo">
+            <p class="typing" style="margin-right: 6px;">Yes, you can train me according to your needs and I will become a genius  </p>
+              <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+           
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo" style="margin-top:2%;">
             <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
-            <p class="typing">That’s cool! I want to purchase this.
+            <p class="typing" style="margin-left: 5px;">That’s cool! I want to purchase this.
             </p>
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo">
+           <p class="typing" style="margin-right: 6px;">Schedule a call with us to get to know us in detail!! Let’s go AI.</p>
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
           </div>
 
           <div class="trigger"></div>  
@@ -843,23 +878,30 @@ window.addEventListener('scroll', function() {
   var screenHeight = window.innerHeight;
   var convo = document.querySelectorAll('.convo')
   var typing = document.querySelectorAll('.typing')
+  var typingright = document.querySelectorAll('.typingright')
+  var loading = document.querySelectorAll('.loading')
+  var loading = document.querySelectorAll('.text')
 
   if (contentPosition < screenHeight) {
     convo.forEach((ele,index)=>{
     setTimeout(()=>{
-
       console.log(index , "pppppppppppppppppppp")
       ele.classList.add('display');
       ele.classList.remove('no-display')
-         typing.forEach((ele)=>{
+         typing.forEach((ele,index)=>{
+          if(index%2 == 0){
+            console.log("even", index)
+            ele.classList.add('typed')
+          }else{
+            console.log("odd", index)
+            ele.classList.add('typedright')
+          }
           console.log(index , "pppppppppppppppppppp")
-          ele.classList.add('typed')
+         
          })
-    },index*1500)
-   
+    },index*2000)
   })
-  } else {
-  }
+  } 
 });
   
   // Check if the trigger element is visible

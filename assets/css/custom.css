@@ -16,23 +16,43 @@
   width: auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: wrap;
 }
 
+
+
 .typed {
+  font-size: 14px;
   overflow: hidden;
   white-space: nowrap;
   animation: typing;
   animation-duration: 1.5s;
   animation-timing-function: steps(30, end);
   animation-fill-mode: forwards;
+  
   /* text-align: right; /* Align text to the right */
+  /* direction: rtl; Right-to-left text direction  */
+}
+
+.typedright {  
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing;
+  animation-duration: 1.7s;
+  animation-timing-function: steps(25, end);
+  animation-fill-mode: forwards;
+ text-align: right;
+margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 0;
   /* direction: rtl; Right-to-left text direction  */
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 50% }
+  to { width: 100% }
 }
 
 /* .typing-animation {
