@@ -1,10 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+.container-1{
+  display: inline-block;
+  font-family: "arial";
+  font-size: 24px;
+}
+
+.no-display{
+  width: 0;
+ display: none;
+
+}
+.display{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.typed {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing;
+  animation-duration: 1.5s;
+  animation-timing-function: steps(30, end);
+  animation-fill-mode: forwards;
+  /* text-align: right; /* Align text to the right */
+  /* direction: rtl; Right-to-left text direction  */
+}
+
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 50% }
 }
+
+/* .typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(15, end) infinite;
+} */
 input{
   width: 100%; /* Make the input field fill its container */
   padding: 6px; /* Add padding for better appearance */
@@ -60,13 +95,7 @@ textarea {
 }
 
 
-.typing-animation {
-  overflow: hidden;
-  /* border-right: .1em solid black; Adjust the color and thickness as needed */
-  white-space: nowrap;
-  margin: 0 auto; /* Center the element */
-  animation: typing 2s steps(15, end); /* Adjust the duration and timing function as needed */
-}
+
 
 .contentfade {
   opacity: 0;

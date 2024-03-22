@@ -351,11 +351,34 @@
       <div class="row align-items-center justify-content-evenly ">
         <div class="col-lg-5 "><h2 class="txt-blk mb-3  w-lg-60 fs-30 fw-600 ">Each Conversation Trains The AI</h2>
           <p class="txt-blk mb-3 w-100  fs-18 fw-300">Chat, learn, convert. Smartle AI gets better with every interaction and instruction you give, driving sales like a seasoned pro</p></div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column">
-          
-          <img src="assets/img/youtube.webp" class="img-fluid youtube" >
-          <img src="assets/img/Lap.webp" class="img-fluid">
+        <div class="p-5 col-lg-6 d-flex flex-column rounded-3" style="box-shadow: 0px 16px 48px 0px #D9D9D9;height: 450px;">
+           <div class="rounded-5 p-1 no-display convo">
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing">Hi! Hello</p>
+          </div>
 
+          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;;" >
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing"> Who are you? </p>
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing">How can you help me?</p>
+          </div>
+
+          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing">That’s interesting
+            </p>
+          </div>  
+          <div class="rounded-5 p-1 no-display convo" style="margin-top: 5%;">
+            <img src="./assets/img/testimonial.png" height="25px" width="25px" style="border-radius: 50%;"/>
+            <p class="typing">That’s cool! I want to purchase this.
+            </p>
+          </div>
+
+          <div class="trigger"></div>  
         </div>
       </div>
     </div>
@@ -687,7 +710,7 @@
       </div>
   </div>
 
-  <div class="container d-flex justify-content-center p-3 box-shadow" style="border-radius: 15px;flex-wrap: wrap;">
+  <!-- <div class="container d-flex justify-content-center p-3 box-shadow" style="border-radius: 15px;flex-wrap: wrap;">
     
     <div class="col-lg-6 p-3">
            <div class="p-1 gradient-card rounded-5 flex-lg-row d-flex typing" style="height: 28%;">
@@ -713,7 +736,7 @@
         <p class= "p-1 text-center gradient-card rounded-5 w-70">Humans enjoy giving opinions</p>
       </div>
 </div>
-  </div>
+  </div> -->
 
   
   
@@ -815,19 +838,31 @@
 // });
 
 window.addEventListener('scroll', function() {
-  var trigger = document.querySelector('.trigger');
-  var content = document.querySelector('.contentfade');
-  var contentRect = content.getBoundingClientRect();
-  var typing = document.querySelector(".typing")
-  // Check if the trigger element is visible
-  if (contentRect.top < window.innerHeight) {
-    // content.classList.add('active');
-    setTimeout(() => {
-                content.classList.add('active');
-            }, 3500);
-    typing.classList.add('typing-animation');
+  var content = document.querySelector('.trigger');
+  var contentPosition = content.getBoundingClientRect().top;
+  var screenHeight = window.innerHeight;
+  var convo = document.querySelectorAll('.convo')
+  var typing = document.querySelectorAll('.typing')
+
+  if (contentPosition < screenHeight) {
+    convo.forEach((ele,index)=>{
+    setTimeout(()=>{
+
+      console.log(index , "pppppppppppppppppppp")
+      ele.classList.add('display');
+      ele.classList.remove('no-display')
+         typing.forEach((ele)=>{
+          console.log(index , "pppppppppppppppppppp")
+          ele.classList.add('typed')
+         })
+    },index*1500)
+   
+  })
+  } else {
   }
 });
+  
+  // Check if the trigger element is visible
 
     </script>
   </body>
