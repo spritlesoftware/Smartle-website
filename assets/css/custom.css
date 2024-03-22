@@ -3,7 +3,7 @@
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 80% }
 }
 input{
   width: 100%; /* Make the input field fill its container */
@@ -12,6 +12,21 @@ input{
   border-radius: 15%; /* Add border radius for rounded corners */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+.fadedown {
+  opacity: 0;
+  animation: fadedown .5s ease forwards; /* Animation after 4 seconds */
+}
+
+.display{
+  height: 9%;
+  display:flex;
+}
+
+.no-display{
+  width: 0;
+  display: none;
+  
+}
 
 label{
   font-size: 15px;
@@ -19,8 +34,8 @@ label{
 
 .loading-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  width: auto;
 }
 textarea {
   width: 100%; /* Make the textarea fill its container */
@@ -65,25 +80,28 @@ textarea {
   /* border-right: .1em solid black; Adjust the color and thickness as needed */
   white-space: nowrap;
   margin: 0 auto; /* Center the element */
-  animation: typing 2s steps(15, end); /* Adjust the duration and timing function as needed */
+  animation: typing 1.6s steps(10, end); /* Adjust the duration and timing function as needed */
+}
+.contentfade{
+  opacity: 0;
 }
 
-.contentfade {
+.contentfadeanimation {
   opacity: 0;
   animation: fadeup 1s ease forwards;
-  animation-delay: 3.5s;
-/*  
-  transform: translateY(70px);
+  animation-delay: 4s;
+ 
+  /* transform: translateY(70px);
   transition: opacity 1s, transform 1s; */
 }
 
-.sentence {
-  font-size: 16px; /* Initial font size */
+.sentenceanimation {
+  /* font-size: 16px; Initial font size */
   color: black; /* Color of the text */
   /* position: relative; */
- 
   animation: scaleSentence 1s  forwards ;
-  animation-delay: 4.5s; /* Animation duration and repetition */
+  animation-delay: 5s; /* Animation duration and repetition */
+  
 }
 
 @keyframes fadeup {
@@ -94,6 +112,18 @@ textarea {
   100% {
       opacity: 1; /* Final opacity */
       transform: translateY(0); /* Final position */
+  }
+}
+
+
+@keyframes fadedown {
+  0% {
+      opacity: 1; /* Initial opacity */
+      /* transform: translateY(-40px); Initial position */
+  }
+  100%{
+      opacity: 0;
+      transform: translateY(30px); /* Final opacity */
   }
 }
 
@@ -119,11 +149,6 @@ textarea {
 .contentfade.active {
   opacity: 1;
   transform: translateY(0px);
-}
-
-.contentfade.active .line {
-  transform: scaleX(1.4);
-  background-color: orange;
 }
 
 
