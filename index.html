@@ -816,53 +816,6 @@
     <script src="assets/js/swiper-bundle.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-//       document.addEventListener("DOMContentLoaded", function() {
-//   const content = document.querySelector(".contentfade");
-//   content.classList.add("active");
-
-// });
-
-window.addEventListener('scroll', function() {
-  var trigger = document.querySelector('.trigger');
-  var content = document.querySelector('.contentfade');
-  var contentRect = trigger.getBoundingClientRect();
-  var typing = document.querySelector(".typing")
-  var text = document.querySelector(".text")
-  var dots = document.querySelector(".dots")
-  var sentence = document.querySelector(".sentence")
-  var loading = document.querySelector(".loading")
-  // Check if the trigger element is visible
-  let animationTriggered = false;
-  
-  if (contentRect.top < window.innerHeight && !animationTriggered) {
-    // content.classList.add('active');
-    animationTriggered = true;
-
-    text.classList.add('no-display')
-    typing.classList.add('typing-animation');
-    content.classList.add('contentfadeanimation');
-    sentence.classList.add('sentenceanimation')
-
-    setTimeout(() => {
-      loading.classList.add('loading-container')
-      loading.classList.remove('no-display')          
-            }, 2500); 
-
-    setTimeout(() => {
-                loading.classList.remove('loading-container')
-                loading.classList.add('no-display');
-                text.classList.add('display')
-                text.classList.remove('no-display')   
-            }, 7000); 
-            setTimeout(() => {
-                content.classList.add("fadedown")
-                content.classList.remove("contentfadeanimation")
-            }, 8000); 
-         
-    
-  }
-});
-
     </script>
   </body>
 </html>
