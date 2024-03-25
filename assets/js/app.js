@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   var navLinks = document.querySelectorAll(".nav-link");
 
@@ -168,7 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("ROI").classList.remove("d-none");
     }
   }
-  document.getElementById("myButton").addEventListener("click", btnClick);
+  const el = document.getElementById("myButton");
+if (el) {
+  el.addEventListener("click", btnClick);
+}
+  //document.getElementById("myButton").addEventListener("click", btnClick);
 });
 
 var phone = document.getElementsByClassName("input");
