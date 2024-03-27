@@ -48,12 +48,12 @@ var swiper = new Swiper("#owl-carousell", {
     releaseOnEdges: true,
   },
   slidesPerView: 1,
-  spaceBetween: 24,
+  spaceBetween: 20,
   speed: 1000,
   slidesPerGroup: 1,
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       slidesPerGroup: 1,
     },
