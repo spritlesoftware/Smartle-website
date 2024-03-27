@@ -53,7 +53,7 @@ var swiper = new Swiper("#owl-carousell", {
   slidesPerGroup: 1,
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
       slidesPerGroup: 1,
     },
