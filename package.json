@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.3",
+    "supabase": "^1.151.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.41.1",
+    "resend": "^3.2.0"
+  }
+}

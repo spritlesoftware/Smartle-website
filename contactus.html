@@ -79,7 +79,7 @@
     <!--build:css-->
     <!-- <link rel="stylesheet" href="assets/custom.css"> -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <!-- <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- endbuild -->
@@ -431,17 +431,16 @@
     <script src="assets/js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
     <script type="module">
-    
-    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-
-
+       import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
     const supabaseUrl = 'https://rjgkhjvxkvkcrqamlrns.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqZ2toanZ4a3ZrY3JxYW1scm5zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE5NzI4MDQsImV4cCI6MjAyNzU0ODgwNH0.6gjvj2IYDuvvaCV0UDwZkVg51LJ7rvLx-CKT-ROpNqk'
-   const supabase = createClient(supabaseUrl, supabaseKey)
-
+    const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqZ2toanZ4a3ZrY3JxYW1scm5zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE5NzI4MDQsImV4cCI6MjAyNzU0ODgwNH0.6gjvj2IYDuvvaCV0UDwZkVg51LJ7rvLx-CKT-ROpNqk"
+      const supabase = createClient(supabaseUrl, supabaseKey)
       console.log(supabase , "SUPABASE")
       const FirstName = document.getElementById("FirstName")
+      
       const LastName = document.getElementById("LastName")
       const PhoneNumber = document.getElementById("PhoneNumber")
       const Email = document.getElementById("Email")
@@ -478,8 +477,34 @@
     console.error('Error inserting data:', error.message);
   } else {
     console.log('Data inserted successfully:', data);
-    alert('Thank you for your submission!');
-    // You can redirect the user or perform any other action here after successful submission
+    const RESEND_API_KEY = "re_YzzZKmbw_DegD4LfFVf8UGqHuQKvTUoXr";
+    const handler = async function(_req){
+    const res = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${RESEND_API_KEY}`
+        },
+        body: JSON.stringify({
+            from: 'Acme <onboarding@resend.dev>',
+            to: ['janani.g@spritle.com'],
+            subject: 'hello world',
+            html: '<strong>it works!</strong>',
+        })
+    });
+
+    const data = await res.json();
+
+    return new Response(JSON.stringify(data), {
+        status: 200,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+};
+
+serve(handler)
+
   }
         FirstName.value = ""
        Email.value = ""
@@ -493,8 +518,7 @@
        
       })
     </script>
-    <script src="assets/js/swiper-bundle.js"></script>
-    
-    <script src="assets/js/app.js"></script>
+    <script src="assets/ts/index.ts" type="text/babel"></script>
+    <!-- <script src="assets/js/app.js"></script> -->
   </body>
 </html>
