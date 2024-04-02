@@ -528,13 +528,21 @@ input[type="number"] {
   100%{left: 70px; top: 80px;}
 }
 
-@keyframes ballTwo {
+/* @keyframes ballTwo {
   0%{left: calc(100vw-0px); top: 80px;}
   25%{left: calc(100vw - 480px); top: 150px;}
   50%{left: calc(100vw - 380px); top: 250px;}
   75%{left: calc(100vw - 400px); top: 300px;}
   100%{left: calc(100vw - 10px); top: 80px;}
-}
+} */
+
+/* @keyframes ballTwo {
+  0%{right: 0px; top: 80px;}
+  25%{right: 0px; top: 180px;}
+  50%{right: 0px; top: 280px;}
+  75%{right: 0px; top: 380px;}
+  100%{right: 0px; top: 480px;}
+} */
 
 .bg-blur {
   filter: blur(150px);
