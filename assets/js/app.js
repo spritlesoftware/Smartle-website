@@ -137,26 +137,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderPM = document.getElementById("order-pm").value;
     const aOV = document.getElementById("aov").value;
     console.log(visitPM, orderPM, aOV);
-    console.log("arun");
 
     if (!visitPM || !orderPM || !aOV) {
       console.log("error");
     } else {
       var conversationsPerMonth = parseFloat(
         // ((visitPM / 3333.33) * 100).toFixed(0)
-        (visitPM  * 0.015).toFixed(0)
+        (visitPM  * 0.015)
       );
       var potentialAdditionalSales = parseFloat(
         // ((orderPM / 769.23) * 100).toFixed(0)
-         (orderPM * 0.16).toFixed(0)
+         (orderPM * 0.16)
       );
-      var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
+      var potentialAOV = parseFloat((aOV* 1.1));
       var addUnlockSales = parseFloat(
         // ((potentialAOV / 76.92) * 100).toFixed(0)
         potentialAdditionalSales * potentialAOV
       );
       var monthlyROI = parseFloat(
-        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+        (((addUnlockSales - 15) / 15) * 100)
       );
       document.getElementById("con-pm").textContent = conversationsPerMonth;
       document.getElementById("addSales").textContent =

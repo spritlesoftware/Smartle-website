@@ -262,19 +262,19 @@
                 <label class="mb-3"
                   >Enter the number of store visitors per month:</label
                 >
-                <input type="number" class="w-100 input lh-22 ps-3" oninput="change(visitors-pm)" required id="visitors-pm" />
+                <input type="number" class="w-100 input lh-22 ps-3" required id="visitors-pm" />
               </div>
               <div class="mb-4">
                 <label class="mb-3"
                   >Enter the number of orders you generate per month:</label
                 >
-                <input type="number" class="w-100 input lh-22 ps-3" oninput="change(order-pm)" required id="order-pm" />
+                <input type="number" class="w-100 input lh-22 ps-3" required id="order-pm" />
               </div>
               <div class="mb-4">
                 <label class="mb-3 "
                   >What is your store's Average Order Value (AOV)?</label
                 >
-                <input type="number" oninput="change(aov)" class="w-100 lh-22 input ps-3" required id="aov" />
+                <input type="number" class="w-100 lh-22 input ps-3" required id="aov" />
               </div>
               <div class="mt-5">
                 <button class="col btn btn-dark-blue btn-rounded w-100 mt-2"id="myButton">Calculate</button>
@@ -444,19 +444,18 @@
     const visitPM = document.getElementById("visitors-pm").value;
     const orderPM = document.getElementById("order-pm").value;
     const aOV = document.getElementById("aov").value;
-    console.log(visitPM, orderPM, aOV);
-    console.log("arun");
-
+ 
     if (!visitPM || !orderPM || !aOV) {
       console.log("error");
     } else {
       var conversationsPerMonth = parseFloat(
         // ((visitPM / 3333.33) * 100).toFixed(0)
-        (visitPM  * 0.015).toFixed(0)
+        (visitPM  * 0.015)
       );
+      console.log((visitPM  * 0.015),"sss")
       var potentialAdditionalSales = parseFloat(
         // ((orderPM / 769.23) * 100).toFixed(0)
-         (orderPM * 0.16).toFixed(0)
+         (orderPM * 0.16)
       );
       var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
       var addUnlockSales = parseFloat(
@@ -464,8 +463,10 @@
         potentialAdditionalSales * potentialAOV
       );
       var monthlyROI = parseFloat(
-        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+        (((addUnlockSales - 15) / 15) * 100)
       );
+      console.log(conversationsPerMonth,"conversationsPerMonth")
+
       document.getElementById("con-pm").textContent = conversationsPerMonth;
       document.getElementById("addSales").textContent =
         potentialAdditionalSales;
