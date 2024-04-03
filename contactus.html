@@ -434,13 +434,10 @@
     <script type="module">
     
     import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-
-
+    import config from './config.js';
     const supabaseUrl = 'https://rjgkhjvxkvkcrqamlrns.supabase.co'
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqZ2toanZ4a3ZrY3JxYW1scm5zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE5NzI4MDQsImV4cCI6MjAyNzU0ODgwNH0.6gjvj2IYDuvvaCV0UDwZkVg51LJ7rvLx-CKT-ROpNqk'
-   const supabase = createClient(supabaseUrl, supabaseKey)
-
-      console.log(supabase , "SUPABASE")
+    const supabaseKey = config.API_KEY
+    const supabase = createClient(supabaseUrl, supabaseKey)
       const FirstName = document.getElementById("FirstName")
       const LastName = document.getElementById("LastName")
       const PhoneNumber = document.getElementById("PhoneNumber")
