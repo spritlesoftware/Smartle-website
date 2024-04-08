@@ -114,21 +114,21 @@
           <div class="">
             <ul class="nav col-12 col-md-auto justify-content-center main-menu">
               <li>
-                <a href="../roi.html" class="nav-link txt-blk fw-600">ROI Calculator</a>
+                <a href="../roi/" class="nav-link txt-blk fw-600">ROI Calculator</a>
               </li>
               <li>
-                <a href="../aboutus.html" class="nav-link txt-blk fw-600">About Us</a>
+                <a href="../about-us/" class="nav-link txt-blk fw-600">About Us</a>
               </li>
               <!-- <li>
                 <a href="success-stories.html" class="nav-link txt-blk fw-600">Success stories</a>
               </li> -->
 
               <li>
-                <a href="../pricing.html" class="nav-link txt-blk fw-600">Pricing</a>
+                <a href="../pricing/" class="nav-link txt-blk fw-600">Pricing</a>
               </li>
 
               <li>
-                <a href="../blogs.html" class="nav-link txt-blk fw-600"
+                <a href="../blogs/" class="nav-link txt-blk fw-600"
                   >Blogs</a
                 >
               </li>
@@ -198,21 +198,21 @@
                     <div class="">
                         <ul class="nav d-flex flex-column main-menu">
                           <li>
-                            <a href="../roi.html" class="nav-link txt-blk fw-600">ROI Calculator</a>
+                            <a href="../roi/" class="nav-link txt-blk fw-600">ROI Calculator</a>
                           </li>
                           <li>
-                            <a href="../aboutus.html" class="nav-link txt-blk fw-600">About Us</a>
+                            <a href="../about-us/" class="nav-link txt-blk fw-600">About Us</a>
                           </li>
                           <!-- <li>
                             <a href="success-stories.html" class="nav-link txt-blk fw-600">Success stories</a>
                           </li> -->
             
                           <li>
-                            <a href="../pricing.html" class="nav-link txt-blk fw-600">Pricing</a>
+                            <a href="../pricing/" class="nav-link txt-blk fw-600">Pricing</a>
                           </li>
             
                           <li>
-                            <a href="../blogs.html" class="nav-link txt-blk fw-600"
+                            <a href="../blogs/" class="nav-link txt-blk fw-600"
                               >Blogs</a
                             >
                           </li>
@@ -229,7 +229,7 @@
     </header>
 
     <div class="container  ptb-120">
-      <div class="row justify-content-center ptb-120 bg-cover align-items-center"style="background: url(assets/img/roi-banner.webp)">
+      <div class="row justify-content-center ptb-120 bg-cover align-items-center"style="background: url(../assets/img/roi-banner.webp)">
         <div
           class="col-lg-9 text-center "
         >
@@ -407,7 +407,7 @@
                   </a>
                 </div>
                 <div>
-                  <a href="../contactus.html"> <button class="bg-white rounded-5 px-4 btn fw-bold">Contact us</button></a>
+                  <a href="../contact-us/"> <button class="bg-white rounded-5 px-4 btn fw-bold">Contact us</button></a>
                 </div>
                
           </div>
@@ -450,20 +450,20 @@
     } else {
       var conversationsPerMonth = parseFloat(
         // ((visitPM / 3333.33) * 100).toFixed(0)
-        (visitPM  * 0.015)
+        (visitPM  * 0.015).toFixed(0)
       );
       console.log((visitPM  * 0.015),"sss")
       var potentialAdditionalSales = parseFloat(
         // ((orderPM / 769.23) * 100).toFixed(0)
-         (orderPM * 0.16)
+         (orderPM * 0.16).toFixed(0)
       );
       var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
       var addUnlockSales = parseFloat(
         // ((potentialAOV / 76.92) * 100).toFixed(0)
-        potentialAdditionalSales * potentialAOV
+        (potentialAdditionalSales * potentialAOV).toFixed(0)
       );
       var monthlyROI = parseFloat(
-        (((addUnlockSales - 15) / 15) * 100)
+        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
       );
       console.log(conversationsPerMonth,"conversationsPerMonth")
 

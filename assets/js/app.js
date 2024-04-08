@@ -143,19 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       var conversationsPerMonth = parseFloat(
         // ((visitPM / 3333.33) * 100).toFixed(0)
-        (visitPM  * 0.015)
+        (visitPM  * 0.015).toFixed(0)
       );
       var potentialAdditionalSales = parseFloat(
         // ((orderPM / 769.23) * 100).toFixed(0)
-         (orderPM * 0.16)
+         (orderPM * 0.16).toFixed(0)
       );
-      var potentialAOV = parseFloat((aOV* 1.1));
+      var potentialAOV = parseFloat((aOV* 1.1).toFixed(0));
       var addUnlockSales = parseFloat(
         // ((potentialAOV / 76.92) * 100).toFixed(0)
-        potentialAdditionalSales * potentialAOV
+        (potentialAdditionalSales * potentialAOV).toFixed(0)
       );
       var monthlyROI = parseFloat(
-        (((addUnlockSales - 15) / 15) * 100)
+        (((addUnlockSales - 15) / 15) * 100).toFixed(0)
       );
       document.getElementById("con-pm").textContent = conversationsPerMonth;
       document.getElementById("addSales").textContent =
