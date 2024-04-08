@@ -21,7 +21,7 @@ async function fetchLastEnteredData() {
     }
 
     if (data && data.length > 0) {
-      return JSON.stringify(data[0].Email)
+      return data[0].Email
       // Do something with the last entered data
      
     } else {
@@ -43,7 +43,8 @@ const handler = async (_request: Request): Promise<Response> => {
     },
     body: JSON.stringify({
       from: 'onboarding@resend.dev',
-      to: ['janani.g@spritle.com', `${email}`],
+      to: [email],
+      cc:['janani.g@spritle.com'],
       subject: 'Thanks for signing up',
       html: '<strong>Thanks for contacting us!</strong>',
     }),
