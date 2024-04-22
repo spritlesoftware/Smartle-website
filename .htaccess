@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.smartle\.ai [NC]
+RewriteRule ^(.*)$ https://smartle.ai/$1 [L,R=301]
