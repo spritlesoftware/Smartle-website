@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy to Server
+      - name: Deploy
         run: |
           scp -r ./* ${YOUR_USERNAME}@${YOUR_SERVER_IP}:/var/www/Smartle-website/
         env:
