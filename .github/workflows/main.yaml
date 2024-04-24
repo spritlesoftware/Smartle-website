@@ -1,24 +1,18 @@
-name: Smartle Website update 
-
+name: Smartle Website update
 on:
   push:
     branches:
       - main
-
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Sync to S3
-        run: aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --delete --exclude ".git/*"
+      - name: Deploy to Server
+        run: |
+          rsync -avz --delete . ${SMARTLE_USERNAME}@${SMARTLE_SERVER_IP}:/var/www/Smartle-website/
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'us-east-1'
-      - name: CloudFront Invalidation
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'us-east-1'
+          YOUR_USERNAME: ${{ secrets.SMARTLE_USERNAME }}
+          YOUR_SERVER_IP: ${{ secrets.SMARTLE_SERVER_IP }}
+          SSH_PRIVATE_KEY: ${{ secrets.SMART_SSH_PRIVATE_KEY}}
