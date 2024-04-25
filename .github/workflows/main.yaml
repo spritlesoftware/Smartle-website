@@ -1,4 +1,4 @@
-name: Smartle Website update
+name: Deploy
 
 on:
   push:
@@ -8,13 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Deploy
-        run: |
-          scp -r ./* ${YOUR_USERNAME}@${YOUR_SERVER_IP}:/var/www/Smartle-website/
-        env:
-          YOUR_USERNAME: ${{ secrets.YOUR_USERNAME }}
-          YOUR_SERVER_IP: ${{ secrets.YOUR_SERVER_IP }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run deployment script with sudo
+      run: |
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@your_server "sudo bash -s" < /var/www/Smartle-website/hooks/post-receive
 
