@@ -15,5 +15,7 @@ jobs:
 
     - name: Run deployment script with sudo
       run: |
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@3.85.202.239 "sudo bash -s" < /var/www/Smartle-website/hooks/post-receive
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > deploy_key.pem
+        chmod 600 deploy_key.pem
+        ssh -i deploy_key.pem ubuntu@3.85.202.239 "sudo bash -s" < /var/www/Smartle-website/hooks/post-receive
 
