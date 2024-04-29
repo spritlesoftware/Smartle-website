@@ -499,6 +499,8 @@
     console.log('Data inserted successfully:', data);
     alert('Thank you for your submission!');
     // You can redirect the user or perform any other action here after successful submission
+    const res =  fetch('https://rjgkhjvxkvkcrqamlrns.supabase.co/functions/v1/resend', {mode:'no-cors'})
+     console.log(res)
   }
         FirstName.value = ""
        Email.value = ""
