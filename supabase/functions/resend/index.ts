@@ -7,7 +7,7 @@ const supabaseUrl = Deno.env.get('API_URL');
 const supabaseKey = Deno.env.get('API_ANON_KEY');
 
 const supabase = createClient(supabaseUrl, supabaseKey);
-const  POSTWORK_API_KEY = Deno.env.get('POSTWORK_API_KEY')
+const  POSTMARK_API_KEY = Deno.env.get('POSTMARK_API_KEY')
 async function fetchLastEnteredData() {
   try {
     const { data, error } = await supabase
@@ -39,12 +39,13 @@ const handler = async (_request: Request): Promise<Response> => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${POSTWORK_API_KEY}`,
-      "X-Postmark-Server-Token": POSTWORK_API_KEY 
+      Authorization: `Bearer ${POSTMARK_API_KEY}`,
+      "X-Postmark-Server-Token": `${POSTMARK_API_KEY}` 
     },
     body: JSON.stringify({
       "From": "janani.g@spritle.com",
       "To": email,
+      "Cc": "prabakaran.m@spritle.com",
       "Subject": "Thanks for signing up",
       "HtmlBody": "Thanks for contacting us!",
     })
