@@ -43,9 +43,10 @@ const handler = async (_request: Request): Promise<Response> => {
       "X-Postmark-Server-Token": `${POSTMARK_API_KEY}` 
     },
     body: JSON.stringify({
-      "From": "janani.g@spritle.com",
+      "From": "prabhu.m@spritle.com",
       "To": email,
-      "Cc": "prabakaran.m@spritle.com",
+      "Cc": "prabhu.m@spritle.com",
+      "Bcc": "prabakaran.m@spritle.com",
       "Subject": "Thanks for signing up",
       "HtmlBody": "Thanks for contacting us!",
     })
