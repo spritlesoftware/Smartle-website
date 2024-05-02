@@ -47,8 +47,8 @@ const handler = async (_request: Request): Promise<Response> => {
       "To": email,
       "Cc": "prabhu.m@spritle.com",
       "Bcc": "prabakaran.m@spritle.com",
-      "Subject": "Thanks for signing up",
-      "HtmlBody": "Thanks for contacting us!",
+      "Subject": "Thanks for contacting us!",
+      "HtmlBody": "Thank you for reaching out to us, We appreciate your interest. We will get back to you shortly!",
     })
   })
 
