@@ -1,5 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
 module.exports = {
   entry: './index.js', // Entry point of your application
   output: {
@@ -14,8 +15,15 @@ module.exports = {
     }
   },
   plugins: [
-    new Dotenv()
+    new webpack.DefinePlugin({
+        'process.env': {
+            API_KEY: JSON.stringify(process.env.API_KEY)
+            // Add other environment variables here...
+        },
+    }),
+    // Use dotenv-webpack only in development mode
+    process.env.NODE_ENV === 'development' ? new Dotenv() : null
 ],  
-  mode: 'development' // Set mode to development
+  mode: 'production' // Set mode to development
 };
 
