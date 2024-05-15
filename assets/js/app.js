@@ -184,3 +184,32 @@ if (phone) {
     });
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let userMessage = document.getElementById("user-message");
+  let userMessageLg = document.getElementById("user-message-lg");
+  let enterBtn = document.getElementById("enterBtn");
+  let messageContainer = document.getElementById("message-container")
+  let enterBtnLg = document.getElementById("enterBtnLg");
+  let messageContainerLg = document.getElementById("message-container-lg")
+  enterBtn.addEventListener("click", btnClick);
+  enterBtnLg.addEventListener("click", EnterbtnClickLg);
+  function EnterbtnClickLg(e){
+    e.preventDefault()
+    console.log("BOTTON CLICKED LG " , )
+    console.log(userMessageLg.value)
+     messageContainerLg.innerHTML += `<div style="display: flex;flex-direction: row;padding:2%;margin-top:1%;background-color: rgb(236, 235, 235);border-radius: 10px;"><img style="margin-right: 3%;border-radius: 50%;" width="10%" height="10%" src="/assets/img/testimonial.png"/><p class="mobile-view-font user-message-display">${userMessageLg.value}</p></div>` 
+      userMessageLg.value = ""                                                                                                                                                                                                                                               
+    }
+  function btnClick(){
+    console.log("BOTTON CLICKED")
+    console.log(userMessage.value)
+     messageContainer.innerHTML += `<div style="display: flex;flex-direction: row;padding:2%;margin-top:1%;background-color: rgb(236, 235, 235);border-radius: 10px;"><img style="margin-right: 3%;border-radius: 50%;" width="10%" height="10%" src="https://chat.smartle.ai:443/media/ead43b4b55e46691af96a3e1646c3a01dd3abb8a3e6f8fe50393bb2f.png"/><p class="mobile-view-font user-message-display">${userMessage.value}</p></div>` 
+      userMessage.value = ""
+    
+  }
+})
+
+
+

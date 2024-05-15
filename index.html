@@ -133,7 +133,7 @@
                 src="assets/img/logo/new_logo.png"
                 alt="logo"
                 class="img-fluid logo-color mt-1"
-                style="width: 150px; height: 40px"
+                style="width: 150px; height: 70px"
               />
             </a>
           </div>
@@ -179,7 +179,7 @@
                 src="assets/img/logo/new_logo.png"
                 alt="logo"
                 class="img-fluid logo-color"
-                style="width: 150px; height: 40px"
+                style="width: 100px; height: 70px"
               />
             </a>
           </div>
@@ -273,12 +273,69 @@
           <img src="assets/img/Left Image.png" class="col-lg-3 d-lg-flex d-none" style="height:100%;padding-top: 15%;">  
           <!-- <img src="assets/img/smartle-mobile.png" class="img-fluid col-lg-6"> -->
           <!-- <iframe src="http://172.16.16.146:8502" seamless width="430" height="932"></iframe> -->
-          <div class="iphone-x d-lg-none" style="overflow:hidden;margin-left:8%;margin-right: 8%;">
-            <iframe src="https://chat.smartle.ai/" seamless width="100%" height="680px" class="smartle-bot"></iframe>
+          <div class="iphone-x d-lg-none" style="margin-left:8%;margin-right: 8%;overflow: hidden;">
+            <!-- <iframe src="https://chat.smartle.ai/" seamless width="100%" height="680px" class="smartle-bot"></iframe> -->
+            <div style="width: 100%; height: 640px;padding-top:20%;padding-left: 5%;padding-right: 5%;" class="smartle-bot scrollable-container">
+              <h3 class="text-black fw-bold">Smartle AI ⚡</h3>
+              <div id="message-container">
+                <div style="display: flex;flex-direction: row;padding-top: 10%;padding:3%;">
+                  <img style="margin-right: 3%;" width="10%" height="10%" src="https://chat.smartle.ai/media/ef9fe68cda1265997305c7ac8eb3852d8b251382237bdf5ca0efdb5a.png"/>
+                  <p style="font-size: small;">Hey! 👋 Welcome to Smartle AI, How I can assist you?</p>
+                </div>
+              </div>
+              
+              <div style="position:absolute;width:100%;bottom:5%;">
+                <input id="user-message" style="font-size: small; border: none; background-color: rgb(234, 232, 232);width: 80%;position: sticky; bottom: 0;padding: 3.3%;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" placeholder="Type your message here..." />
+                <button id="enterBtn" style="border: none;position: absolute;z-index: 10;border-top-right-radius: 10px;border-bottom-right-radius: 10px;background-color:rgb(234, 232, 232);">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1.2rem" height="2.1rem" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                      <polygon points="0,14.69 0,39.65 51,45 0,50.35 0,75.31 90,45 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                    </g>
+                    </svg>
+                </button> 
+               
+              </div>   
+              
+            </div>
           </div>
-          <div class="iphone-x d-lg-flex d-none">
-            <iframe src="https://chat.smartle.ai/" seamless width="100%" height="680px" class="smartle-bot"></iframe>
+          <div class="iphone-x d-lg-flex d-none" style=""> 
+            <div class="buttons-container">
+              <!-- Individual buttons -->
+              <div class="buttonsmall"></div>
+              <div class="button"></div>
+              <div class="button"></div>
+             
+            </div>
+            <div style="width: 100%; height: 640px;padding-top:20%;padding-left: 5%;padding-right: 5%;" class="smartle-bot scrollable-container">
+              <h3 class="text-black fw-bold">Smartle AI ⚡</h3>
+              <div id="message-container-lg">
+                <div style="display: flex;flex-direction: row;padding-top: 10%;padding:3%;">
+                  <img style="margin-right: 3%;" width="10%" height="10%" src="https://chat.smartle.ai/media/ef9fe68cda1265997305c7ac8eb3852d8b251382237bdf5ca0efdb5a.png"/>
+                  <p>Hey! 👋 Welcome to Smartle AI, How I can assist you?</p>
+                </div>
+              </div>
+              
+              <div style="position:absolute;width:100%;bottom:5%;">
+                <input id="user-message-lg" style="border: none; background-color: rgb(234, 232, 232);width: 80%;position: sticky; bottom: 0;padding: 3.3%;border-top-left-radius: 10px;border-bottom-left-radius: 10px;" placeholder="Type your message here..." />
+                <button id="enterBtnLg" style="border: none;position: absolute;z-index: 10;border-top-right-radius: 10px;border-bottom-right-radius: 10px;background-color:rgb(234, 232, 232);">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="43" viewBox="0 0 256 256" xml:space="preserve">
+
+                    <defs>
+                    </defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                      <polygon points="0,14.69 0,39.65 51,45 0,50.35 0,75.31 90,45 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                    </g>
+                    </svg>
+                </button> 
+               
+              </div>   
+              
+            </div>
           </div>
+         
           <!-- <div class="device device-iphone-14-pro">
             <div class="device-frame">
               <iframe src="https://chat.smartle.ai/" seamless width="390px" height="830px" class="smartle-bot" style="border-top-right-radius: 50px;border-top-left-radius: 50px;"></iframe>
@@ -292,7 +349,7 @@
           </div> -->
           <img src="assets/img/Right Image.png" class="col-lg-3 d-lg-flex d-none" style="height: 100%;padding-top: 15%;">
          </div>
-       
+        </div>
       </div>
     </div>
     <div class="container-fluid d-lg-block d-none ">
