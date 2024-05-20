@@ -184,3 +184,43 @@ if (phone) {
     });
   }
 }
+
+// Percentage increment effect
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll('.percentage');
+    const speed = 200; // Adjust the speed of the animation here
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-percentage');
+                    const count = +counter.innerText.replace('%', '');
+
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment) + '%';
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + '%';
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.6 // Adjust this threshold as needed
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
+
+

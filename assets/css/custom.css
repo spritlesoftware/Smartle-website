@@ -880,6 +880,13 @@ margin-bottom: 10px;
 font-weight: bold;
 }
 
+
+/* percetage increment style */
+
+.percentage {
+  transition: all 0.5s ease;
+}
+
 .card-text {
 font-size: 18px;
 color: black; 
@@ -1008,3 +1015,5 @@ margin-bottom: 20px;
       display: none;
   }
 }
+
+
