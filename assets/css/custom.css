@@ -917,9 +917,9 @@ input[type="number"] {
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
 :root {
   --size: max(2px, 1.1vmin);
-  /* --height: 0em; */
-  --pad: .6rem;
-  --border-radius: 7em;
+  /* --height: 80em; */
+  --pad: 9px;
+  --border-radius: 45px;
   --gutter: calc(var(--pad) * 2);
   --scene-pad: 5vmin;
   --bg-blur: 0.333em;
@@ -928,9 +928,9 @@ input[type="number"] {
   --notch-width: 33.3%;
   --notch-radius: calc(var(--border-radius) - calc(var(--pad) * 2));
   --notch-duration: 0.333s;
-  --ease: cubic-bezier(0.666, 0, 0.4, 1);
-  --ease-spring: cubic-bezier(0.666, 0, 0.4, 1.2);
-  --ease-out: cubic-bezier(0.15, 0, 0.333, 1);
+  --ease: cubic-bezier(.666, 0, .4, 1);
+  --ease-spring: cubic-bezier(.666, 0, .4, 1.2);
+  --ease-out: cubic-bezier(.15,0,.333,1);
   --border-width: 0.4em;
   --deep-purple: 284;
   --gold: 22.5;
@@ -954,15 +954,14 @@ input[type="number"] {
     opacity: 1;
   }
 }
-
 .scene {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 3em 0;
   align-items: center;
   align-content: center;
   justify-content: center;
-  /* min-height: 60vh; */
+  /* min-height: 100vh; */
   font-family: Inter;
   font-size: var(--size);
   padding: var(--scene-pad);
@@ -978,19 +977,17 @@ input[type="number"] {
 .phone {
   position: relative;
   z-index: 1;
-  aspect-ratio: 60/76;
+  aspect-ratio: 37/76;
   background: rgb(255, 255, 255);
-  z-index: -20;
   height: var(--height);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 0.1em 0.25em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+  box-shadow: 0 0 0.3em 0.45em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
   box-sizing: border-box;
   opacity: 0;
   transform: scale3d(1.1, 1.1, 1);
   -webkit-animation: appear 1s var(--ease-out) forwards;
           animation: appear 1s var(--ease-out) forwards;
   webkit-backface-visibility: hidden;
-  border-radius: var(--border-radius);
 }
 .phone:before {
   content: "";
@@ -999,7 +996,7 @@ input[type="number"] {
   right: calc(var(--border-width) * -1);
   bottom: var(--border-radius);
   left: calc(var(--border-width) * -1); */
-  border: .4em solid hsl(var(--c-h), 20%, 30%);
+  /* border: 0.5em solid hsl(var(--c-h), 20%, 30%); */
   border-left-width: 0;
   border-right-width: 0;
 }
@@ -1046,7 +1043,7 @@ input[type="number"] {
   position: absolute;
   inset: 0;
   border-radius: var(--border-radius);
-  border: var(--pad) solid rgb(0, 0, 0);
+  border: var(--pad) solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1056,7 +1053,7 @@ input[type="number"] {
   content: "";
   position: absolute;
   z-index: 2;
-  background: rgb(129, 129, 129);
+  background: white;
   width: 36.6%;
   bottom: calc(var(--pad) * 0.75);
   height: calc(var(--pad) * 0.5);
@@ -1250,16 +1247,10 @@ input[type="number"] {
   align-items: center;
   gap: 1em;
 }
-.content,
-.content .left,
-.content .right,
-.content .bar,
-.content .text {
+.content, .content .left, .content .right, .content .bar, .content .text {
   transition: var(--notch-duration) var(--ease-out);
 }
-.content .left,
-.content .right,
-.content .bar {
+.content .left, .content .right, .content .bar {
   transition-property: max-height, opacity;
   will-change: max-height;
 }
@@ -1274,17 +1265,18 @@ input[type="number"] {
   opacity: var(--bar-opacity, 0);
 }
 .content .text:before {
-  content: "Smartle.ai";
+  content: "Smartle.AI";
   order: 1;
   text-transform: uppercase;
+  font-size: .8rem;
   font-family: inherit;
 }
 .content .text:after {
   order: 2;
-  content: "Feels human";
+  content: "Feels Human";
   opacity: 0.5;
+  font-size: .7rem;
   font-family: inherit;
-
 }
 .content .right {
   flex-grow: 1;
@@ -1326,7 +1318,7 @@ input[type="number"] {
 .content .bar .duration:before {
   content: "";
   height: 100%;
-  background: white;
+  background: rgb(176, 61, 61);
   width: 25%;
   position: absolute;
 }
@@ -1335,6 +1327,30 @@ input[type="number"] {
 }
 .content .bar:after {
   content: "-1:48";
+}
+
+.camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--notch-height);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  top: calc(var(--pad) * 2);
+  right: calc(50% - calc(var(--notch-width) * 0.5));
+  margin-right: calc(var(--pad) * 0.333);
+}
+.camera:before {
+  content: "";
+  height: 33.3%;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0.25em #4c4da3;
+  background: radial-gradient(#6667ac, transparent 50%) no-repeat 33.3% 10%/75% 50%, radial-gradient(#454680, transparent 50%) no-repeat 60% 85%/50% 50%;
+  background-color: #080928;
 }
 
 .screen {
@@ -1353,3 +1369,40 @@ input[type="number"] {
   border-radius: calc(var(--border-radius) - var(--pad));
   transition: opacity 1s var(--ease-out) 0.25s;
 }
+
+#zoom:checked ~ .scene {
+  --size: max(5px, 2vmin);
+  opacity: 0;
+  -webkit-animation: appear 0.5s var(--ease-out) forwards;
+          animation: appear 0.5s var(--ease-out) forwards;
+}
+#zoom:checked ~ .scene .phone {
+  order: 1;
+}
+#zoom:checked ~ .scene .pallette,
+#zoom:checked ~ .scene .zoom-con {
+  order: 0;
+  font-size: 50%;
+}
+#zoom:checked ~ .scene label[for=zoom] {
+  --zoom-icon: url("data:image/svg+xml,%3Csvg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m14 18-9 9m9-9v9m0-9H5M18 14l9-9m-9 9V5m0 9h9' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#zoom:not(:checked) ~ .scene {
+  opacity: 0;
+  -webkit-animation: appear-again 0.5s var(--ease-out) forwards;
+          animation: appear-again 0.5s var(--ease-out) forwards;
+}
+@-webkit-keyframes appear-again {
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@keyframes appear-again {
+  to {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
