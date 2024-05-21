@@ -918,8 +918,8 @@ input[type="number"] {
 :root {
   --size: max(5px, 1vmin);
   --height: 580px;
-  --pad: 1.25em;
-  --border-radius: 6.9em;
+  --pad: 8px;
+  --border-radius: 50px;
   --gutter: calc(var(--pad) * 4);
   --scene-pad: 5vmin;
   --bg-blur: 0.333em;
@@ -1359,6 +1359,7 @@ body {
   transform-origin: top;
   background-color: rgba(0, 0, 0, 0.95);
   height: 3rem;
+  margin-top: .3rem;
 }
 
 .content {
@@ -1407,7 +1408,7 @@ body {
   text-transform: uppercase;
   font-family: inherit;
   font-size: .74rem;
-  margin-left: 1.7rem;
+  margin-left: 1.5rem;
   padding-top: .6rem;
 }
 
@@ -1417,7 +1418,7 @@ body {
   opacity: 0.5;
   font-family: inherit;
   font-size: .5rem;
-  margin-left: 1.7rem;
+  margin-left: 1.5rem;
 }
 
 .content .right {
