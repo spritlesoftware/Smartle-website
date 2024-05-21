@@ -978,10 +978,10 @@ input[type="number"] {
   position: relative;
   z-index: 1;
   aspect-ratio: 37/76;
-  background: rgb(255, 255, 255);
+  background: rgb(250, 250, 250);
   height: var(--height);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 0.3em 0.45em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
+  box-shadow: 0 0 0.2em 0.5em hsl(var(--c-h), 20%, 25%), 0 0 0 var(--border-width) hsl(var(--c-h), 30%, 85%);
   box-sizing: border-box;
   opacity: 0;
   transform: scale3d(1.1, 1.1, 1);
