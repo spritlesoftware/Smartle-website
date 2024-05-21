@@ -1027,3 +1027,57 @@ margin-bottom: 20px;
   background-color: #00356b;
   
 }
+
+
+
+/* customer section  */
+
+/* Desktop styles */
+.desktop-version {
+  display: block;
+}
+
+.responsive-version {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 960px) {
+  .desktop-version {
+      display: none;
+  }
+  .responsive-version {
+      display: block;
+  }
+
+  .responsive-version h2 {
+      order: 1;
+  }
+  .responsive-version img {
+      order: 2;
+      display: block;
+      margin: 0 auto;
+  }
+  .responsive-version p {
+      order: 3;
+      text-align: center;
+  }
+  .responsive-version h5 {
+      order: 4;
+      text-align: center;
+  }
+}
+
+/* Default styles (desktop and larger screens)  for the Integration section*/
+.responsive-container {
+  margin-top: 0;
+}
+
+/* Responsive styles (screens narrower than 960px) */
+@media (max-width: 960px) {
+  .responsive-container {
+      margin-top: 40%; 
+      margin-bottom: -40px;
+  }
+}
+
