@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {/* <Navbar /> */}
+      <body style={{overflowX:"hidden"}}>
+        <Navbar />
         {children}
         <Footer />
       </body>

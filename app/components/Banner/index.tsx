@@ -29,7 +29,7 @@ const Banner = () => {
         {/* COLUMN-2 */}
 
         <div className="lg:-m-24 lg:pt-20 lg:block">
-          {/* <Image src="/images/banner/banner.svg" alt="hero-image" width={800} height={642} /> */}
+          <Image src="/images/banner/banner.svg" alt="hero-image" width={800} height={442} style={{position:"absolute"}} className="lg:block hidden" />
           <div className="scene" style={{ margin: "0 auto" }}>
             <div className="phone-con" style={{ width: 300 }}>
               <div className="phone" style={{ width: 300 }}>
@@ -57,7 +57,7 @@ const Banner = () => {
                         <div className="left" style={{ margin: "auto 0" }}>
                           {/* <div class="tile"> */}
                           <img
-                            src="assets/img/logo/Sicon.png"
+                            src="/images/Sicon.png"
                             style={{
                               height: 20,
                               width: "20x",
@@ -81,6 +81,16 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <div className="lg:block hidden">
+      <div className="blur-box">
+         <div className="blur-box center-box">
+         <div className="bg-shape1 bg-blur"></div>
+         <div className="bg-shape2 bg-blur"></div>
+         <div className="bg-shape3 bg-blur"></div>
+         </div>
+      </div>
+      
+</div>
     </div>
   );
 };
