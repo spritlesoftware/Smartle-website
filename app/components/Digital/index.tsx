@@ -4,7 +4,7 @@ const Digital = () => {
   return (
     <div className="mx-2">
         <h2 className="max-w-7xl text-5xl font-bold text-center" style={{margin:"0 auto"}}>
-        Transforming ordinary interactions into extraordinary experiences with Smartle's 
+        Transforming ordinary interactions into extraordinary experiences with Smartle's{" "} 
         <span className="text-style-gradient">conversational AI Assistance</span> for Ecommerce
           </h2>
       <div className="mx-auto max-w-7xl px-4 my-40 pb-20 lg:pb-40 lg:px-8 bg-digital rounded-3xl bg-blue relative">

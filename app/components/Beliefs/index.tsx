@@ -1,7 +1,7 @@
 const Beliefs = () => {
   return (
     <div className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 rounded-3xl">
-      <div className="grid grid-cols-1 lg:grid-cols-2 bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-40 md:pb-40 rounded-3xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-12 md:pb-12 rounded-3xl">
         <div>
           <h3
             style={{ fontSize: "2.5rem" }}
@@ -25,7 +25,7 @@ const Beliefs = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 my-16 mx-5 gap-5">
         {/* COLUMN-1 */}
 
-        <div className="bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-40 md:pb-40 rounded-3xl">
+        <div className="bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-15 pb-12 md:pb-12 rounded-3xl">
           <h3
             style={{ fontSize: "2.5rem" }}
             className="text-3xl sm:text-65xl font-bold  leading-snug mb-5 text-center sm:text-start"
@@ -41,7 +41,7 @@ const Beliefs = () => {
           </h5>
           <img
             src="/images/textbook-screen.webp"
-            className="max-w-full h-auto "
+            className="max-w-full" style={{height:"30%", marginTop:"5rem"}}
           />
         </div>
 
@@ -49,7 +49,7 @@ const Beliefs = () => {
 
         <div
           style={{ height: "auto" }}
-          className="bg-build gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-40 md:pb-40 rounded-3xl"
+          className="bg-build gradient-card dr-shadow pt-12 px-10 sm:px-15 pb-12 md:pb-12 rounded-3xl"
         >
           <h3
             style={{ fontSize: "2.5rem" }}
@@ -66,7 +66,7 @@ const Beliefs = () => {
             need. The longer you use Smartle AI, the better it becomes at
             helping you make sales with its conversational AI for e-commerce
           </h5>
-          <img src="/images/train-ai.webp" className="max-w-full h-auto " />
+          <img src="/images/train-ai.webp" className="max-w-full" style={{height:"30%"}} />
         </div>
       </div>
     </div>
