@@ -6,11 +6,6 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-       
-        <div>
-          <button className="btn btn-primary">bootstrap button</button>
-     
-        </div>
       </div>
 
       <div className={styles.center}>
