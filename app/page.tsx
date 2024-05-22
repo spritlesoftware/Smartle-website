@@ -26,9 +26,9 @@ export default function Home() {
       <Ourteam />
       {/* <Featured /> */}
       <Manage />
-      <FAQ />
+      {/* <FAQ /> */}
       <Testimonials />
-      <Articles />
+      {/* <Articles /> */}
       <Joinus />
       <Insta />
     </main>
