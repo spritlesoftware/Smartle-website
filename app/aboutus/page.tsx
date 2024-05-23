@@ -37,7 +37,7 @@ const Aboutus = () => {
         <div className="container mx-auto sm:px-4  ptb-120">
           <div
             className="flex flex-wrap  justify-center ptb-120 bg-cover items-center"
-            style={{ background: "url(../assets/img/roi-banner.webp)" }}
+            style={{ background: "url(/images/roi-banner-webp)" }}
           >
             <div className="lg:w-3/4 pr-4 pl-4 text-center ">
               <h1 className=" fs-48 txt-blk fw-600 py-5">
@@ -59,7 +59,7 @@ const Aboutus = () => {
         </div>
         <div className="container mx-auto sm:px-4 flex lg:flex-row flex-wrap justify-between w-full">
           <div className="lg:w-2/5 pr-4 pl-4">
-            <h2 style={{ textAlign: "left" }} className="fw-bold">
+            <h2 style={{ textAlign: "left" , fontWeight: 500}} className="fw-bold text-5xl fs-36">
               Your AI partner
             </h2>
             <p style={{ textAlign: "left" }} className="py-3">
@@ -94,9 +94,9 @@ const Aboutus = () => {
           </div>
           <div
             className="lg:w-2/5 pr-4 pl-4 py-5 flex flex-col justify-center"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "2%" }}
           >
-            <h2 style={{ fontWeight: 600 }}>Smartle AI</h2>
+            <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500}}>Smartle AI</h2>
             <h6 style={{ fontWeight: 400 }}>
               Continuously learning, it adopts new strategies, while
               <br />
@@ -126,7 +126,7 @@ const Aboutus = () => {
                     >
                       <div className="flex">
                         <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-                          <h3>
+                          <h3 className=" fw-500 mb-3" style={{fontSize:32}}>
                             Happier
                             <br /> Shoppers
                           </h3>
@@ -155,7 +155,7 @@ const Aboutus = () => {
                     >
                       <div className="flex justify-between mt-4">
                         <div className="text-center  w-full fw-bolder text-gray-900">
-                          <h3>
+                          <h3 className=" fw-500 mb-3" style={{fontSize:32}}>
                             Effortless
                             <br />
                             Assistance
@@ -185,7 +185,7 @@ const Aboutus = () => {
                     >
                       <div className="flex justify-between mt-4">
                         <div className="text-center  w-full fw-bolder text-gray-900">
-                          <h3>
+                          <h3 className=" fw-500 mb-3" style={{fontSize:32}}>
                             Personalized
                             <br />
                             Touch
@@ -215,7 +215,7 @@ const Aboutus = () => {
                     >
                       <div className="flex justify-between mt-4">
                         <div className="text-center  w-full fw-bolder text-gray-900">
-                          <h3>24/7 support</h3>
+                          <h3 className=" fw-500 mb-3" style={{fontSize:32}}>24/7 support</h3>
                           <div className="flex justify-center">
                             <hr
                               style={{
@@ -237,12 +237,12 @@ const Aboutus = () => {
                   <div className="item swiper-slide">
                     {" "}
                     <div
-                      className="bg-white  p-6 "
+                      className="bg-white p-6 "
                       style={{ width: 320, height: 350 }}
                     >
                       <div className="flex justify-between mt-4">
                         <div className="text-center  w-full fw-bolder text-gray-900">
-                          <h3>
+                          <h3 className="fw-500 mb-3" style={{fontSize:32}}>
                             Data-Driven <br /> Insights
                           </h3>
                           <div className="flex justify-center">
