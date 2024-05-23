@@ -43,14 +43,17 @@ const Navbar = () => {
                 >
                   
                 </a> */}
-                <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                <img
+                <Link
+                  href="/"
+                  className="text-2xl sm:text-4xl font-semibold text-black"
+                >
+                  <img
                     src="/images/new_logo .png"
                     alt="logo"
                     className="max-w-full h-auto logo-color mt-1"
                     style={{ width: 150, height: 40 }}
                   />
-                                </Link>
+                </Link>
               </div>
 
               {/* LINKS */}
@@ -74,8 +77,13 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-              {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Contact us</button> */}
-              <Contactusform />
+              <a className="hidden lg:block">
+                <button onClick={()=>{"Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"}} className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded">
+                  Start for Free
+                </button>
+              </a>
+
+              {/* <Contactusform /> */}
             </div>
 
             {/* DRAWER FOR MOBILE VIEW */}

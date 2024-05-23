@@ -5,17 +5,17 @@ const Pricing = () => {
         <div className="flex flex-wrap  justify-center">
           <div
             className="lg:w-full pr-4 pl-4 text-center ptb-120 bg-cover"
-            style={{ background: "url(/images/pricing-banner.webp)" }}
+            style={{ background: "url(/images/pricing-banner.webp)"}}
           >
             <h1 className=" fs-48 txt-blk px-3">
               <span className="fw-600">Conversation to Conversion</span>:
               Mastering the Art of Sales-Driven AI Chat
             </h1>
-            <p className="mt-4 fs-18 lg:block hidden">
+            <h2 className="mt-4 text-xl lg:block hidden max-w-5xl" style={{margin:"0 auto"}}>
               At Smartle AI, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
               and let's build your success story together.
-            </p>
+            </h2>
             <p className="mt-4 fs-18 block lg:hidden py-4">
               At Smartle AI, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
@@ -26,7 +26,7 @@ const Pricing = () => {
         </div>
       </div>
       <div className="container mx-auto sm:px-4 pb-60">
-        <h2 className="text-center" style={{ paddingBottom: "6%" }}>
+        <h2 className="text-center text-5xl" style={{ paddingBottom: "6%" }}>
           Pricing that propels your success
         </h2>
         <div className="flex flex-wrap  lg:w-5/6 pr-4 pl-4 mx-auto justify-center items-end">
@@ -34,7 +34,7 @@ const Pricing = () => {
             <h2 className="mb-3 fw-300">
               $39<span className="fs-18 txt-gray">/month</span>
             </h2>
-            <h3 className="mb-2 fw-300 ">Starter</h3>
+            <h3 className="mb-2 text-4xl font-bold">Starter</h3>
             <p className="mb-4 txt-gray fs-15">5 days free trial</p>
             <ul className="p-0" style={{ listStyle: "none" }}>
               <li className="txt-gray fs-15 mb-2">
@@ -93,7 +93,7 @@ const Pricing = () => {
             <h2 className="mb-3 fw-300">
               $99<span className="fs-18 txt-gray">/month</span>
             </h2>
-            <h3 className="mb-2 fw-300 ">Growth</h3>
+            <h3 className="mb-2 text-4xl font-bold ">Growth</h3>
             <p className="mb-4 txt-gray fs-15">5 days free trial</p>
             <ul className="p-0" style={{ listStyle: "none" }}>
               <li className="txt-gray fs-15 mb-2">
@@ -155,7 +155,7 @@ const Pricing = () => {
             <h2 className="my-3 pt-2 fw-300">
               $199<span className="fs-18">/month</span>
             </h2>
-            <h3 className="mb-2 fw-300">Pro</h3>
+            <h3 className="mb-2 text-4xl font-bold">Pro</h3>
             <p className="mb-4 fs-15">5 days free trial</p>
             <ul className="p-0" style={{ listStyle: "none" }}>
               <li className="txt-white fs-15 mb-2">
@@ -215,7 +215,7 @@ const Pricing = () => {
             <h2 className="mb-3 fw-300">
               $499<span className="fs-18 txt-gray">/month</span>
             </h2>
-            <h3 className="mb-2 fw-300 ">Scale</h3>
+            <h3 className="text-4xl font-bold">Scale</h3>
             <p className="mb-4 txt-gray fs-15">5 days free trial</p>
             <ul className="p-0" style={{ listStyle: "none" }}>
               <li className="txt-gray fs-15 mb-2">
@@ -294,9 +294,9 @@ const Pricing = () => {
           className="flex flex-wrap  p-6"
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
         >
-          <div className="lg:w-5/6 pr-4 pl-4">
-            <h3 className="fw-600 mb-2">Enterprise</h3>
-            <p className="mb-2">
+          <div className="pr-4 pl-4 max-lg-7xl">
+            <h3 className="text-4xl font-bold ">Enterprise</h3>
+            <p className="mb-2 text-xl mt-4" style={{width:"80%"}}>
               For organizations requiring more, please don't hesitate to contact
               us, and we will be glad to assist you in addressing your specific
               needs.
@@ -323,7 +323,7 @@ const Pricing = () => {
       </div>
       <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 ptb-60">
         <div className="flex flex-wrap  items-center justify-center">
-          <h3 className="text-center txt-blue fs-30 fw-600">
+          <h3 className="text-center txt-blue mb-5 fs-30 fw-600" style={{width:"100%"}}>
             CALCULATE YOUR ROI
           </h3>
           <h4 className="text-center txt-blk mb-5 fs-30 fw-300">
@@ -390,8 +390,8 @@ const Pricing = () => {
                 <h5 className="my-3 ps-3 fs-18 fw-600">
                   ROI Calculator Result
                 </h5>
-                <ul className="flex flex-col pl-0 mb-0 border rounded border-gray-300  bg-blue">
-                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline bg-blue lh-2 flex items-center justify-between">
+                <ul className="flex flex-col pl-0 mb-0 rounded  bg-blue">
+                  <li className="relative block py-3 px-6 -mb-px bg-blue lh-2 flex items-center justify-between">
                     Conversations per month:
                     <span className="value float-end fs-20 fw-600" id="con-pm">
                       0
@@ -421,7 +421,7 @@ const Pricing = () => {
                       0
                     </span>
                   </li>
-                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline bg-blue lh-2 flex items-center justify-between">
+                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 bg-blue lh-2 flex items-center justify-between" style={{borderBottom:".2rem"}}>
                     Subscription Cost:
                     <span
                       className="value float-end fs-20 fw-600"
@@ -459,12 +459,12 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto sm:px-4 ptb-60">
+      <div className="container mx-auto sm:px-4 ptb-60 mb-12">
         <div
           className="flex flex-wrap   justify-center  "
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
         >
-          <div className="lg:w-1/2 pr-4 pl-4 p-12">
+          <div className="pr-4 pl-4 p-12">
             <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
               Still Not Sure?
             </h3>
@@ -484,7 +484,7 @@ const Pricing = () => {
           <div
             className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
             style={{
-              background: "url(../assets/img/still-not-sure.webp)",
+              background: "url(https://smartle-ai.s3.amazonaws.com/assets/img/still-not-sure.webp)",
               borderRadius: 10,
               backgroundSize: "cover",
             }}

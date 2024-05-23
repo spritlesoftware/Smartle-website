@@ -42,8 +42,8 @@ const Roi = () => {
               <input
                 type="number"
                 className="w-full input lh-22 ps-3"
-                required=""
                 id="visitors-pm"
+                required
               />
             </div>
             <div className="mb-4">
@@ -53,8 +53,8 @@ const Roi = () => {
               <input
                 type="number"
                 className="w-full input lh-22 ps-3"
-                required=""
                 id="order-pm"
+                required
               />
             </div>
             <div className="mb-4">
@@ -64,7 +64,7 @@ const Roi = () => {
               <input
                 type="number"
                 className="w-full lh-22 input ps-3"
-                required=""
+               required
                 id="aov"
               />
             </div>
