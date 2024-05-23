@@ -459,6 +459,8 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      
       <div className="container mx-auto sm:px-4 ptb-60 mb-12">
         <div
           className="flex flex-wrap   justify-center  "
