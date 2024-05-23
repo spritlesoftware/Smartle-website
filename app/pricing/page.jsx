@@ -5,7 +5,7 @@ const Pricing = () => {
         <div className="flex flex-wrap  justify-center">
           <div
             className="lg:w-full pr-4 pl-4 text-center ptb-120 bg-cover"
-            style={{ background: "url(../assets/img/pricing-banner.webp)" }}
+            style={{ background: "url(/images/pricing-banner.webp)" }}
           >
             <h1 className=" fs-48 txt-blk px-3">
               <span className="fw-600">Conversation to Conversion</span>:
