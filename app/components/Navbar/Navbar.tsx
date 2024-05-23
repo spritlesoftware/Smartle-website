@@ -6,6 +6,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import Contactusform from "./Contactus";
+import { idText } from "typescript";
 
 interface NavigationItem {
   name: string;
@@ -14,10 +15,10 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: "ROI Calculator", href: "#aboutus-section", current: false },
-  { name: "About us", href: "#services-section", current: false },
-  { name: "Pricing", href: "#faq-section", current: false },
-  { name: "Blogs", href: "#blog-section", current: false },
+  { name: "ROI Calculator", href: "/roi", current: false },
+  { name: "About us", href: "/aboutus", current: false },
+  { name: "Pricing", href: "/pricing", current: false },
+  { name: "Blogs", href: "https://www.smartle.ai/blog/", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -31,7 +32,7 @@ const Navbar = () => {
     <Disclosure as="nav" className="navbar">
       <>
         <div className="mx-auto max-w-7xl p-3 md:p-4 lg:px-8">
-          <div className="relative flex h-12 sm:h-20 items-center">
+          <div className="relative flex h-7 sm:h-20 items-center">
             <div className="flex flex-1 items-center sm:justify-between">
               {/* LOGO */}
 

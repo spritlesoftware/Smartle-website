@@ -40,9 +40,12 @@ const Data = () => {
                             </Link>
                         ))}
                         <div className="mt-4"></div>
+                        <a href="">
                         <button className="bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded">
-                            Contact Us
+                            Start for Free
                         </button>
+                        </a>
+                        
                         {/* <Contactusform /> */}
                     </div>
                 </div>

@@ -33,7 +33,7 @@ const Aboutdata: datatype[] = [
 const Aboutus = () => {
     return (
 
-        <div id="aboutus-section">
+        <div>
             <div className='mx-auto max-w-7xl px-4 py-24 my-32 lg:px-10 bg-lightgrey rounded-3xl relative'>
                 <Image src="/images/aboutus/dots.svg" width={100} height={100} alt="dots-image" className="absolute bottom-1 -left-20" />
                 <h3 className='text-center text-blue text-lg tracking-widest'>SMARTLE.AI</h3>
