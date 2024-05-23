@@ -1,7 +1,7 @@
 const Beliefs = () => {
   return (
     <div className="mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 rounded-3xl">
-      <div className="grid grid-cols-1 lg:grid-cols-2 bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-12 md:pb-12 rounded-3xl">
+      <div className="grid grid-cols-1 my-12 lg:grid-cols-2 bg-belief gradient-card dr-shadow pt-12 px-10 sm:px-24 pb-12 md:pb-12 rounded-3xl" style={{marginBottom:"-2.5rem"}}>
         <div>
           <h3
             style={{ fontSize: "2.5rem" }}

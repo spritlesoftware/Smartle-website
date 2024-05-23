@@ -25,7 +25,7 @@ export default function Home() {
       <Wework />
       <Ourteam />
       {/* <Featured /> */}
-      <Manage />
+      {/* <Manage /> */}
       {/* <FAQ /> */}
       <Testimonials />
       {/* <Articles /> */}

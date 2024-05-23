@@ -16,7 +16,7 @@ const Dedicated = () => {
           {/* COLUMN-1 */}
           <div>
             <Image
-              src="https://www.spritle.com/assets/img/index/nestley.svg"
+              src="/images/nestlee.png"
               alt="man-icon"
               width={416}
               height={530}
