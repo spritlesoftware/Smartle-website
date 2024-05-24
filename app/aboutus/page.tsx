@@ -1,6 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 
 interface datatype {
   heading: string;
@@ -106,7 +115,7 @@ const Aboutus = () => {
             </h6>
           </div>
         </div>
-        <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 bg-gray-100 ptb-60">
+        {/* <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 bg-gray-100 ptb-60">
           <div className="flex flex-wrap  items-center justify-center">
             <h3 className="text-center fs-40 fw-600 mb-5">
               Why customers win with Smartle?
@@ -267,7 +276,117 @@ const Aboutus = () => {
               </div>
             </div>
           </div>
+        </div> */}
+
+<div className="container mx-auto sm:px-4 max-w-full bg-gray-100 ptb-60">
+      <div className="flex flex-wrap items-center justify-center">
+        <h3 className="text-center fs-40 fw-600 mb-5">
+          Why customers win with Smartle?
+        </h3>
+        <div className="lg:w-5/6 pr-4 pl-4">
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
+            className="swiper"
+            id="owl-carousell"
+          >
+            <SwiperSlide>
+              <div className="bg-white p-6" style={{ width: 320, height: 350 }}>
+                <div className="text-center w-full fw-bolder text-gray-900 mt-4">
+                  <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
+                    Happier
+                    <br /> Shoppers
+                  </h3>
+                  <div className="flex justify-center">
+                    <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+                  </div>
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  Smartle AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="bg-white p-6" style={{ width: 320, height: 350 }}>
+                <div className="text-center w-full fw-bolder text-gray-900 mt-4">
+                  <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
+                    Effortless
+                    <br />
+                    Assistance
+                  </h3>
+                  <div className="flex justify-center">
+                    <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+                  </div>
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  Get instant answers and product recommendations, leading to faster purchases and fewer frustrated customers.
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="bg-white p-6" style={{ width: 320, height: 350 }}>
+                <div className="text-center w-full fw-bolder text-gray-900 mt-4">
+                  <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
+                    Personalized
+                    <br />
+                    Touch
+                  </h3>
+                  <div className="flex justify-center">
+                    <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+                  </div>
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  Smartle AI learns buyer preferences, offering relevant suggestions and boosting customer satisfaction.
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="bg-white p-6" style={{ width: 320, height: 350 }}>
+                <div className="text-center w-full fw-bolder text-gray-900 mt-4">
+                  <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>24/7 support</h3>
+                  <div className="flex justify-center">
+                    <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+                  </div>
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  With round-the-clock AI assistance that continues conversations even after business hours, you'll never miss a sale.
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="bg-white p-6" style={{ width: 320, height: 350 }}>
+                <div className="text-center w-full fw-bolder text-gray-900 mt-4">
+                  <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
+                    Data-Driven <br /> Insights
+                  </h3>
+                  <div className="flex justify-center">
+                    <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+                  </div>
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  Through Smartle AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
+                </p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
+      </div>
+    </div>
+
         <div className="container mx-auto sm:px-4 ptb-60">
           <div
             className="flex flex-wrap   justify-center  "
