@@ -1,5 +1,5 @@
 import Banner from './components/Banner/index';
-import Aboutus from './components/Aboutus/index';
+import Aboutus from './components/Cards/index';
 import Dedicated from './components/Dedicated/index';
 import Digital from './components/Digital/index';
 import Beliefs from './components/Beliefs/index';
@@ -12,13 +12,15 @@ import Testimonials from './components/Testimonials/index';
 import Articles from './components/Articles/index';
 import Joinus from './components/Joinus/index';
 import Insta from './components/Insta/index';
+import Cards from './components/Cards/index';
+import Contactsus from './contactsus/page';
 
 
 export default function Home() {
   return (
     <main>
       <Banner />
-      <Aboutus />
+      <Cards/>
       <Dedicated />
       <Digital />
       <Beliefs />

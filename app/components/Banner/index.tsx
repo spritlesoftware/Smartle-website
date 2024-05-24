@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "../magicui/animated-gradient-text";
 
 const Banner = () => {
   return (
@@ -6,21 +8,37 @@ const Banner = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 my-16">
         {/* COLUMN-1 */}
 
-        <div className="mx-auto sm:mx-0" style={{margin:"auto 0"}}>
-          {/* <div className="py-3 text-center lg:text-start">
+        <div className="mx-auto sm:mx-0" style={{ margin: "auto 0" }}>
+          <div className="py-3 text-center lg:text-start" >
             <button className="text-blue bg-lightblue hover:shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider hover:text-white hover:bg-black">
-              DESIGN AGENCY
+              Smartle.AI
             </button>
-          </div> */}
+            {/* <AnimatedGradientText>
+                <span
+                  className={cn(
+                    `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+                  )}
+                >
+                 Smartle.AI
+                </span>
+              </AnimatedGradientText> */}
+          </div>
           <div className="py-3 text-center lg:text-start">
-            <h1 className="text-5xl lg:text-70xl font-bold text-darkpurple" style={{lineHeight:"3.5rem"}}>
+            <h1
+              className="text-5xl lg:text-70xl font-bold text-darkpurple"
+              style={{ lineHeight: "3.5rem" }}
+            >
               Turn your window shoppers into paying customers with{" "}
               <span className="text-style-gradient">Smartle's Chat AI </span>
               Assistance
             </h1>
+           
           </div>
           <div className="my-7 text-center lg:text-start">
-            <button className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue" style={{backgroundColor:"#00356b"}}>
+            <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
               Try Smartle AI
             </button>
           </div>
@@ -29,7 +47,14 @@ const Banner = () => {
         {/* COLUMN-2 */}
 
         <div className="lg:-m-24 lg:pt-20 lg:block">
-          <Image src="/images/banner/banner.svg" alt="hero-image" width={800} height={442} style={{position:"absolute"}} className="lg:block hidden" />
+          <Image
+            src="/images/banner/banner.svg"
+            alt="hero-image"
+            width={800}
+            height={442}
+            style={{ position: "absolute" }}
+            className="lg:block hidden"
+          />
           <div className="scene" style={{ margin: "0 auto" }}>
             <div className="phone-con" style={{ width: 300 }}>
               <div className="phone" style={{ width: 300 }}>
@@ -82,15 +107,14 @@ const Banner = () => {
         </div>
       </div>
       <div className="lg:block hidden">
-      <div className="blur-box">
-         <div className="blur-box center-box">
-         <div className="bg-shape1 bg-blur"></div>
-         <div className="bg-shape2 bg-blur"></div>
-         <div className="bg-shape3 bg-blur"></div>
-         </div>
+        <div className="blur-box">
+          <div className="blur-box center-box">
+            <div className="bg-shape1 bg-blur"></div>
+            <div className="bg-shape2 bg-blur"></div>
+            <div className="bg-shape3 bg-blur"></div>
+          </div>
+        </div>
       </div>
-      
-</div>
     </div>
   );
 };

@@ -78,7 +78,13 @@ const Navbar = () => {
                 </div>
               </div>
               <a className="hidden lg:block">
-                <button onClick={()=>{"Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"}} className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded">
+                {/* <button onClick={()=>{"Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"}} className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded">
+                  Start for Free
+                </button> */}
+                <button
+                  className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3  md:py-3 md:px-7 rounded-full hover:bg-hoblue"
+                  style={{ backgroundColor: "#00356b" }}
+                >
                   Start for Free
                 </button>
               </a>
