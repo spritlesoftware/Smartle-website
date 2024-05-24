@@ -1,4 +1,5 @@
 import "./globals.css";
+import Head from 'next/head';
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
 
@@ -15,7 +16,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      
+
+        
+
+
+
+        <script
+          // you might need to get a newer version
+          src="https://kit.fontawesome.com/fbadad80a0.js"
+          crossOrigin="anonymous"
+        ></script>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           rel="stylesheet"

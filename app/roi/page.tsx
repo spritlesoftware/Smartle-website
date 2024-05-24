@@ -1,6 +1,6 @@
 'use client'; 
 
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 
 const Roi = () => {
     const [visitorsPM, setVisitorsPM] = useState('');
@@ -13,19 +13,6 @@ const Roi = () => {
         addUnlockSales: 0,
         monthlyROI: 0,
     });
-
-
-    useEffect(() => {
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.body.appendChild(script);
-
-      return () => {
-          document.body.removeChild(script);
-      };
-  }, []);
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
