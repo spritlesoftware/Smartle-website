@@ -117,114 +117,124 @@ const Aboutus = () => {
           </div>
         </div>
 
-        <div className="container mx-auto bg-light bg-gray-100 sm:px-4 max-w-full ptb-60">
-  <div className="flex flex-wrap items-center justify-center">
-    <h3 className="text-center fs-40 fw-600 mb-5">
-      Why customers win with Smartle?
-    </h3>
-    <div className="lg:w-5/6 pr-4 pl-4">
-      <Swiper
-        spaceBetween={2}
-        slidesPerView={1}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-        className="swiper"
-        id="owl-carousell"
-      >
-        <SwiperSlide>
-          <div className="bg-light p-6" style={{ width: "100%", maxWidth: 320, height: 350, background: 'white' }}>
-            <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-              <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
-                Happier
-                <br /> Shoppers
-              </h3>
-              <div className="flex justify-center">
-                <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+      
+
+
+<div className="container mx-auto bg-light bg-gray-100 sm:px-4 max-w-full pt-12 pb-12">
+      <div className="flex flex-wrap items-center justify-center">
+        <h3 className="text-center text-4xl font-semibold mb-8 w-full">
+          Why customers win with Smartle?
+        </h3>
+        <div className="w-full lg:w-5/6 pr-4 pl-4">
+          <Swiper
+            spaceBetween={2}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+            }}
+            className="swiper"
+            id="owl-carousell"
+          >
+           
+           
+            <SwiperSlide>
+              <div className="bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
+                <div className="text-center w-full font-semibold text-gray-900 mt-4">
+                  <h3 className="text-2xl mb-3">Happier  <br /> Shoppers</h3>
+                
+            
+                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                  Smartle AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
+                </p>
               </div>
-            </div>
-            <p className="text-center text-gray-900 py-3">
-              Smartle AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-white p-6" style={{ width: "100%", maxWidth: 320, height: 350 }}>
-            <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-              <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
-                Effortless
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
+                <div className="text-center w-full font-semibold text-gray-900 mt-4">
+                  <h3 className="text-2xl mb-3">
+                  Effortless
                 <br />
                 Assistance
-              </h3>
-              <div className="flex justify-center">
-                <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+
+                  </h3>
+                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                Get instant answers and product recommendations, leading to faster purchases and fewer frustrated customers.
+                </p>
               </div>
-            </div>
-            <p className="text-center text-gray-900 py-3">
-              Get instant answers and product recommendations, leading to faster purchases and fewer frustrated customers.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-white p-6" style={{ width: "100%", maxWidth: 320, height: 350 }}>
-            <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-              <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
-                Personalized
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
+                <div className="text-center w-full font-semibold text-gray-900 mt-4">
+                  <h3 className="text-2xl mb-3">
+                  Personalized
                 <br />
                 Touch
-              </h3>
-              <div className="flex justify-center">
-                <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+
+                  </h3>
+                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                Smartle AI learns buyer preferences, offering relevant suggestions and boosting customer satisfaction.
+                </p>
               </div>
-            </div>
-            <p className="text-center text-gray-900 py-3">
-              Smartle AI learns buyer preferences, offering relevant suggestions and boosting customer satisfaction.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-white p-6" style={{ width: "100%", maxWidth: 320, height: 350 }}>
-            <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-              <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>24/7 support</h3>
-              <div className="flex justify-center">
-                <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
+                <div className="text-center w-full font-semibold text-gray-900 mt-4">
+                  <h3 className="text-2xl mb-3">
+                  24/7 support
+                <br />
+                  </h3>
+                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                With round-the-clock AI assistance that continues conversations even after business hours, you'll never miss a sale.
+                </p>
               </div>
-            </div>
-            <p className="text-center text-gray-900 py-3">
-              With round-the-clock AI assistance that continues conversations even after business hours, you'll never miss a sale.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-white p-6" style={{ width: "100%", maxWidth: 320, height: 350 }}>
-            <div className="text-center w-full fw-bolder text-gray-900 mt-4">
-              <h3 className="fw-500 mb-3" style={{ fontSize: 32 }}>
-                Data-Driven <br /> Insights
-              </h3>
-              <div className="flex justify-center">
-                <hr style={{ width: '80%', backgroundColor: 'black', height: 2 }} />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
+                <div className="text-center w-full font-semibold text-gray-900 mt-4">
+                  <h3 className="text-2xl mb-3">
+                  Data-Driven 
+                <br />
+                Insights
+                  </h3>
+                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                </div>
+                <p className="text-center text-gray-900 py-3">
+                Through Smartle AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
+                </p>
               </div>
-            </div>
-            <p className="text-center text-gray-900 py-3">
-              Through Smartle AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
-            </p>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  </div>
+            </SwiperSlide>
+
+            
+           
+          </Swiper>
         </div>
+      </div>
+    </div>
+
+
 
 
         <div className="container mx-auto sm:px-4 ptb-60">
