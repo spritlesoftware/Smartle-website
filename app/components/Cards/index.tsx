@@ -6,6 +6,7 @@ interface datatype {
     imgSrc: string;
     paragraph: string;
     link: string;
+    bg:string
 }
 
 const Aboutdata: datatype[] = [
@@ -13,19 +14,22 @@ const Aboutdata: datatype[] = [
         heading: 83,
         imgSrc: "/images/aboutus/service.svg",
         paragraph: 'Increased in customer satisfaction ratings',
-        link: 'Learn more'
+        link: 'Learn more',
+        bg:"#AFD5F0"
     },
     {
         heading: 67,
         imgSrc: "/images/aboutus/package.svg",
         paragraph: 'Increase in Average order value',
-        link: 'Learn more'
+        link: 'Learn more',
+        bg:"#F8C8DC"
     },
     {
         heading: 79,
         imgSrc: "/images/aboutus/support.svg",
         paragraph: 'Reduction in customer support tickets',
-        link: 'Learn more'
+        link: 'Learn more',
+        bg:"#FEDD9E"
     },
 ]
 
@@ -40,13 +44,13 @@ const Cards = () => {
                 <p className="text-center text-xl mt-4">The concrete results our customers have attained</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-12 gap-x-16 lg:gap-x-32'>
                     {Aboutdata.map((item, i) => (
-                        <div key={i} className='bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group card'>
-                            <h4 className='text-4xl font-semibold  text-black mb-5 group-hover:text-white'>
+                        <div key={i} className='rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group card' style={{backgroundColor:item.bg}}>
+                            <h4 className='text-4xl font-semibold mb-5 number-text group-hover:text-black'>
                             <NumberTicker value={item.heading} />%
                             </h4>
                             
                             <Image src={item.imgSrc} alt={item.imgSrc} width={40} height={40} className="mb-5" />
-                            <h4 className='text-lg font-normal text-black group-hover:text-offwhite mb-5'>{item.paragraph}</h4>
+                            <h4 className='text-lg font-normal text-black mb-5'>{item.paragraph}</h4>
                             {/* <Link href="#" className='text-lg font-semibold group-hover:text-white text-blue hover-underline'>
                                 {item.link}
                                 <ChevronRightIcon width={20} height={20} />

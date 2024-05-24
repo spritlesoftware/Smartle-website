@@ -11,7 +11,7 @@ const Dedicated = () => {
         className="absolute left-0 hidden lg:block -z-10"
       />
 
-      <div className="mx-auto max-w-7xl px-4 my-24 sm:py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 my-12 sm:py-20 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 my-16">
           {/* COLUMN-1 */}
           <div style={{margin:"auto 0"}}>

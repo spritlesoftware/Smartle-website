@@ -32,6 +32,9 @@ const index = () => {
   return (
     <>
       {/* ANIMATED BDEAM STARTS */}
+      <h2 className="text-6xl text-center font-bold my-4 pt-24">
+        CRM Integrations
+      </h2>
       <div
         className="relative flex h-full w-full  items-center justify-center overflow-hidden rounded-lg  bg-background p-20 max-w-5xl "
         ref={containerRef}
@@ -100,7 +103,7 @@ const index = () => {
       </div>
       {/* ANIMATED BEAM ENDS */}
       <div className="mx-auto max-w-7xl px-8  sm:py-20 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 my-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 my-4">
           {/* COLUMN-1 */}
           <div style={{ margin: "auto 0" }}>
             <h2 className="text-5xl font-bold text-left">
