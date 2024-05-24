@@ -1,4 +1,4 @@
-const Contactsus = () => {
+const Contactus = () => {
   <>
     {/* <div className="container mx-auto sm:px-4  ptb-120">
       <div
@@ -228,4 +228,4 @@ const Contactsus = () => {
   </>;
 };
 
-export default Contactsus;
+export default Contactus;
