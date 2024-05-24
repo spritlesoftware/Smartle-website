@@ -237,7 +237,7 @@ const footer = () => {
               </a>
             </div>
             <div>
-              <a href="contactus">
+              <a href="contact-us">
                 <button className="bg-white rounded-2xl px-4 my-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline fw-bold">
                   Contact us
                 </button>
