@@ -1,4 +1,42 @@
+'use client'; 
+
+import React, { useEffect } from "react";
+
 const Pricing = () => {
+  useEffect(() => {
+    function btnClick(e) {
+      e.preventDefault();
+      const visitPM = document.getElementById("visitors-pm").value;
+      const orderPM = document.getElementById("order-pm").value;
+      const aOV = document.getElementById("aov").value;
+      console.log(visitPM, orderPM, aOV);
+
+      if (!visitPM || !orderPM || !aOV) {
+        console.log("error");
+      } else {
+        var conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
+        var potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
+        var potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
+        var addUnlockSales = parseFloat(
+          (potentialAdditionalSales * potentialAOV).toFixed(0)
+        );
+        var monthlyROI = parseFloat(
+          (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+        );
+        document.getElementById("con-pm").textContent = conversationsPerMonth;
+        document.getElementById("addSales").textContent =
+          potentialAdditionalSales;
+        document.getElementById("potAV").textContent = "$ " + potentialAOV;
+        document.getElementById("addSalesFromSpritle").textContent =
+          "$ " + addUnlockSales;
+        document.getElementById("subsCost").textContent = "$ 15";
+        document.getElementById("mon-ROI").textContent = monthlyROI + " %";
+        document.getElementById("ROI").classList.remove("hidden");
+      }
+    }
+    document.getElementById("myButton").addEventListener("click", btnClick);
+  }, []);
+
   return (
     <>
       <div className="container mx-auto sm:px-4 ptb-120">
