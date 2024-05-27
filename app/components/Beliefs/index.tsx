@@ -36,7 +36,7 @@ const Beliefs = () => {
           <span className="text-blue"> AI chat </span> Pro-Actively engage
           visitors
         </h3>
-        <h5 className="bluish pt-2 mb-5 text-center sm:text-start">
+        <h5 className="bluish pt-2 mb-5 text-center sm:text-start text-xl">
           Our Proactive Chat engages visitors differently depending on their
           behaviour in your store.
         </h5>
@@ -76,7 +76,7 @@ const Beliefs = () => {
             Be their Friend{" "}
             <span className="text-grey"> , not a textbook.</span>
           </h3>
-          <h5 className="text-offwhite pt-2 mb-5 text-center sm:text-start">
+          <h5 className="text-offwhite pt-2 mb-5 text-center sm:text-start text-xl">
             No matter where or how they speak, Smartle AI adapts to your
             business, breaking the language barrier with its conversational AI
           </h5>
@@ -119,7 +119,7 @@ const Beliefs = () => {
             <span className="text-blue">Train</span> your AI assistance to suit
             your needs
           </h3>
-          <h5 className="bluish pt-2 mb-5 text-center sm:text-start">
+          <h5 className="bluish pt-2 mb-5 text-center sm:text-start text-xl">
             Every chat is an opportunity for Smartle AI to learn something new
             and with each response, it gets better at understanding what you
             need. The longer you use Smartle AI, the better it becomes at
