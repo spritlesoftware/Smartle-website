@@ -129,6 +129,14 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: unset;
+  background-color: "#ff964f";
+}
+.bg-build1 {
+  background-image: url('/images/beliefs/bg1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: unset;
+  background-color: "#ff964f";
 }
 
 .girldoodle {
@@ -552,6 +560,7 @@ body {
   filter: drop-shadow(0 0.1em 0.25em rgba(0, 0, 0, 0.1));
 }
 
+
 .notch-container {
   position: absolute;
   z-index: 3;
@@ -561,50 +570,45 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
-  max-height: calc(var(--notch-radius) * 3); /* Increased max-height for normal state */
+  max-height: calc(var(--notch-radius) * 2);
   pointer-events: none;
   outline: none;
-  --shadow-opacity: 0.5; /* Move shadow opacity to normal state */
-  --bar-height: 1em; /* Move bar height to normal state */
-  --bar-opacity: 1; /* Move bar opacity to normal state */
-  transition: none; /* Remove transition */
+  transition: var(--notch-duration) var(--ease);
+  transition-property: max-height, max-width, filter, transform;
+  will-change: max-width, max-height, filter;
 }
-
 .is-resizing .notch-container, .is-resizing .notch-container * {
   transition: none;
 }
-
-.notch-container .content {
-  --content-padding: 2.2em; /* Move content padding to normal state */
+.notch-container:hover, .notch-container:focus-within {
+  --shadow-opacity: 0.5;
+  transition-timing-function: var(--ease-spring);
 }
-
-.notch-container .content .text {
-  opacity: 1; /* Move text opacity to normal state */
+.notch-container:hover .content, .notch-container:focus-within .content {
+  --content-padding: 2em;
 }
-
-.notch-container .notch {
-  max-width: 100%; /* Move notch dimensions to normal state */
-  max-height: 100%; /* Move notch dimensions to normal state */
-  pointer-events: all; /* Make notch interactive in normal state */
-  transform: scale3d(1, 1, 1); /* Move notch transform to normal state */
+.notch-container:hover .content .text, .notch-container:focus-within .content .text {
+  opacity: 1;
 }
-
-.notch-container ~ .notch-blur {
-  opacity: 1; /* Move notch-blur opacity to normal state */
-  max-height: calc(var(--notch-radius) * 3.333 + var(--pad)); /* Increased max-height for notch-blur in normal state */
+.notch-container:hover .notch, .notch-container:focus-within .notch {
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: all;
+  transform: scale3d(1, 1, 1);
 }
-
+.notch-container:hover ~ .notch-blur, .notch-container:focus-within ~ .notch-blur {
+  opacity: 1;
+  max-height: calc(var(--notch-radius) * 3.333 + var(--pad));
+}
 .notch-container:focus-within {
   max-height: calc(var(--notch-radius) * 3);
   --bar-height: 1em;
   --bar-opacity: 1;
 }
-
 .notch-container:focus-within .left,
 .notch-container:focus-within .right {
   max-height: calc(100% - var(--bar-height, 0%) - var(--content-gap));
 }
-
 .notch-container:focus-within ~ .notch-blur {
   max-height: calc(var(--notch-radius) * 5);
   opacity: 1;
@@ -622,9 +626,11 @@ body {
           backdrop-filter: blur(0.2em);
   -webkit-mask-image: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 1) 60%, hsla(0deg, 0%, 0%, 0.738) 67.6%, hsla(0deg, 0%, 0%, 0.541) 73.6%, hsla(0deg, 0%, 0%, 0.382) 78.8%, hsla(0deg, 0%, 0%, 0.278) 82.6%, hsla(0deg, 0%, 0%, 0.194) 86%, hsla(0deg, 0%, 0%, 0.126) 89.2%, hsla(0deg, 0%, 0%, 0.075) 92.08%, hsla(0deg, 0%, 0%, 0.042) 94.44%, hsla(0deg, 0%, 0%, 0.021) 96.4%, hsla(0deg, 0%, 0%, 0.008) 98.08%, hsla(0deg, 0%, 0%, 0.002) 99.28%, hsla(0deg, 0%, 0%, 0) 100%);
           mask-image: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 1) 60%, hsla(0deg, 0%, 0%, 0.738) 67.6%, hsla(0deg, 0%, 0%, 0.541) 73.6%, hsla(0deg, 0%, 0%, 0.382) 78.8%, hsla(0deg, 0%, 0%, 0.278) 82.6%, hsla(0deg, 0%, 0%, 0.194) 86%, hsla(0deg, 0%, 0%, 0.126) 89.2%, hsla(0deg, 0%, 0%, 0.075) 92.08%, hsla(0deg, 0%, 0%, 0.042) 94.44%, hsla(0deg, 0%, 0%, 0.021) 96.4%, hsla(0deg, 0%, 0%, 0.008) 98.08%, hsla(0deg, 0%, 0%, 0.002) 99.28%, hsla(0deg, 0%, 0%, 0) 100%);
-  opacity: 1; /* Move opacity to normal state */
+  opacity: 0;
   border-radius: calc(var(--border-radius) - var(--pad));
-  transition: none; /* Remove transition */
+  transition: var(--notch-duration) var(--ease);
+  transition-property: max-height, max-width, opacity, transform;
+  will-change: max-width, max-height;
 }
 
 .notch {
@@ -632,21 +638,29 @@ body {
   border-radius: var(--notch-radius);
   pointer-events: all;
   overflow: hidden;
-  color: rgb(234, 234, 234);
+  color: white;
   display: flex;
   cursor: pointer;
-  width: 95%;
-  transition: none; /* Remove transition */
+  width: 100%;
+  transition: inherit;
+  transition-property: inherit;
+  will-change: inherit;
   filter: drop-shadow(0 1em 2em hsla(0 0% 0%/var(--shadow-opacity, 0)));
-  transform: scale3d(1, 1, 1); /* Move transform to normal state */
+  transform: scale3d(0.375, 0.4, 1);
   transform-origin: top;
-  background-color: rgba(0, 0, 0, 0.95);
-  height: 3rem;
-  margin-top: .3rem;
+  height: 3.3rem;
+}
+.notch:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1'><defs><filter id='round'><feGaussianBlur in='SourceGraphic' stdDeviation='5' result='blur' /><feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9' result='goo'/><feComposite in='SourceGraphic' in2='goo' operator='atop'/></filter></defs></svg>#round");
+  border-radius: inherit;
 }
 
 .content {
-  --content-padding: 2.3em; /* Move content padding to normal state */
+  --content-padding: 1.75em;
   --duration-height: 0.5em;
   --content-gap: 1em;
   width: 100%;
@@ -654,13 +668,13 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: stretch;
-  /* padding: var(--content-padding); */
+  padding: var(--content-padding);
   gap: var(--content-gap);
   font-size: 125%;
-  transition: none; /* Remove transition */
+  transition-property: padding;
+  will-change: padding;
   position: relative;
 }
-
 .content .left,
 .content .right {
   height: 100%;
@@ -669,65 +683,54 @@ body {
   align-items: center;
   gap: 1em;
 }
-
 .content, .content .left, .content .right, .content .bar, .content .text {
-  transition: none; /* Remove transition */
+  transition: var(--notch-duration) var(--ease-out);
 }
-
+.content .left, .content .right, .content .bar {
+  transition-property: max-height, opacity;
+  will-change: max-height;
+}
 .content .left {
   flex-grow: 2;
 }
-
 .content .text {
   display: flex;
   flex-direction: column;
   gap: 0.333em;
-  opacity: 1; /* Move opacity to normal state */
+  transition-property: opacity;
+  opacity: var(--bar-opacity, 0);
 }
-
 .content .text:before {
   content: "Smartle.AI";
   order: 1;
   text-transform: uppercase;
   font-family: inherit;
-  font-size: .74rem;
-  /* padding-top: .6rem; */
 }
-
 .content .text:after {
   order: 2;
   content: "Feels Human";
-  opacity: 0.5;
+  opacity: 0.8;
   font-family: inherit;
-  font-size: .5rem;
 }
-
 .content .right {
-  /* flex-grow: 1; */
+  flex-grow: 1;
 }
-
 .content .tile {
-  /* background: #1a1ab3; */
+  background: #1a1ab3;
   height: 100%;
   aspect-ratio: 1;
   border-radius: 33.3%;
-  /* position: relative; */
-  margin-bottom: 25px;
+  position: relative;
 }
-
 .content .tile:before {
   content: "";
-  /* position: absolute; */
+  position: absolute;
   inset: 0;
   border-radius: 50%;
-  /* background: radial-gradient(50% 50% at 55% 40%, #131386, #cd1385 75%, transparent) center/133.3% 133.3%;
-  background-color: yellow; */
+  background: radial-gradient(50% 50% at 55% 40%, #131386, #cd1385 75%, transparent) center/133.3% 133.3%;
+  background-color: yellow;
   filter: blur(0.05em);
-  /* margin-bottom: .2rem; */
- 
 }
-
-
 
 
 .screen {
@@ -1341,4 +1344,11 @@ input[type="number"] {
 
 .btn-rounded {
   border-radius: 25px;
+}
+
+.text-blue{
+  color: #00356b;
+}
+.number-text:hover{
+  color: white;
 }

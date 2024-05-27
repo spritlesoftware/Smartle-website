@@ -59,7 +59,33 @@ module.exports = {
       '65xl': ['65px', { lineHeight: '1' }],
       '80xl': ['80px', { lineHeight: '6rem' }],
     },
-    extend: {},
+    extend: {
+      animation: {
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
+        },
+      },
+      animation: {
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      },
+      keyframes: {
+        orbit: {
+            "0%": {
+                transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+            },
+            "100%": {
+                transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+            },
+        },
+      },
   },
   plugins: [],
+}
+
+
 }
