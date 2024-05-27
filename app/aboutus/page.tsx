@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -41,21 +41,6 @@ const Aboutdata: datatype[] = [
 ];
 
 const Aboutus = () => {
-  const [calendlyLoaded, setCalendlyLoaded] = useState(false);
-
-  useEffect(() => {
-    // Load Calendly script on client side
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    script.onload = () => setCalendlyLoaded(true);
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up script on component unmount
-      document.body.removeChild(script);
-    };
-  }, []);
   return (
     <div>
       <>
@@ -72,17 +57,12 @@ const Aboutus = () => {
                   How Smartle AI is Making Your Store Smarter
                 </span>
               </h1>
-              <div className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3">
-      {calendlyLoaded && (
-        <button onClick={() => {
-          if (window.Calendly) {
-            window.Calendly.initPopupWidget({ url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03' });
-          }
-        }}>
-          Try Smartle AI For FREE
-        </button>
-      )}
-    </div>
+              <button
+                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
+              >
+                Try Smartle AI For FREE
+              </button>
               {/* <button class="bg-blue mb-4 mt-3 lg:mb-0 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-w">Try Smartle AI For FREE</button> */}
             </div>
           </div>
