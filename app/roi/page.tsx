@@ -63,11 +63,11 @@ const Roi = () => {
       </div>
       <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 ptb-60">
         <div className="flex flex-wrap items-center justify-center">
-          <h3 className="text-center txt-blue fs-30 fw-600">
+          <h3 className="text-center txt-blue mb-5 fs-30 fw-600">
             CALCULATE YOUR ROI
           </h3>
           <h4 className="text-center txt-blk mb-5 fs-30 fw-300">
-            Maximize your potential with Smartle AI
+              Maximize your potential with Smartle AI
           </h4>
           <div
             className="lg:w-3/4 pr-4 pl-4 bg-white lg:flex justify-center"
@@ -124,8 +124,8 @@ const Roi = () => {
                                         Calculate
                                     </button> */}
                   <button
-                    className="text-sm  max-w-full md:text-xl font-semibold hover:shadow-xl text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
-                    style={{ backgroundColor: "#00356b" }}
+                    className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-4 md:px-14 rounded-full hover:bg-hoblue"
+                    style={{ backgroundColor: "#00356b", width: "100%" }}
                     id="myButton"
                   >
                     Calculate
@@ -144,8 +144,8 @@ const Roi = () => {
                 <h5 className="my-3 ps-3 fs-18 fw-600">
                   ROI Calculator Result
                 </h5>
-                <ul className="flex flex-col pl-0 mb-0 border rounded border-gray-300 bg-blue">
-                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline bg-blue lh-2 flex items-center justify-between">
+                <ul className="flex flex-col pl-0 mb-0 rounded  bg-blue">
+                  <li className="relative block py-3 px-6 -mb-px bg-blue lh-2 flex items-center justify-between">
                     Conversations per month:
                     <span className="value float-end fs-20 fw-600" id="con-pm">
                       {results.conversationsPerMonth}
@@ -169,13 +169,13 @@ const Roi = () => {
                   <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline bg-blue lh-2 flex items-center justify-between">
                     Additional unlock sales from SmartleAI:
                     <span
-                      className="value float-end fs-20 fw-600"
+                      className="value float-end fs-20 fw-600 "
                       id="addSalesFromSpritle"
                     >
                       $ {results.addUnlockSales}
                     </span>
                   </li>
-                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 no-underline bg-blue lh-2 flex items-center justify-between">
+                  <li className="relative block py-3 px-6 -mb-px border border-r-0 border-l-0 border-gray-300 bg-blue lh-2 flex items-center justify-between" style={{borderBottom:".2rem"}}>
                     Subscription Cost:
                     <span
                       className="value float-end fs-20 fw-600"
@@ -203,9 +203,9 @@ const Roi = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center items-center mt-5">
+        <div className="flex flex-wrap justify-center items-center mt-5 py-3">
           <div className="lg:w-1/3 pr-4 pl-4 text-center">
-            <button
+            {/* <button
               className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
               style={{ width: "90%" }}
               onClick={() =>
@@ -213,6 +213,12 @@ const Roi = () => {
                   url: "https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03",
                 })
               }
+            >
+              Unlock Additional Sales Now
+            </button> */}
+            <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-4 md:px-14 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b", width: "100%" }}
             >
               Unlock Additional Sales Now
             </button>
@@ -232,14 +238,20 @@ const Roi = () => {
               Let us show you a quick DEMO tailored to your store. You’ll be
               impressed.
             </p>
-            <div className="flex justify-center">
-              <button
+            <div className="flex justify-center py-3">
+              {/* <button
                 className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
                 onClick={() =>
                   Calendly.initPopupWidget({
                     url: "https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03",
                   })
                 }
+              >
+                Schedule Demo
+              </button> */}
+              <button
+                className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-4 md:px-14 rounded-full hover:bg-hoblue"
+                style={{ backgroundColor: "#00356b" }}
               >
                 Schedule Demo
               </button>
