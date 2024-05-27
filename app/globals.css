@@ -129,6 +129,14 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: unset;
+  background-color: "#ff964f";
+}
+.bg-build1 {
+  background-image: url('/images/beliefs/bg1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: unset;
+  background-color: "#ff964f";
 }
 
 .girldoodle {

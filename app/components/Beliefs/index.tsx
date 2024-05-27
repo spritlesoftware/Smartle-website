@@ -26,8 +26,8 @@ const Beliefs = () => {
         </div>
       </div> */}
       <div
-        className="bg-build pt-12 px-10 sm:px-24 pb-24 md:pb-70 rounded-3xl"
-        style={{marginBottom:"-2rem"}}
+        className="bg-build1 pt-12 px-10 sm:px-24 pb-24 md:pb-70 rounded-3xl"
+        style={{marginBottom:"-2rem" , backgroundColor:"#f5e2e4"}}
       >
         <h2 className="text-lg font-normal text-blue tracking-widest mb-5 text-center sm:text-start">
           ENGAGE VISITORS
