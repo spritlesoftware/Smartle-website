@@ -46,7 +46,7 @@ const footer = () => {
 
     {/* COLUMN-2/3 */}
     {products.map((product) => (
-      <div key={product.id} className="group relative col-span-2 flex flex-col items-center sm:items-center" style={{ marginLeft: "3.5rem" }}>
+      <div key={product.id} className="group relative col-span-2 flex flex-col items-center sm:items-center" style={{ marginLeft: "3.9rem" }}>
         <p className="text-white text-xl font-extrabold mb-9">
           {product.section}
         </p>
