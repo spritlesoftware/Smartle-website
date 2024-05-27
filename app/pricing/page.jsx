@@ -113,12 +113,18 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
+              {/* <button
                 className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Start FREE Trail
-              </button>
+              </button> */}
+               <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
+              Start FREE Trail
+            </button>
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
@@ -172,12 +178,18 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
+              {/* <button
                 className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Start FREE Trail
-              </button>
+              </button> */}
+              <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
+              Start FREE Trail
+            </button>
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
@@ -240,13 +252,19 @@ const Pricing = () => {
               </li>
             </ul>
             <div className="text-center">
-              <button
+              {/* <button
                 type="button"
                 className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded txt-blue but-white mt-3"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Start FREE Trial
-              </button>
+              </button> */}
+              <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#ffff", color:"#00356b" }}
+            >
+              Start FREE Trail
+            </button>
             </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0 ps-4">
@@ -311,12 +329,18 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
+              {/* <button
                 className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Start FREE Trail
-              </button>
+              </button> */}
+              <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
+              Start FREE Trail
+            </button>
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
@@ -340,14 +364,20 @@ const Pricing = () => {
               needs.
             </p>
             <div className="flex justify-center">
-              <button
+              {/* <button
                 className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-w btn-rounded mt-3 justify-center items-center"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 {" "}
                 Schedule a Call
                 <i className="fa-solid fa-arrow-right float-end ps-4 mt-1" />
-              </button>
+              </button> */}
+              <button
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
+              Start FREE Trail
+            </button>
             </div>
             {/* <button
       type="button"
@@ -408,12 +438,19 @@ const Pricing = () => {
                   />
                 </div>
                 <div className="mt-5">
-                  <button
+                  {/* <button
                     className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded w-full mt-2"
                     id="myButton"
                   >
                     Calculate
-                  </button>
+                  </button> */}
+                  <button
+                  id="myButton"
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" , width:"100%" }}
+            >
+              Calculate
+            </button>
                 </div>
               </form>
             </div>
@@ -487,12 +524,19 @@ const Pricing = () => {
         </div>
         <div className="flex flex-wrap  justify-center items-center mt-5">
           <div className="lg:w-1/3 pr-4 pl-4 text-center">
-            <button
+            {/* <button
               className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
               style={{ width: "90%" }}
               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
             >
               Unlock Additional Sales Now
+            </button> */}
+             <button
+                  id="myButton"
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" , width:"100%" }}
+            >
+               Unlock Additional Sales Now
             </button>
           </div>
         </div>
@@ -512,13 +556,21 @@ const Pricing = () => {
               Let us show you a quick DEMO tailored to your store. You’ll be
               impressed.
             </p>
-            <div className="flex justify-center">
-              <button
+            <div className="flex justify-center my-3">
+              {/* <button
                 className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
                 onClick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Schedule Demo
-              </button>
+              </button> */}
+              <button
+                  id="myButton"
+              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" }}
+            >
+               Schedule Demo
+            </button>
+              
             </div>
           </div>
           <div
