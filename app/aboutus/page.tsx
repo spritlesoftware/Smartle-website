@@ -43,6 +43,8 @@ const Aboutdata: datatype[] = [
 const Aboutus = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const [showsCalendly, setShowsCalendly] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
 
    const handleButtonClicks = () => {
     setShowsCalendly(true);
@@ -55,14 +57,18 @@ const Aboutus = () => {
 
   const handleButtonClick = () => {
     setShowCalendly(true);
+    setOverlayVisible(!overlayVisible);
   };
   
-
+  
   
   return (
     <div>
+     
       <>
+      
         <div className="container mx-auto sm:px-4  ptb-120">
+        {overlayVisible && <div className="overlay"></div>}
           <div
             className="flex flex-wrap  justify-center ptb-120 bg-cover items-center"
             style={{ background: "url(/images/roi-banner-webp)" }}
