@@ -14,6 +14,9 @@ const Pricing = () => {
   const handleClicks = () => {
     setShowWidget(true);
   };
+  const handleClose = () => {
+    setIsVisible(false);
+  };
 
   const handleTrialButtonClick = () => {
     setIsVisibleTrial(true);
@@ -149,21 +152,26 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-            <button
+      <button
         className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-        onClick={handleClick}
+        onClick={handleButtonClick}
       >
         Start FREE Trial
       </button>
-      {isVisible && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-    
-              {/* <button
-        type="button"
-        class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
-      >
-        Start FREE Trail
-      </button> */}
-            </div>
+      {showCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0">
             <h2 className="mb-3 fw-300">
@@ -210,20 +218,26 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-            <button
+      <button
         className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-        onClick={handlesClick}
+        onClick={handleButtonClick}
       >
-        Start FREE Trail
+        Start FREE Trial
       </button>
-      {isVisibleCal && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-              {/* <button
-        type="button"
-        class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
-      >
-        Start FREE Trail
-      </button> */}
-            </div>
+      {showCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 bg-blue p-6 br-14 box-shadow mb-4 lg:mb-0">
             <div className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-2 px-4 bg-white fs-15 fw-100 text-blue float-end mb-3">
@@ -279,15 +293,26 @@ const Pricing = () => {
               </li>
             </ul>
             <div className="text-center">
-            <button
-        type="button"
-        className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded txt-blue but-white mt-3"
-        onClick={handleTrialButtonClick}
+      <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
+        onClick={handleButtonClick}
       >
         Start FREE Trial
       </button>
-      {isVisibleTrial && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-            </div>
+      {showCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0 ps-4">
             <h2 className="mb-3 fw-300">
@@ -351,20 +376,26 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-            <button
+      <button
         className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-        onClick={handleClicks}
+        onClick={handleButtonClick}
       >
-        Start FREE Trail
+        Start FREE Trial
       </button>
-      {showWidget && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-              {/* <button
-        type="button"
-        class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
-      >
-        Start FREE Trail
-      </button> */}
-            </div>
+      {showCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
           </div>
         </div>
       </div>
@@ -381,15 +412,27 @@ const Pricing = () => {
               needs.
             </p>
             <div className="flex justify-center">
-            <button
+      <button
         className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-w btn-rounded mt-3 justify-center items-center"
         onClick={handlesButtonClick}
       >
         Schedule a Call
         <i className="fa-solid fa-arrow-right float-end ps-4 mt-1" />
       </button>
-      {isCalendlyVisible && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-            </div>
+      {isCalendlyVisible && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setCalendlyVisibility(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setCalendlyVisibility(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
             {/* <button
       type="button"
       class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-blue mt-3 btn-w flex justify-center items-center"
@@ -527,8 +570,7 @@ const Pricing = () => {
           </div>
         </div>
         <div className="flex flex-wrap  justify-center items-center mt-5">
-          <div className="lg:w-1/3 pr-4 pl-4 text-center">
-            
+        <div className="lg:w-1/3 pr-4 pl-4 text-center">
       <button
         className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
         style={{ width: "90%" }}
@@ -536,8 +578,20 @@ const Pricing = () => {
       >
         Unlock Additional Sales Now
       </button>
-      {showCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
+      {showCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
           </div>
+        </div>
+      )}
+    </div>
         </div>
       </div>
 
@@ -556,14 +610,26 @@ const Pricing = () => {
               impressed.
             </p>
             <div className="flex justify-center">
-            <button
+      <button
         className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
         onClick={handleButtonClicks}
       >
         Schedule Demo
       </button>
-      {showsCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-            </div>
+      {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowsCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowsCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
           </div>
           <div
             className="lg:w-1/2 pr-4 pl-4 hidden lg:block"

@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 const Roi = () => {
     const [showCalendly, setShowCalendly] = useState(false);
     const [showsCalendly, setShowsCalendly] = useState(false);
-
+    const [overlayVisible, setOverlayVisible] = useState(false);
  
     const [visitorsPM, setVisitorsPM] = useState('');
     const [ordersPM, setOrdersPM] = useState('');
@@ -19,9 +19,11 @@ const Roi = () => {
     });
 
     const handleButtonClick = () => {
+        setOverlayVisible(!overlayVisible);
         setShowCalendly(true);
       };
     const handleButtonClicks = () => {
+        setOverlayVisible(!overlayVisible);
         setShowsCalendly(true);
       };
 
@@ -52,6 +54,7 @@ const Roi = () => {
     return (
         <div>
             <div className="container mx-auto sm:px-4 ptb-120">
+            {overlayVisible && <div className="overlay"></div>}
                 <div
                     className="flex flex-wrap justify-center ptb-120 bg-cover items-center"
                     style={{
@@ -202,7 +205,7 @@ const Roi = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
           <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl" // Increased font size to make the X button larger
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
               onClick={() => setShowCalendly(false)}
             >
               &#10005; {/* X button */}
@@ -215,6 +218,7 @@ const Roi = () => {
                 </div>
             </div>
             <div className="container mx-auto sm:px-4 ptb-60">
+            {overlayVisible && <div className="overlay"></div>}
                 <div
                     className="flex flex-wrap justify-center"
                     style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
@@ -228,14 +232,26 @@ const Roi = () => {
                             impressed.
                         </p>
                         <div className="flex justify-center">
-                        <button
+      <button
         className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
         onClick={handleButtonClicks}
       >
         Schedule Demo
       </button>
-      {showsCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-                        </div>
+      {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowsCalendly(false)}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+              onClick={() => setShowsCalendly(false)}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
                     </div>
                     <div
                         className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
