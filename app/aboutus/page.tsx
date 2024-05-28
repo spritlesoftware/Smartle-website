@@ -44,11 +44,21 @@ const Aboutus = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const [showsCalendly, setShowsCalendly] = useState(false);
 
+  
+
   const handleButtonClick = () => {
     setShowCalendly(true);
   };
   const handleButtonClicks = () => {
     setShowsCalendly(true);
+    // Disable scrolling on the body when the modal is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseModal = () => {
+    setShowsCalendly(false);
+    // Enable scrolling on the body when the modal is closed
+    document.body.style.overflow = 'auto';
   };
   return (
     <div>
@@ -266,15 +276,28 @@ const Aboutus = () => {
                 Let us show you a quick DEMO tailored to your store. You’ll be
                 impressed.
               </p>
-              <div className="flex justify-center">
-              <button
-        className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
+              <div className="flex items-center justify-center h-screen">
+      <button
+        className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
         onClick={handleButtonClicks}
       >
         Schedule Demo
       </button>
-      {showsCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
-              </div>
+
+      {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
+          <div className="relative bg-white rounded-lg shadow-lg p-8 w-11/12 max-w-4xl">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              onClick={handleCloseModal}
+            >
+              &#10005; {/* X button */}
+            </button>
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+    </div>
             </div>
             <div
               className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
