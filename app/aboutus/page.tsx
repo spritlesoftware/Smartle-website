@@ -4,13 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-
+import { InlineWidget } from 'react-calendly';
 
 interface datatype {
   heading: string;
@@ -41,6 +41,15 @@ const Aboutdata: datatype[] = [
 ];
 
 const Aboutus = () => {
+  const [showCalendly, setShowCalendly] = useState(false);
+  const [showsCalendly, setShowsCalendly] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowCalendly(true);
+  };
+  const handleButtonClicks = () => {
+    setShowsCalendly(true);
+  };
   return (
     <div>
       <>
@@ -57,12 +66,19 @@ const Aboutus = () => {
                   How Smartle AI is Making Your Store Smarter
                 </span>
               </h1>
-              <button
+              {/* <button
                 className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
               >
                 Try Smartle AI For FREE
-              </button>
+              </button> */}
+              <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
+        onClick={handleButtonClick}
+      >
+        Try Smartle AI For FREE
+      </button>
+      {showCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
               {/* <button class="bg-blue mb-4 mt-3 lg:mb-0 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-w">Try Smartle AI For FREE</button> */}
             </div>
           </div>
@@ -251,12 +267,13 @@ const Aboutus = () => {
                 impressed.
               </p>
               <div className="flex justify-center">
-                <button
-                  className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
-                  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
-                >
-                  Schedule Demo
-                </button>
+              <button
+        className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
+        onClick={handleButtonClicks}
+      >
+        Schedule Demo
+      </button>
+      {showsCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
               </div>
             </div>
             <div
