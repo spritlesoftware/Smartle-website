@@ -4,19 +4,40 @@ import React, {useState, useEffect } from "react";
 import { InlineWidget } from "react-calendly";
 const Pricing = () => {
   const [showCalendly, setShowCalendly] = useState(false);
+  const [showsCalendly, setShowsCalendly] = useState(false);
+  const [isCalendlyVisible, setCalendlyVisibility] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isVisibleCal, setIsVisibleCal] = useState(false);
+  const [isVisibleTrial, setIsVisibleTrial] = useState(false);
+  const [showWidget, setShowWidget] = useState(false);
 
+  const handleClicks = () => {
+    setShowWidget(true);
+  };
+
+  const handleTrialButtonClick = () => {
+    setIsVisibleTrial(true);
+  };
+
+  const handlesClick = () => {
+    setIsVisibleCal(true);
+  };
+
+  
   const handleButtonClick = () => {
     setShowCalendly(true);
   };
-  const [showsCalendly, setShowsCalendly] = useState(false);
-
+  
   const handleButtonClicks = () => {
     setShowCalendly(true);
   };
-  const [isCalendlyVisible, setCalendlyVisibility] = useState(false);
-
+  
   const handlesButtonClick = () => {
     setCalendlyVisibility(true);
+  };
+
+    const handleClick = () => {
+    setIsVisible(true);
   };
   useEffect(() => {
     function btnClick(e) {
@@ -128,12 +149,14 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
-              >
-                Start FREE Trail
-              </button>
+            <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
+        onClick={handleClick}
+      >
+        Start FREE Trial
+      </button>
+      {isVisible && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
+    
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
@@ -187,12 +210,13 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
-              >
-                Start FREE Trail
-              </button>
+            <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
+        onClick={handlesClick}
+      >
+        Start FREE Trail
+      </button>
+      {isVisibleCal && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
@@ -255,13 +279,14 @@ const Pricing = () => {
               </li>
             </ul>
             <div className="text-center">
-              <button
-                type="button"
-                className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded txt-blue but-white mt-3"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
-              >
-                Start FREE Trial
-              </button>
+            <button
+        type="button"
+        className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded txt-blue but-white mt-3"
+        onClick={handleTrialButtonClick}
+      >
+        Start FREE Trial
+      </button>
+      {isVisibleTrial && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
             </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0 ps-4">
@@ -326,12 +351,13 @@ const Pricing = () => {
       </li> */}
             </ul>
             <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"
-              >
-                Start FREE Trail
-              </button>
+            <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
+        onClick={handleClicks}
+      >
+        Start FREE Trail
+      </button>
+      {showWidget && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
               {/* <button
         type="button"
         class="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline  btn-dark-rounded bg-blue mt-3"
