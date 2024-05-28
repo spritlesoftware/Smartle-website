@@ -44,22 +44,21 @@ const Aboutus = () => {
   const [showCalendly, setShowCalendly] = useState(false);
   const [showsCalendly, setShowsCalendly] = useState(false);
 
+   const handleButtonClicks = () => {
+    setShowsCalendly(true);
+  };
+
+  const handleCalendlyClose = () => {
+    setShowsCalendly(false);
+  };
   
 
   const handleButtonClick = () => {
     setShowCalendly(true);
   };
-  const handleButtonClicks = () => {
-    setShowsCalendly(true);
-    // Disable scrolling on the body when the modal is open
-    document.body.style.overflow = 'hidden';
-  };
+  
 
-  const handleCloseModal = () => {
-    setShowsCalendly(false);
-    // Enable scrolling on the body when the modal is closed
-    document.body.style.overflow = 'auto';
-  };
+  
   return (
     <div>
       <>
@@ -276,20 +275,20 @@ const Aboutus = () => {
                 Let us show you a quick DEMO tailored to your store. You’ll be
                 impressed.
               </p>
-              <div className="flex items-center justify-center h-screen">
+              <div className="flex items-center justify-center">
       <button
-        className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
+        className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
         Schedule Demo
       </button>
 
       {showsCalendly && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
-          <div className="relative bg-white rounded-lg shadow-lg p-8 w-11/12 max-w-4xl">
+        <div className="fixed inset-0 flex items-center justify-center z-50" onClick={handleCalendlyClose}>
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-              onClick={handleCloseModal}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl" // Increased font size to make the X button larger
+              onClick={handleCalendlyClose}
             >
               &#10005; {/* X button */}
             </button>
