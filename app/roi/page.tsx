@@ -1,8 +1,12 @@
 'use client'; 
 
 import React, { useState } from 'react';
-
+import { InlineWidget } from "react-calendly";
 const Roi = () => {
+    const [showCalendly, setShowCalendly] = useState(false);
+    const [showsCalendly, setShowsCalendly] = useState(false);
+
+ 
     const [visitorsPM, setVisitorsPM] = useState('');
     const [ordersPM, setOrdersPM] = useState('');
     const [aov, setAov] = useState('');
@@ -13,6 +17,13 @@ const Roi = () => {
         addUnlockSales: 0,
         monthlyROI: 0,
     });
+
+    const handleButtonClick = () => {
+        setShowCalendly(true);
+      };
+    const handleButtonClicks = () => {
+        setShowCalendly(true);
+      };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -180,13 +191,14 @@ const Roi = () => {
                 </div>
                 <div className="flex flex-wrap justify-center items-center mt-5">
                     <div className="lg:w-1/3 pr-4 pl-4 text-center">
-                        <button
-                            className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
-                            style={{ width: "90%" }}
-                            onClick={() => Calendly.initPopupWidget({ url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03' })}
-                        >
-                            Unlock Additional Sales Now
-                        </button>
+                    <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
+        style={{ width: "90%" }}
+        onClick={handleButtonClick}
+      >
+        Unlock Additional Sales Now
+      </button>
+      {showCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
                     </div>
                 </div>
             </div>
@@ -204,12 +216,13 @@ const Roi = () => {
                             impressed.
                         </p>
                         <div className="flex justify-center">
-                            <button
-                                className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
-                                onClick={() => Calendly.initPopupWidget({ url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03' })}
-                            >
-                                Schedule Demo
-                            </button>
+                        <button
+        className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
+        onClick={handleButtonClicks}
+      >
+        Schedule Demo
+      </button>
+      {showsCalendly && <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />}
                         </div>
                     </div>
                     <div
