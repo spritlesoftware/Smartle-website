@@ -1,12 +1,13 @@
 "use client";
 import { Disclosure } from "@headlessui/react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 import Contactusform from "./Contactus";
 import { idText } from "typescript";
+import { InlineWidget } from "react-calendly";
 
 interface NavigationItem {
   name: string;
@@ -27,6 +28,20 @@ function classNames(...classes: string[]) {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [showsCalendly, setShowsCalendly] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
+  const handleButtonClicks = () => {
+    setShowsCalendly(true);
+    setOverlayVisible(true);
+  };
+
+  const handleCalendlyClose = () => {
+    setShowsCalendly(false);
+    setOverlayVisible(false);
+  };
+
+
 
   return (
     <Disclosure as="nav" className="navbar">
@@ -78,15 +93,44 @@ const Navbar = () => {
                 </div>
               </div>
               <a className="hidden lg:block">
-                {/* <button onClick={()=>{"Calendly.initPopupWidget({url: 'https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03'}); return false;"}} className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded">
-                  Start for Free
-                </button> */}
-                <button
+              <div>
+              <button
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        onClick={handleButtonClicks}
+      >
+         Start for Free
+      </button>
+      {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+              onClick={handleCalendlyClose}
+            >
+              &#10005; {/* X button */}
+            </button>
+            {/* Include your InlineWidget component here */}
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+      {overlayVisible && (
+        <div
+          className="fixed inset-0 z-40"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            // backdropFilter: 'blur(5px)',
+          }}
+          onClick={handleCalendlyClose}
+        />
+      )}
+    </div>
+                {/* <button
                   className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3  md:py-3 md:px-7 rounded-full hover:bg-hoblue"
                   style={{ backgroundColor: "#00356b" }}
                 >
                   Start for Free
-                </button>
+                </button> */}
               </a>
 
               {/* <Contactusform /> */}
