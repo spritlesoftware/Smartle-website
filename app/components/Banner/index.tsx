@@ -1,8 +1,26 @@
+"use client"
+
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../magicui/animated-gradient-text";
+import { useState } from "react";
+import { InlineWidget } from "react-calendly";
 
 const Banner = () => {
+  const [showsCalendly, setShowsCalendly] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
+  const handleButtonClicks = () => {
+    setShowsCalendly(true);
+    setOverlayVisible(true);
+  };
+
+  const handleCalendlyClose = () => {
+    setShowsCalendly(false);
+    setOverlayVisible(false);
+  };
+
+
   return (
     <div className="mx-auto max-w-7xl my-10 sm:py-10 px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 my-16">
@@ -34,14 +52,38 @@ const Banner = () => {
             </h1>
            
           </div>
-          <div className="my-7 text-center lg:text-start">
+          <div className="flex items-center justify-center">
+      <button
+        className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        onClick={handleButtonClicks}
+      >
+         Try Smartle AI
+      </button>
+      {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
             <button
-              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3 px-6 md:py-5 md:px-14 rounded-full hover:bg-hoblue"
-              style={{ backgroundColor: "#00356b" }}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+              onClick={handleCalendlyClose}
             >
-              Try Smartle AI
+              &#10005; {/* X button */}
             </button>
+            {/* Include your InlineWidget component here */}
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
           </div>
+        </div>
+      )}
+      {overlayVisible && (
+        <div
+          className="fixed inset-0 z-40"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            // backdropFilter: 'blur(5px)',
+          }}
+          onClick={handleCalendlyClose}
+        />
+      )}
+    </div>
         </div>
 
         {/* COLUMN-2 */}
