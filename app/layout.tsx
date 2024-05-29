@@ -1,3 +1,4 @@
+"use client"
 import "./globals.css";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
@@ -11,7 +12,11 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+})
+
+{
+  
+
   return (
     <html lang="en">
       <head>
@@ -27,7 +32,8 @@ export default function RootLayout({
         />
       </head>
       <body style={{ overflowX: "hidden" }}>
-        <Navbar />
+        <Navbar/>
+        
         {children}
         <Footer />
       </body>

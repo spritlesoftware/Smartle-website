@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/pricing/page.jsx", "app/contactsus/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/pricing/page.jsx", "app/contactsus/page.tsx", "app/components/Navbar/Drawerdata.jsx"],
   "exclude": ["node_modules"]
 }
