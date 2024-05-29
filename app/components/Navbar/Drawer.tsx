@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Link from "next/link";
+import Image from 'next/image';
 
 
 interface DrawerProps {
@@ -30,11 +31,19 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                 <article className="relative w-340px max-w-lg pb-10 flex flex-col space-y-6 h-full">
                     <header className="px-4 py-4 flex items-center">
 
-                        <div className="flex flex-shrink-0 items-center border-right">
-                            <Link href="/" className='text-2xl font-semibold text-black'>
-                                Desgy Solutions
-                            </Link>
-                        </div>
+                    <div className="flex flex-shrink-0 items-center border-right">
+      <Link href="/">
+        <div className='flex items-center'>
+          <Image
+            src="/images/new_logo .png"
+            alt="Smartle.ai Logo"
+            width={120} 
+            height={40}  
+            className="h-auto w-auto"
+          />
+        </div>
+      </Link>
+    </div>
 
                         <XMarkIcon className="block h-6 w-6" onClick={() => {
                             setIsOpen(false);
