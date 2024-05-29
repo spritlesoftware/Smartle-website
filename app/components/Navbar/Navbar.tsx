@@ -25,21 +25,25 @@ const navigation: NavigationItem[] = [
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
+interface DrawerDataProps {
+  setShowsCalendly: (showsCalendly : boolean) => void;
+  setOverlayVisible: (overlayVisible: boolean) => void;
+}
 
-const Navbar = () => {
+const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [showsCalendly, setShowsCalendly] = useState(false);
-  const [overlayVisible, setOverlayVisible] = useState(false);
-
+  // const [showsCalendly, setShowsCalendly] = useState(false);
+  // const [overlayVisible, setOverlayVisible] = useState(false);
   const handleButtonClicks = () => {
+    console.log("HANLDE HANDLE")
     setShowsCalendly(true);
     setOverlayVisible(true);
   };
 
-  const handleCalendlyClose = () => {
-    setShowsCalendly(false);
-    setOverlayVisible(false);
-  };
+  // const handleCalendlyClose = () => {
+  //   setShowsCalendly(false);
+  //   setOverlayVisible(false);
+  // };
 
 
 
@@ -100,30 +104,29 @@ const Navbar = () => {
       >
          Start for Free
       </button>
-      {showsCalendly && (
+      {/* {showsCalendly && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
             <button
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
               onClick={handleCalendlyClose}
             >
-              &#10005; {/* X button */}
+              &#10005; 
             </button>
-            {/* Include your InlineWidget component here */}
             <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
           </div>
         </div>
-      )}
-      {overlayVisible && (
+      )} */}
+      {/* {overlayVisible && (
         <div
           className="fixed inset-0 z-40"
           style={{
             backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            // backdropFilter: 'blur(5px)',
+            
           }}
           onClick={handleCalendlyClose}
         />
-      )}
+      )} */}
     </div>
                 {/* <button
                   className="text-sm md:text-xl font-semibold hover:shadow-xl text-white py-3  md:py-3 md:px-7 rounded-full hover:bg-hoblue"
@@ -151,7 +154,7 @@ const Navbar = () => {
             {/* DRAWER LINKS DATA */}
 
             <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-              <Drawerdata />
+              <Drawerdata setShowsCalendly={setShowsCalendly} setOverlayVisible={setOverlayVisible} />
             </Drawer>
           </div>
         </div>

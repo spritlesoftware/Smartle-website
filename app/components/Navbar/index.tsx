@@ -1,8 +1,22 @@
 "use client"
 import Navbar from './Navbar';
-import React, { useEffect } from 'react';
+import React, { useEffect , useState} from 'react';
+import { InlineWidget } from 'react-calendly';
 
 const Navbarin: React.FC = () => {
+    const [showsCalendly, setShowsCalendly] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
+ console.log(showsCalendly , "SHOWS CALENDLY" , overlayVisible , "OVERLAYVISIBLE")
+  // const handleButtonClicks = () => {
+  //   setShowsCalendly(true);
+  //   setOverlayVisible(true);
+  // };
+
+  const handleCalendlyClose = () => {
+    setShowsCalendly(false);
+    setOverlayVisible(false);
+  };
     useEffect(() => {
         // The debounce function receives our function as a parameter
         const debounce = (fn: Function) => {
@@ -36,7 +50,31 @@ const Navbarin: React.FC = () => {
     }, [])
     return (
         <>
-            <Navbar />
+            <Navbar setOverlayVisible={setOverlayVisible} setShowsCalendly={setShowsCalendly}/>
+            {showsCalendly && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+            <button
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+              onClick={handleCalendlyClose}
+            >
+              &#10005; {/* X button */}
+            </button>
+            {/* Include your InlineWidget component here */}
+            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+          </div>
+        </div>
+      )}
+      {overlayVisible && (
+        <div
+          className="fixed inset-0 z-40"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            // backdropFilter: 'blur(5px)',
+          }}
+          onClick={handleCalendlyClose}
+        />
+      )}
         </>
     );
 }
