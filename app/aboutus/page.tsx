@@ -79,7 +79,7 @@ const handleCloseCalendly = () => {
         {overlayVisible && <div className="overlay"></div>}
           <div
             className="flex flex-wrap  justify-center ptb-120 bg-cover items-center"
-            style={{ background: "url(/images/roi-banner-webp)" }}
+            style={{ background: "url(https://smartle-ai.s3.amazonaws.com/assets/img/roi-banner.webp)" }}
           >
             <div className="lg:w-3/4 pr-4 pl-4 text-center ">
               <h1 className=" fs-48 txt-blk fw-600 py-5">
@@ -128,11 +128,11 @@ const handleCloseCalendly = () => {
           </div>
         </div>
         <div className="container mx-auto sm:px-4 flex lg:flex-row flex-wrap justify-between w-full">
-          <div className="lg:w-2/5 pr-4 pl-4">
+          <div className="lg:w-3/5 pr-4 pl-4">
             <h2 style={{ textAlign: "left" , fontWeight: 500}} className="fw-bold text-5xl fs-36">
               Your AI partner
             </h2>
-            <p style={{ textAlign: "left" }} className="py-3">
+            <p style={{ textAlign: "left" , fontSize:"1.15rem"}} className="py-3">
               Imagine a world where conversation isn't confined to screens and
               buttons. Where you can chat, ask questions, and get things done
               with an AI as natural and engaging as a real person. That's the
@@ -153,7 +153,7 @@ const handleCloseCalendly = () => {
           </div>
         </div>
         <div
-          className="container mx-auto sm:px-4 flex lg:flex-row justify-between py-3 flex-wrap"
+          className="container mx-auto sm:px-4 flex lg:flex-row justify-between py-3 my-20 flex-wrap"
           style={{ overflow: "hidden" }}
         >
           <div className="lg:w-1/3 pr-4 pl-4 py-5">
@@ -167,7 +167,7 @@ const handleCloseCalendly = () => {
             style={{ marginLeft: "2%" }}
           >
             <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500}}>Smartle AI</h2>
-            <h6 style={{ fontWeight: 400 }}>
+            <h6 style={{ fontWeight: 400 , fontSize:"1rem" }}>
               Continuously learning, it adopts new strategies, while
               <br />
               personalizing its interactions to cater to your unique style and
@@ -180,7 +180,7 @@ const handleCloseCalendly = () => {
       
 
 
-<div className="container mx-auto bg-light bg-gray-100 sm:px-4 max-w-full pt-12 pb-12">
+<div className="container mx-auto bg-lightgrey sm:px-4 max-w-full pt-12 pb-12">
       <div className="flex flex-wrap items-center justify-center">
         <h3 className="text-center text-4xl font-semibold mb-8 w-full">
           Why customers win with Smartle?
@@ -211,12 +211,12 @@ const handleCloseCalendly = () => {
             <SwiperSlide>
               <div className="bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
                 <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3">Happier  <br /> Shoppers</h3>
+                  <h3 className="text-2xl mb-3 text-black">Happier  <br /> Shoppers</h3>
                 
             
-                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
                 </div>
-                <p className="text-center text-gray-900 py-3">
+                <p className="text-center py-3 text-black">
                   Smartle AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
                 </p>
               </div>
@@ -225,15 +225,15 @@ const handleCloseCalendly = () => {
             <SwiperSlide>
               <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
                 <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3">
+                  <h3 className="text-2xl mb-3 text-black">
                   Effortless
                 <br />
                 Assistance
 
                   </h3>
-                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
                 </div>
-                <p className="text-center text-gray-900 py-3">
+                <p className="text-center text-black py-3">
                 Get instant answers and product recommendations, leading to faster purchases and fewer frustrated customers.
                 </p>
               </div>
@@ -242,15 +242,15 @@ const handleCloseCalendly = () => {
             <SwiperSlide>
               <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
                 <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3">
+                  <h3 className="text-2xl mb-3 text-black">
                   Personalized
                 <br />
                 Touch
 
                   </h3>
-                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
                 </div>
-                <p className="text-center text-gray-900 py-3">
+                <p className="text-center text-black py-3">
                 Smartle AI learns buyer preferences, offering relevant suggestions and boosting customer satisfaction.
                 </p>
               </div>
@@ -259,13 +259,13 @@ const handleCloseCalendly = () => {
             <SwiperSlide>
               <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
                 <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3">
+                  <h3 className="text-2xl mb-3 text-black">
                   24/7 support
                 <br />
                   </h3>
-                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
                 </div>
-                <p className="text-center text-gray-900 py-3">
+                <p className="text-center text-black py-3">
                 With round-the-clock AI assistance that continues conversations even after business hours, you'll never miss a sale.
                 </p>
               </div>
@@ -274,14 +274,14 @@ const handleCloseCalendly = () => {
             <SwiperSlide>
               <div className="bg-light bg-white p-6 rounded-md" style={{ maxWidth: 320, height:320 }}>
                 <div className="text-center w-full font-semibold text-gray-900 mt-4">
-                  <h3 className="text-2xl mb-3">
+                  <h3 className="text-2xl mb-3 text-black">
                   Data-Driven 
                 <br />
                 Insights
                   </h3>
-                  <hr className="mx-auto" style={{ width: '80%', backgroundColor: 'black', height: '2px' }} />
+                  <hr className="mx-auto" style={{ width: '80%', color:"lightgrey" , }} />
                 </div>
-                <p className="text-center text-gray-900 py-3">
+                <p className="text-center text-black py-3">
                 Through Smartle AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
                 </p>
               </div>
@@ -312,7 +312,7 @@ const handleCloseCalendly = () => {
               </p>
               <div className="flex items-center justify-center">
             <button
-                className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+                className="my-3 inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
                 onClick={handleButtonClicks}
             >
                 Schedule Demo
