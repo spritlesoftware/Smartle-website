@@ -177,7 +177,7 @@ const Contactus = () => {
     <div>
       <h6 className="font-bold">Want to visit us? Here are the Google Maps directions</h6>
       <div className="py-3 flex flex-col space-y-2">
-      <div className="py-3 flex flex-col space-y-2" style={{paddingLeft:"5%"}}>
+      <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
         <a
           className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
@@ -204,7 +204,7 @@ const Contactus = () => {
       </div>
     </div>
 
-    <div className="py-4">
+    <div className="py-1">
       <h6 className="flex items-center">
         <i className="fas fa-suitcase mr-2" style={{color:'#00356b'}}></i>
         For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com">jobs@spritle.com</a>
