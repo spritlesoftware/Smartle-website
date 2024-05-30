@@ -152,7 +152,7 @@ const Contactus = () => {
     </div>
   </div>
 
-  <div className="lg:w-2/5 lg:pl-4 py-2 lg:py-0 flex flex-col justify-between">
+  <div className="lg:w-2/5 lg:pl-4 py-2 lg:py-0 flex flex-col justify-center">
     <div>
       <h6 className="font-bold">Want to get on a quick call? Ring us at</h6>
       <div className="py-1">
