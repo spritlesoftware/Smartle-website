@@ -13,7 +13,6 @@ import Articles from './components/Articles/index';
 import Joinus from './components/Joinus/index';
 import Insta from './components/Insta/index';
 import Cards from './components/Cards/index';
-import Contactsus from './contactsus/page';
 
 
 export default function Home() {
