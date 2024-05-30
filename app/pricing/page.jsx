@@ -632,7 +632,6 @@ const Pricing = () => {
         </div>
         </div>
       </div>
-      //
 
       
       <div className="container mx-auto sm:px-4 ptb-60 mb-12">
@@ -655,33 +654,6 @@ const Pricing = () => {
       >
         Schedule Demo
       </button>
-      {showsCalendly && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={handleCloseCalendly}>
-          <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-              onClick={handleCloseCalendly}
-            >
-              &#10005; {/* X button */}
-            </button>
-            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
-          </div>
-        </div>
-      )}
-      {overlayVisible && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            zIndex: 40,
-          }}
-          onClick={handleCloseCalendly}
-        />
-      )}
     </div>
           </div>
           <div

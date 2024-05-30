@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import React, { useState } from "react";
 import { InlineWidget } from "react-calendly";
 const Roi = () => {
@@ -31,31 +31,39 @@ const Roi = () => {
     setShowsCalendly(true);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
+    function btnClick(e) {
+      e.preventDefault();
+      const visitPM = document.getElementById("visitors-pm").value;
+      const orderPM = document.getElementById("order-pm").value;
+      const aOV = document.getElementById("aov").value;
+      console.log(visitPM, orderPM, aOV);
 
-    if (!visitorsPM || !ordersPM || !aov) {
-      console.log("error");
-    } else {
-      const conversationsPerMonth = (parseFloat(visitorsPM) * 0.015).toFixed(2);
-      const potentialAdditionalSales = (parseFloat(ordersPM) * 0.16).toFixed(2);
-      const potentialAOV = (parseFloat(aov) * 1.1).toFixed(2);
-      const addUnlockSales = (potentialAdditionalSales * potentialAOV).toFixed(
-        2
-      );
-      const monthlyROI = (((addUnlockSales - 15) / 15) * 100).toFixed(2);
-
-      setResults({
-        conversationsPerMonth,
-        potentialAdditionalSales,
-        potentialAOV,
-        addUnlockSales,
-        monthlyROI,
-      });
-
-      document.getElementById("ROI").classList.remove("hidden");
+      if (!visitPM || !orderPM || !aOV) {
+        console.log("error");
+      } else {
+        var conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
+        var potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
+        var potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
+        var addUnlockSales = parseFloat(
+          (potentialAdditionalSales * potentialAOV).toFixed(0)
+        );
+        var monthlyROI = parseFloat(
+          (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+        );
+        document.getElementById("con-pm").textContent = conversationsPerMonth;
+        document.getElementById("addSales").textContent =
+          potentialAdditionalSales;
+        document.getElementById("potAV").textContent = "$ " + potentialAOV;
+        document.getElementById("addSalesFromSpritle").textContent =
+          "$ " + addUnlockSales;
+        document.getElementById("subsCost").textContent = "$ 15";
+        document.getElementById("mon-ROI").textContent = monthlyROI + " %";
+        document.getElementById("ROI").classList.remove("hidden");
+      }
     }
-  };
+    document.getElementById("myButton").addEventListener("click", btnClick);
+  }, []);
 
   return (
     <div>
@@ -79,20 +87,23 @@ const Roi = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto sm:px-4 max-w-7xl mx-auto sm:px-4 ptb-60">
-        <div className="flex flex-wrap items-center justify-center">
-          <h3 className="text-center txt-blue fs-30 fw-600">
+      <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 ptb-60">
+        <div className="flex flex-wrap  items-center justify-center">
+          <h3
+            className="text-center txt-blue mb-5 fs-30 fw-600"
+            style={{ width: "100%" }}
+          >
             CALCULATE YOUR ROI
           </h3>
           <h4 className="text-center txt-blk mb-5 fs-30 fw-300">
             Maximize your potential with Smartle AI
           </h4>
           <div
-            className="lg:w-3/4 pr-4 pl-4 bg-white lg:flex justify-center"
+            className="lg:w-3/4 pr-4 pl-4 bg-white lg:flex  justify-center"
             style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
           >
             <div className="lg:w-1/2 pr-4 pl-4 p-6 mb-4 lg:mb-0">
-              <form className="my-3" onSubmit={handleSubmit}>
+              <form className="my-3">
                 <h5 className="mb-4 fs-18 fw-600">Your Current Process</h5>
                 <div className="mb-4">
                   <label className="mb-3">
@@ -100,11 +111,9 @@ const Roi = () => {
                   </label>
                   <input
                     type="number"
-                    className="w-full input lh-22 ps-3"
+                    className="w-full input ps-3 lh-22"
                     required
                     id="visitors-pm"
-                    value={visitorsPM}
-                    onChange={(e) => setVisitorsPM(e.target.value)}
                   />
                 </div>
                 <div className="mb-4">
@@ -113,15 +122,13 @@ const Roi = () => {
                   </label>
                   <input
                     type="number"
-                    className="w-full input lh-22 ps-3"
+                    className="w-full input ps-3 lh-22"
                     required
                     id="order-pm"
-                    value={ordersPM}
-                    onChange={(e) => setOrdersPM(e.target.value)}
                   />
                 </div>
                 <div className="mb-4">
-                  <label className="mb-3">
+                  <label className="mb-3 ">
                     What is your store's Average Order Value (AOV)?
                   </label>
                   <input
@@ -129,21 +136,26 @@ const Roi = () => {
                     className="w-full lh-22 input ps-3"
                     required
                     id="aov"
-                    value={aov}
-                    onChange={(e) => setAov(e.target.value)}
                   />
                 </div>
                 <div className="mt-5">
                   <button
                     className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded w-full mt-2"
-                    type="submit"
                     id="myButton"
                   >
                     Calculate
                   </button>
+                  {/* <button
+                  id="myButton"
+              className="text-sm md:text-xl  hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              style={{ backgroundColor: "#00356b" , width:"100%" }}
+            >
+              Calculate
+            </button> */}
                 </div>
               </form>
             </div>
+
             <div className="lg:w-1/2 pr-4 pl-4">
               <div
                 className=" ms-3 my-2 px-2 pb-5 pt-3 bg-blue h-390"
@@ -215,7 +227,7 @@ const Roi = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center items-center mt-5">
+        <div className="flex flex-wrap  justify-center items-center mt-5">
           <div className="lg:w-1/3 pr-4 pl-4 text-center">
             <button
               className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mb-5"
@@ -226,19 +238,10 @@ const Roi = () => {
             </button>
             {showCalendly && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative w-11/12 max-w-4xl my-8 bg-transparent">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
                   <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
                   <button
-                    className="absolute text-white"
-                    style={{
-                      top: "calc(-20px - 1rem)", // Adjusted position to be slightly above the widget scrollbar
-                      right: "-20px",
-                      zIndex: 60,
-                      fontSize: "24px",
-                      color: "#fff",
-                      cursor: "pointer",
-                      padding: "5px",
-                    }}
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
                     onClick={handleCloseCalendly}
                   >
                     &#10005; {/* X button */}
