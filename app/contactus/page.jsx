@@ -72,7 +72,7 @@ const Contactus = () => {
       className="py-5 px-5 rounded-lg shadow-lg h-full"
       style={{ boxShadow: "0px 16px 48px 0px #D9D9D9" }}
     >
-      <h4 className="text-center font-semibold text-lg py-3">Contact us</h4>
+      <h1 className="text-center font-semibold text-3xl py-3">Contact us</h1>
 
       <div className="flex flex-wrap justify-between mb-3 space-y-4 lg:space-y-0">
         <div className="w-full lg:w-2/5">
@@ -192,7 +192,7 @@ const Contactus = () => {
         </a>
       </div>
     </div>
-    <div className="py-3">
+    <div className="py-4">
       <h6 className="flex items-center">
         <i className="fas fa-suitcase mr-2 text-navyblue"></i>
         For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com">jobs@spritle.com</a>
