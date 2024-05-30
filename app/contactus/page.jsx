@@ -247,7 +247,7 @@ const Contactus = () => {
           <div
             className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
             style={{
-              background: "url(../assets/img/still-not-sure.webp)",
+              background: "url(images/still-not-sure.webp)",
               borderRadius: 10,
               backgroundSize: "cover",
             }}
