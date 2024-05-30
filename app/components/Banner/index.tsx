@@ -52,9 +52,9 @@ const Banner = () => {
             </h1>
            
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-left">
       <button
-        className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        className="inline-block p-2 my-3 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
          Try Smartle AI

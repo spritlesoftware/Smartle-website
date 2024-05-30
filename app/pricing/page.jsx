@@ -310,7 +310,7 @@ const Pricing = () => {
             </ul>
             <div className="text-center">
       <button
-        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-white py-2 btn-rounded mt-3 w-90"
         onClick={handleButtonClick}
       >
         Start FREE Trial
@@ -481,7 +481,7 @@ const Pricing = () => {
                   <input
                     type="number"
                     className="w-full input ps-3 lh-22"
-                    required=""
+                    required
                     id="visitors-pm"
                   />
                 </div>
@@ -492,7 +492,7 @@ const Pricing = () => {
                   <input
                     type="number"
                     className="w-full input ps-3 lh-22"
-                    required=""
+                    required
                     id="order-pm"
                   />
                 </div>
@@ -503,27 +503,28 @@ const Pricing = () => {
                   <input
                     type="number"
                     className="w-full lh-22 input ps-3"
-                    required=""
+                    required
                     id="aov"
                   />
                 </div>
                 <div className="mt-5">
-                  {/* <button
+                  <button
                     className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded w-full mt-2"
                     id="myButton"
                   >
                     Calculate
-                  </button> */}
-                  <button
+                  </button>
+                  {/* <button
                   id="myButton"
-              className="text-sm md:text-xl font-semibold hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
+              className="text-sm md:text-xl  hover:shadow-xl text-white  px-6 md:py-3 md:px-9 rounded-full hover:bg-hoblue"
               style={{ backgroundColor: "#00356b" , width:"100%" }}
             >
               Calculate
-            </button>
+            </button> */}
                 </div>
               </form>
             </div>
+
             <div className="lg:w-1/2 pr-4 pl-4">
               <div
                 className=" ms-3 my-2 px-2 pb-5 pt-3 bg-blue h-390"
@@ -631,6 +632,7 @@ const Pricing = () => {
         </div>
         </div>
       </div>
+      //
 
       
       <div className="container mx-auto sm:px-4 ptb-60 mb-12">
