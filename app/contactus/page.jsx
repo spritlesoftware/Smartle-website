@@ -101,6 +101,7 @@ const Contactus = () => {
           />
         </div>
       </div>
+
       <div className="flex flex-wrap justify-between mb-4 space-y-4 lg:space-y-0">
         <div className="w-full lg:w-2/5">
           <label htmlFor="Email" className="mb-2 block">
@@ -128,83 +129,94 @@ const Contactus = () => {
           />
         </div>
       </div>
+
       <div className="mb-4">
         <label htmlFor="text-area" className="mb-2 block">
           Tell us a little about your site*
         </label>
         <textarea
-          className="rounded-lg border border-gray-300 w-full p-2 block"
+          className="rounded-lg border border-gray-300 w-full p-2 block resize-y" // Added 'resize-y' class to enable vertical resizing
           id="text-area"
           placeholder="Write your message"
+          style={{ height: "170px" }} // Adjust the height as needed
         ></textarea>
         <p className="text-red-500 text-xs mt-1" id="TextAreaErr"></p>
       </div>
+
       <button
-        className="bg-navyblue text-white font-bold py-2 px-4 rounded-3xl w-full"
-        id="submit"
+        className="text-white font-bold py-3 px-4 rounded-3xl w-full"
+        id="submit" style={{background:' #00356b'}}
       >
         Submit
       </button>
     </div>
   </div>
+
   <div className="lg:w-2/5 lg:pl-4 py-3 lg:py-0 flex flex-col justify-between">
     <div>
       <h6 className="font-bold">Want to get on a quick call? Ring us at</h6>
+      <div className="py-1">
       <div className="py-3">
         <p className="flex items-center mb-1">
-          <i className="fas fa-phone text-navyblue mr-2"></i>
+          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
         <p className="flex items-center mb-1">
-          <i className="fas fa-phone text-navyblue mr-2"></i>
+          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
         <p className="flex items-center mb-1">
-          <i className="fas fa-phone text-navyblue mr-2"></i>
+          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
       </div>
+
+      </div>
     </div>
+
     <div>
       <h6 className="font-bold">Want to visit us? Here are the Google Maps directions</h6>
       <div className="py-3 flex flex-col space-y-2">
+      <div className="py-3 flex flex-col space-y-2">
         <a
-          className="flex items-center text-navyblue"
+          className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Ohio, USA</span>
         </a>
         <a
-          className="flex items-center text-navyblue"
+          className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.co.in/maps/place/Spritle+Software/@1.3325619,103.8915719,17z/data=!3m1!5s0x31da19f66c9058fd:0x8871b496b404d2ba!4m6!3m5!1s0x31da1703646cca73:0xee6ab222437d335a!8m2!3d1.332946!4d103.8939974!16s%2Fg%2F11ffltwqh1?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Singapore</span>
         </a>
         <a
-          className="flex items-center text-navyblue"
+          className="flex items-centere" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+Software/@13.0670529,80.1766501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263d902a72203:0xa64bbcae249c5436!8m2!3d13.0670529!4d80.1766501!16s%2Fg%2F1tfv3k9g?entry=ttu"
         >
-          <i className="fas fa-flag text-navyblue mr-2"></i>
+          <i className="fas fa-flag  mr-2" style={{color:'#00356b'}}></i>
 
           <span className="font-bold">Chennai, India</span>
         </a>
       </div>
+      </div>
     </div>
+
     <div className="py-4">
       <h6 className="flex items-center">
-        <i className="fas fa-suitcase mr-2 text-navyblue"></i>
+        <i className="fas fa-suitcase mr-2" style={{color:'#00356b'}}></i>
         For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com">jobs@spritle.com</a>
       </h6>
       <h6 className="flex items-center mt-2">
-  <i className="fas fa-circle-info mr-2 text-navyblue"></i>
-  <span>For General enquiries, email us at <a href="mailto:info@spritle.com">info@spritle.com</a></span>
-</h6>
-
+        <i className="fas fa-circle-info mr-2" style={{color:'#00356b'}}></i>
+        <span>For General enquiries, email us at <a href="mailto:info@spritle.com">info@spritle.com</a></span>
+      </h6>
     </div>
   </div>
 </div>
+
 
       <div className="container mx-auto sm:px-4 ptb-60">
         <div
