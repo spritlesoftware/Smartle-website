@@ -163,9 +163,9 @@ const Contactus = () => {
         </p>
         <p className="flex items-center mb-2">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
-          <span clasName="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
+          <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
-        <p className="flex items-center">
+        <p className="flex items-center mb-0">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
@@ -177,7 +177,7 @@ const Contactus = () => {
     <div>
       <h6 className="font-bold">Want to visit us? Here are the Google Maps directions</h6>
       <div className="py-3 flex flex-col space-y-2">
-      <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
+      <div className="py-3 flex flex-col space-y-2" style={{paddingLeft:"5%"}}>
         <a
           className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
@@ -193,7 +193,7 @@ const Contactus = () => {
           <span className="font-bold">Singapore</span>
         </a>
         <a
-          className="flex items-centere mb-2" style={{color:'#00356b'}}
+          className="flex items-centere" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+Software/@13.0670529,80.1766501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263d902a72203:0xa64bbcae249c5436!8m2!3d13.0670529!4d80.1766501!16s%2Fg%2F1tfv3k9g?entry=ttu"
         >
           <i className="fas fa-flag  mr-2" style={{color:'#00356b'}}></i>
