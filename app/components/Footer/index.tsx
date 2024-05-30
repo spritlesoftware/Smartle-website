@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,11 +25,10 @@ const footer = () => {
       id="first-section"
       style={{ backgroundColor: "#00356b" }}
     >
-    
-    <div className="mx-auto max-w-2xl pt-28 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-  <div className="grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
-    {/* COLUMN-1 */}
-    {/* <div className="col-span-4 flex flex-col items-center sm:items-start" style={{ marginLeft: "1.5rem" }}>
+      <div className="mx-auto max-w-2xl pt-28 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
+          {/* COLUMN-1 */}
+          {/* <div className="col-span-4 flex flex-col items-center sm:items-start" style={{ marginLeft: "1.5rem" }}>
       <Link
         href="/"
         className="text-2xl sm:text-4xl font-semibold text-black"
@@ -46,47 +45,72 @@ const footer = () => {
       </h5>
     </div> */}
 
-<div className="col-span-4 flex flex-col items-center sm:items-start" style={{ marginLeft: "1.5rem", maxWidth: "1000px", margin: "0 auto" }}>
-  <Link href="/" className="text-2xl sm:text-4xl font-semibold text-black">
-    <img
-      src="/images/logo-white.png"
-      alt="logo"
-      className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
-      style={{ width: 210, height: 100, marginTop: "-2rem" }}
-    />
-  </Link>
-  <h5 className="text-white mb-5 sm:mb-0 sm:text-left">
-    Transform your shopping experience with Smartle's revolutionary conversational AI chatbot for E-commerce crafted to boost sales by converting potential chats into revenue.
-  </h5>
-</div>
-
-
-
-    {/* COLUMN-2/3 */}
-    
-{products.map((product) => (
- <div key={product.id} className="group relative col-span-2 flex flex-col items-center sm:items-start sm:text-left sm:justify-start" style={{ marginLeft: "3.9rem", maxWidth: "1000px", margin: "0 auto" }}>
-    <p className="text-white text-xl font-extrabold mb-9">
-      {product.section}
-    </p>
-    <ul className="text-center sm:text-left">
-      {product.link.map((link, index) => (
-        <li key={index} className="mb-5">
-          <Link
-            href="/"
-            className="text-white text-lg font-normal mb-6 space-links"
+          <div
+            className="col-span-4 flex flex-col items-center sm:items-start"
+            style={{
+              marginLeft: "1.5rem",
+              maxWidth: "1000px",
+              margin: "0 auto",
+            }}
           >
-            {link}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-))}
+            <Link
+              href="/"
+              className="text-2xl sm:text-4xl font-semibold text-black"
+            >
+              <img
+                src="/images/logo-white.png"
+                alt="logo"
+                className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
+                style={{ width: 250, height: 110, marginTop: "-2rem" , marginLeft:"-1.5rem" }}
+              />
+            </Link>
+            <h5 className="text-white mb-5 sm:mb-0 sm:text-left">
+              Transform your shopping experience with Smartle's revolutionary
+              conversational AI chatbot for E-commerce crafted to boost sales by
+              converting potential chats into revenue.
+            </h5>
+          </div>
 
+          {/* COLUMN-2/3 */}
 
-     {/* LOCATION */}
-          <div className="col-span-3 sm:items-center" style={{ color: "white", marginLeft: "auto", marginRight: "auto", maxWidth: "100%" }}>
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="group relative col-span-2 flex flex-col items-center sm:items-start sm:text-left sm:justify-start"
+              style={{
+                marginLeft: "3.9rem",
+                maxWidth: "1000px",
+                margin: "0 auto",
+              }}
+            >
+              <p className="text-white text-xl font-extrabold mb-9">
+                {product.section}
+              </p>
+              <ul className="text-center sm:text-left">
+                {product.link.map((link, index) => (
+                  <li key={index} className="mb-5">
+                    <Link
+                      href="/"
+                      className="text-white text-lg font-normal mb-6 space-links"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* LOCATION */}
+          <div
+            className="col-span-3 sm:items-center"
+            style={{
+              color: "white",
+              marginLeft: "auto",
+              marginRight: "auto",
+              maxWidth: "100%",
+            }}
+          >
             <h5 className="text-white text-xl font-extrabold mb-9">Location</h5>
             <p className="mb-4">
               <a
@@ -214,10 +238,16 @@ const footer = () => {
               </a>
             </p>
           </div>
-          
 
           {/* FOLLOW US */}
-          <div className="col-span-3 " style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "100%" }}>
+          <div
+            className="col-span-3 "
+            style={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              maxWidth: "100%",
+            }}
+          >
             <h5 className="text-white text-xl font-extrabold mb-5">
               Follow us on
             </h5>
@@ -255,19 +285,17 @@ const footer = () => {
             </div>
             <div>
               <a href="/contactus">
-                <button className="bg-white rounded-2xl px-4 my-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline fw-bold">
+                <button
+                  className="bg-white font-semibold rounded-3xl px-5 my-3 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-2 leading-normal no-underline fw-bold"
+                  style={{ fontSize: "1.2rem" }}
+                >
                   Contact us
                 </button>
               </a>
             </div>
           </div>
-
-
-
-  </div>
-</div>
-
-
+        </div>
+      </div>
 
       {/* All Rights Reserved */}
 
@@ -279,7 +307,7 @@ const footer = () => {
                 @2024 - All Rights Reserved by{" "}
                 <Link href="https://adminmart.com/" target="_blank">
                   {" "}
-                 Spritle Software
+                  Spritle Software
                 </Link>
               </h3>
             </div>
