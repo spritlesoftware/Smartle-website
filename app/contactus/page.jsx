@@ -80,7 +80,7 @@ const Contactus = () => {
             First Name *
           </label>
           <input
-            className="rounded-lg border border-gray-100 w-full p-2"
+            className="rounded-lg border  w-full p-2" style={{borderColor:"lightgrey"}}
             type="text"
             id="FirstName"
             name="name"
@@ -93,7 +93,7 @@ const Contactus = () => {
             Last Name
           </label>
           <input
-            className="rounded-lg border border-gray-300 w-full p-2"
+            className="rounded-lg border w-full p-2" style={{borderColor:"lightgrey"}}
             type="text"
             id="LastName"
             name="name"
@@ -108,7 +108,7 @@ const Contactus = () => {
             Email*
           </label>
           <input
-            className="rounded-lg border border-gray-300 w-full p-2 block"
+            className="rounded-lg border  w-full p-2 block" style={{borderColor:"lightgrey"}}
             type="email"
             id="Email"
             name="email"
@@ -121,7 +121,7 @@ const Contactus = () => {
             Phone Number
           </label>
           <input
-            className="rounded-lg border border-gray-300 w-full p-2"
+            className="rounded-lg border  w-full p-2" style={{borderColor:"lightgrey"}}
             type="tel"
             id="PhoneNumber"
             name="phone"
@@ -138,7 +138,7 @@ const Contactus = () => {
           className="rounded-lg border border-gray-300 w-full p-2 block resize-y" // Added 'resize-y' class to enable vertical resizing
           id="text-area"
           placeholder="Write your message"
-          style={{ height: "170px" }} // Adjust the height as needed
+          style={{ height: "170px", borderColor:'lightgrey'}} // Adjust the height as needed
         ></textarea>
         <p className="text-red-500 text-xs mt-1" id="TextAreaErr"></p>
       </div>
@@ -152,20 +152,20 @@ const Contactus = () => {
     </div>
   </div>
 
-  <div className="lg:w-2/5 lg:pl-4 py-3 lg:py-0 flex flex-col justify-between">
+  <div className="lg:w-2/5 lg:pl-4 py-2 lg:py-0 flex flex-col justify-between">
     <div>
       <h6 className="font-bold">Want to get on a quick call? Ring us at</h6>
       <div className="py-1">
       <div className="py-3" style={{paddingLeft:"5%"}}>
-        <p className="flex items-center mb-1">
+        <p className="flex items-center mb-2">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
-        <p className="flex items-center mb-1">
+        <p className="flex items-center mb-2">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
-          <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
+          <span clasName="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
-        <p className="flex items-center mb-1">
+        <p className="flex items-center">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
@@ -177,7 +177,7 @@ const Contactus = () => {
     <div>
       <h6 className="font-bold">Want to visit us? Here are the Google Maps directions</h6>
       <div className="py-3 flex flex-col space-y-2">
-      <div className="py-3 flex flex-col space-y-2" style={{paddingLeft:"5%"}}>
+      <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
         <a
           className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
@@ -193,7 +193,7 @@ const Contactus = () => {
           <span className="font-bold">Singapore</span>
         </a>
         <a
-          className="flex items-centere" style={{color:'#00356b'}}
+          className="flex items-centere mb-2" style={{color:'#00356b'}}
           href="https://www.google.com/maps/place/Spritle+Software/@13.0670529,80.1766501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263d902a72203:0xa64bbcae249c5436!8m2!3d13.0670529!4d80.1766501!16s%2Fg%2F1tfv3k9g?entry=ttu"
         >
           <i className="fas fa-flag  mr-2" style={{color:'#00356b'}}></i>
