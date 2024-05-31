@@ -1,3 +1,4 @@
 User-agent: *
 allow: /
+allow: https://www.smartle.ai/blog/
 Sitemap: https://www.smartle.ai/sitemap.xml
