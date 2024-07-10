@@ -67,7 +67,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
                   className="text-2xl sm:text-4xl font-semibold text-black"
                 >
                   <img
-                    src="/images/new_logo .png"
+                    src="/images/new_logo.png"
                     alt="logo"
                     className="max-w-full h-auto logo-color mt-1"
                     style={{ width: 150, height: 40 }}

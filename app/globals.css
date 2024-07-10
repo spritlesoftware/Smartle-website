@@ -400,7 +400,7 @@ html {
 }
 .text-style-gradient {
   background: linear-gradient(to right, #615eff, #ff6a4d);
-  background: #00356b;  /* fallback for old browsers */
+  background: #286955;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #615eff, #ff6a4d);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #615eff, #ff6a4d);
   -webkit-text-fill-color: transparent;
@@ -1013,7 +1013,7 @@ label[for=random]:after {
   filter: drop-shadow(0.5px 0.5px 0.5px #00000040);
 }
 .card:hover{
-  background-color: #00356b;
+  background-color: #286955;
 }
 .fs-18 {
   font-size: 18px;
@@ -1065,12 +1065,12 @@ label[for=random]:after {
 }
 .bg-blue,
 .bg-blue:hover {
-  background-color: #00356b;
+  background-color: #286955;
   color: white;
 }
 .bg-white {
   background-color: white;
-  color: #00356b;
+  color: #286955;
 }
 .br-14 {
   border-radius: 14px;
@@ -1082,7 +1082,7 @@ label[for=random]:after {
   color: #1e1e1e;
 }
 .txt-blue {
-  color: #00356b;
+  color: #286955;
 }
 .fs-48 {
   font-size: 45px;
@@ -1284,12 +1284,12 @@ label[for=random]:after {
   }
 }
 .but-white:hover {
-  color: #00356b !important;
+  color: #286955 !important;
   background-color: white;
 }
 .but-white {
   background-color: white;
-  color: #00356b;
+  color: #286955;
 }
 #falling-svg {
   width: 100px; /* Adjust the width as needed */
@@ -1330,11 +1330,11 @@ input[type="number"] {
 
          
 .btn-dark-blue {
-  background: #00356b;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00356b, rgb(9, 17, 64));  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #00356b, rgb(18, 23, 81)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #286955;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #286955,#234238 );  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #286955, #234238); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
-  border: 0px solid #00356b;
+  border: 0px solid #286955;
   padding:10px 25px 10px 25px;
 }
 
@@ -1347,7 +1347,7 @@ input[type="number"] {
 }
 
 .text-blue{
-  color: #00356b;
+  color: #286955;
 }
 .number-text:hover{
   color: white;

@@ -23,7 +23,7 @@ const footer = () => {
     <div
       className="mt-8"
       id="first-section"
-      style={{ backgroundColor: "#00356b" }}
+      style={{ backgroundColor: "#286955" }}
     >
       <div className="mx-auto max-w-2xl pt-28 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
@@ -58,10 +58,10 @@ const footer = () => {
               className="text-2xl sm:text-4xl font-semibold text-black"
             >
               <img
-                src="/images/logo-white.png"
+                src="/images/logo-white.jpg"
                 alt="logo"
                 className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
-                style={{ width: 250, height: 110, marginTop: "-2rem" , marginLeft:"-1.5rem" }}
+                style={{ width: "auto", height: 60, marginTop: "-2rem" , marginLeft:"1.5rem" }}
               />
             </Link>
             <h5 className="text-white mb-5 sm:mb-0 sm:text-left">

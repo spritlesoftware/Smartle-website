@@ -209,7 +209,7 @@ const Contactus = () => {
               <button
                 className="text-white font-bold py-3 px-4 rounded-3xl w-full"
                 id="submit"
-                style={{ background: '#00356b' }}
+                style={{ background: '#286955' }}
               >
                 Submit
               </button>
@@ -223,15 +223,15 @@ const Contactus = () => {
       <div className="py-1">
       <div className="py-3" style={{paddingLeft:"5%"}}>
         <p className="flex items-center mb-2">
-          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
         <p className="flex items-center mb-2">
-          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
         <p className="flex items-center mb-0">
-          <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
+          <i className="fas fa-phone mr-2" style={{color:'#286955'}}></i>
           <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
       </div>
@@ -244,24 +244,24 @@ const Contactus = () => {
       <div className="py-3 flex flex-col space-y-2">
       <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
         <a
-          className="flex items-center" style={{color:'#00356b'}}
+          className="flex items-center" style={{color:'#286955'}}
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Ohio, USA</span>
         </a>
         <a
-          className="flex items-center" style={{color:'#00356b'}}
+          className="flex items-center" style={{color:'#286955'}}
           href="https://www.google.co.in/maps/place/Spritle+Software/@1.3325619,103.8915719,17z/data=!3m1!5s0x31da19f66c9058fd:0x8871b496b404d2ba!4m6!3m5!1s0x31da1703646cca73:0xee6ab222437d335a!8m2!3d1.332946!4d103.8939974!16s%2Fg%2F11ffltwqh1?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
           <span className="font-bold">Singapore</span>
         </a>
         <a
-          className="flex items-centere" style={{color:'#00356b'}}
+          className="flex items-centere" style={{color:'#286955'}}
           href="https://www.google.com/maps/place/Spritle+Software/@13.0670529,80.1766501,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5263d902a72203:0xa64bbcae249c5436!8m2!3d13.0670529!4d80.1766501!16s%2Fg%2F1tfv3k9g?entry=ttu"
         >
-          <i className="fas fa-flag  mr-2" style={{color:'#00356b'}}></i>
+          <i className="fas fa-flag  mr-2" style={{color:'#286955'}}></i>
 
           <span className="font-bold">Chennai, India</span>
         </a>
@@ -271,11 +271,11 @@ const Contactus = () => {
 
     <div className="py-1">
       <h6 className="flex items-center">
-        <i className="fas fa-suitcase mr-2" style={{color:'#00356b'}}></i>
+        <i className="fas fa-suitcase mr-2" style={{color:'#286955'}}></i>
         For Jobs enquiries, email us at&nbsp;<a href="mailto:jobs@spritle.com">jobs@spritle.com</a>
       </h6>
       <h6 className="flex items-center mt-2">
-        <i className="fas fa-circle-info mr-2" style={{color:'#00356b'}}></i>
+        <i className="fas fa-circle-info mr-2" style={{color:'#286955'}}></i>
         <span>For General enquiries, email us at <a href="mailto:info@spritle.com">info@spritle.com</a></span>
       </h6>
     </div>

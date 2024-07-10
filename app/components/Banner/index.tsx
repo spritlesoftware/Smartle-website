@@ -46,7 +46,7 @@ const Banner = () => {
               className="text-5xl lg:text-70xl font-bold text-darkpurple"
               style={{ lineHeight: "3.5rem" }}
             >
-              Turn your window shoppers into paying customers with{" "}
+              Turn your window shopperszzz into paying customers with{" "}
               <span className="text-style-gradient">Smartle's Chat AI </span>
               Assistance
             </h1>
