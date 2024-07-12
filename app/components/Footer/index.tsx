@@ -61,7 +61,7 @@ const footer = () => {
                 src="/images/logo-white.png"
                 alt="logo"
                 className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
-                style={{ width: 250, height: 110, marginTop: "-2rem" , marginLeft:"-1.5rem" }}
+                style={{ width: 250, height: 110, marginTop: "-2rem" , marginLeft:"1rem" }}
               />
             </Link>
             <h5 className="text-white mb-5 sm:mb-0 sm:text-left">
