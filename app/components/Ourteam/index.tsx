@@ -105,6 +105,7 @@ const index = () => {
           </Circle>
           <Circle ref={div5Ref}>
             {/* <Icons.googleDocs className="h-6 w-6" /> */}
+            
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
@@ -171,6 +172,36 @@ const index = () => {
       />
     </div>
       
+    <div className="mx-auto max-w-7xl px-8  sm:py-20 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 my-4">
+          {/* COLUMN-1 */}
+          <div style={{ margin: "auto 0" }}>
+            <h2 className="text-5xl font-bold text-left">
+              Smartle AI your trusted ecommerce ally ensures real results while
+              preserving profit margins
+            </h2>
+            <h3 className="text-2xl font-medium text-left pt-10 opacity-50">
+              Upgrade your customer experience with our AI chat: engaging in
+              heartfelt conversations and responding promptly. Dive into
+              meaningful answers, reduce wait times, and ensure happy customers.
+            </h3>
+          </div>
+
+          {/* COLUMN-2 */}
+          <div className="relative">
+            <video
+              autoPlay
+              muted
+              loop
+              className=""
+              style={{ height: "40rem", width: "25rem", margin: "0 auto" }}
+            >
+              <source src="/videos/smartle phone.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
       {/* ANIMATED BEAM ENDS */}
 
       <h2 className="text-6xl text-center font-bold my-4 pt-24">
@@ -222,36 +253,7 @@ const index = () => {
           <Icons.discord />
         </OrbitingCircles>
       </div>
-      <div className="mx-auto max-w-7xl px-8  sm:py-20 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 my-4">
-          {/* COLUMN-1 */}
-          <div style={{ margin: "auto 0" }}>
-            <h2 className="text-5xl font-bold text-left">
-              Smartle AI your trusted ecommerce ally ensures real results while
-              preserving profit margins
-            </h2>
-            <h3 className="text-2xl font-medium text-left pt-10 opacity-50">
-              Upgrade your customer experience with our AI chat: engaging in
-              heartfelt conversations and responding promptly. Dive into
-              meaningful answers, reduce wait times, and ensure happy customers.
-            </h3>
-          </div>
-
-          {/* COLUMN-2 */}
-          <div className="relative">
-            <video
-              autoPlay
-              muted
-              loop
-              className=""
-              style={{ height: "40rem", width: "25rem", margin: "0 auto" }}
-            >
-              <source src="/videos/smartle phone.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </div>
+      
     </>
 
     // <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 m-32">

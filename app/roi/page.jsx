@@ -88,7 +88,7 @@ const Roi = () => {
         </div>
       </div>
       <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 ptb-60">
-        <div className="flex flex-wrap  items-center justify-center">
+        <div className="flex flex-col flex-wrap  items-center justify-center">
           <h3
             className="text-center txt-blue mb-5 fs-30 fw-600"
             style={{ width: "100%" }}
