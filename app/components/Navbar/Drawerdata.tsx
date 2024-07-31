@@ -26,13 +26,11 @@ interface DrawerDataProps {
 const Data = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
     const [activeLink, setActiveLink] = useState('/roi');
     const [menuVisible, setMenuVisible] = useState(true);
- console.log()
     const handleButtonClicks = () => {
         setMenuVisible(true);
         setShowsCalendly(true);
         setOverlayVisible(true);
         // setTimeout(() => {
-        //    console.log("RUNNING")
         // }, 500); // Adjust the delay to match your transition duration
     };
 

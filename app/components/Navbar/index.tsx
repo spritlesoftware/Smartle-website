@@ -7,7 +7,6 @@ const Navbarin: React.FC = () => {
     const [showsCalendly, setShowsCalendly] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(false);
 
- console.log(showsCalendly , "SHOWS CALENDLY" , overlayVisible , "OVERLAYVISIBLE")
   // const handleButtonClicks = () => {
   //   setShowsCalendly(true);
   //   setOverlayVisible(true);

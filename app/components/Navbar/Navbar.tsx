@@ -35,7 +35,6 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
   // const [showsCalendly, setShowsCalendly] = useState(false);
   // const [overlayVisible, setOverlayVisible] = useState(false);
   const handleButtonClicks = () => {
-    console.log("HANLDE HANDLE")
     setShowsCalendly(true);
     setOverlayVisible(true);
   };

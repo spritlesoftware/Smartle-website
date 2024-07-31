@@ -18,6 +18,12 @@ const Roi = () => {
     monthlyROI: 0,
   });
 
+  const [errors, setErrors] = useState({
+    visitorsPM: "",
+    ordersPM: "",
+    aov: "",
+  });
+
   const handleButtonClick = () => {
     setOverlayVisible(!overlayVisible);
     setShowCalendly(true);
@@ -31,39 +37,80 @@ const Roi = () => {
     setShowsCalendly(true);
   };
 
+
   useEffect(() => {
     function btnClick(e) {
       e.preventDefault();
       const visitPM = document.getElementById("visitors-pm").value;
       const orderPM = document.getElementById("order-pm").value;
       const aOV = document.getElementById("aov").value;
-      console.log(visitPM, orderPM, aOV);
 
-      if (!visitPM || !orderPM || !aOV) {
-        console.log("error");
-      } else {
-        var conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
-        var potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
-        var potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
-        var addUnlockSales = parseFloat(
+      const newErrors = {
+        visitorsPM: visitPM ? "" : "Please enter the number of store visitors per month.",
+        ordersPM: orderPM ? "" : "Please enter the number of orders you generate per month.",
+        aov: aOV ? "" : "Please enter your store's Average Order Value (AOV).",
+      };
+
+      setErrors(newErrors);
+
+      if (visitPM && orderPM && aOV) {
+        const conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
+        const potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
+        const potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
+        const addUnlockSales = parseFloat(
           (potentialAdditionalSales * potentialAOV).toFixed(0)
         );
-        var monthlyROI = parseFloat(
+        const monthlyROI = parseFloat(
           (((addUnlockSales - 15) / 15) * 100).toFixed(0)
         );
         document.getElementById("con-pm").textContent = conversationsPerMonth;
-        document.getElementById("addSales").textContent =
-          potentialAdditionalSales;
+        document.getElementById("addSales").textContent = potentialAdditionalSales;
         document.getElementById("potAV").textContent = "$ " + potentialAOV;
-        document.getElementById("addSalesFromSpritle").textContent =
-          "$ " + addUnlockSales;
+        document.getElementById("addSalesFromSpritle").textContent = "$ " + addUnlockSales;
         document.getElementById("subsCost").textContent = "$ 15";
         document.getElementById("mon-ROI").textContent = monthlyROI + " %";
         document.getElementById("ROI").classList.remove("hidden");
       }
     }
+
     document.getElementById("myButton").addEventListener("click", btnClick);
   }, []);
+
+
+
+  // useEffect(() => {
+  //   function btnClick(e) {
+  //     e.preventDefault();
+  //     const visitPM = document.getElementById("visitors-pm").value;
+  //     const orderPM = document.getElementById("order-pm").value;
+  //     const aOV = document.getElementById("aov").value;
+  //     console.log(visitPM, orderPM, aOV);
+
+  //     if (!visitPM || !orderPM || !aOV) {
+  //       console.log("error");
+  //     } else {
+  //       var conversationsPerMonth = parseFloat((visitPM * 0.015).toFixed(0));
+  //       var potentialAdditionalSales = parseFloat((orderPM * 0.16).toFixed(0));
+  //       var potentialAOV = parseFloat((aOV * 1.1).toFixed(0));
+  //       var addUnlockSales = parseFloat(
+  //         (potentialAdditionalSales * potentialAOV).toFixed(0)
+  //       );
+  //       var monthlyROI = parseFloat(
+  //         (((addUnlockSales - 15) / 15) * 100).toFixed(0)
+  //       );
+  //       document.getElementById("con-pm").textContent = conversationsPerMonth;
+  //       document.getElementById("addSales").textContent =
+  //         potentialAdditionalSales;
+  //       document.getElementById("potAV").textContent = "$ " + potentialAOV;
+  //       document.getElementById("addSalesFromSpritle").textContent =
+  //         "$ " + addUnlockSales;
+  //       document.getElementById("subsCost").textContent = "$ 15";
+  //       document.getElementById("mon-ROI").textContent = monthlyROI + " %";
+  //       document.getElementById("ROI").classList.remove("hidden");
+  //     }
+  //   }
+  //   document.getElementById("myButton").addEventListener("click", btnClick);
+  // }, []);
 
   return (
     <div>
@@ -106,38 +153,52 @@ const Roi = () => {
               <form className="my-3">
                 <h5 className="mb-4 fs-18 fw-600">Your Current Process</h5>
                 <div className="mb-4">
-                  <label className="mb-3">
-                    Enter the number of store visitors per month:
-                  </label>
+                  <label className="mb-3">Enter the number of store visitors per month:</label>
                   <input
                     type="number"
                     className="w-full input ps-3 lh-22"
                     required
                     id="visitors-pm"
+                    value={visitorsPM}
+                    onChange={(e) => {
+                      setVisitorsPM(e.target.value);
+                      setErrors((prev) => ({ ...prev, visitorsPM: "" }));
+                    }}
                   />
+                  {errors.visitorsPM && <p style={{ color: "red" }}>{errors.visitorsPM}</p>}
                 </div>
                 <div className="mb-4">
-                  <label className="mb-3">
-                    Enter the number of orders you generate per month:
-                  </label>
+                  <label className="mb-3">Enter the number of orders you generate per month:</label>
                   <input
                     type="number"
                     className="w-full input ps-3 lh-22"
                     required
                     id="order-pm"
+                    value={ordersPM}
+                    onChange={(e) => {
+                      setOrdersPM(e.target.value);
+                      setErrors((prev) => ({ ...prev, ordersPM: "" }));
+                    }}
                   />
+                  {errors.ordersPM && <p style={{ color: "red" }}>{errors.ordersPM}</p>}
                 </div>
                 <div className="mb-4">
-                  <label className="mb-3 ">
-                    What is your store's Average Order Value (AOV)?
-                  </label>
+                  <label className="mb-3">What is your store's Average Order Value (AOV)?</label>
                   <input
                     type="number"
                     className="w-full lh-22 input ps-3"
                     required
                     id="aov"
+                    value={aov}
+                    onChange={(e) => {
+                      setAov(e.target.value);
+                      setErrors((prev) => ({ ...prev, aov: "" }));
+                    }}
                   />
+                  {errors.aov && <p style={{ color: "red" }}>{errors.aov}</p>}
                 </div>
+
+
                 <div className="mt-5">
                   <button
                     className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded w-full mt-2"
