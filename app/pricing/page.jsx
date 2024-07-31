@@ -112,10 +112,6 @@ const Pricing = () => {
     }
 
     document.getElementById("myButton").addEventListener("click", btnClick);
-
-    return () => {
-      document.getElementById("myButton").removeEventListener("click", btnClick);
-    };
   }, []);
 
 
