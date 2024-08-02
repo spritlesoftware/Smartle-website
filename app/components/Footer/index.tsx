@@ -26,7 +26,7 @@ const products: ProductType[] = [
 const footer = () => {
   return (
     <div
-      className="mt-8"
+      // className="mt-8"
       id="first-section"
       style={{ backgroundColor: "#00356b" }}
     >
