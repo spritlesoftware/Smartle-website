@@ -39,7 +39,7 @@ const index = () => {
       <h2 className="text-6xl text-center font-bold my-4 pt-24">
         CRM Integrations
       </h2>
-	  <h3 className="text-2xl font-medium text-center pt-10 opacity-50">Smartle AI provides advanced <span className="text-style-gradient">CRM integration</span> , expertly crafted to fit and <br /> enhance your business’s specific needs and objectives.</h3>
+	  <h3 className="text-2xl font-medium text-center pt-4 opacity-50">Smartle AI provides advanced <span className="text-style-gradient">CRM integration</span> , expertly crafted to fit and <br /> enhance your business’s specific needs and objectives.</h3>
       {/* <div
         className="relative flex h-full w-full  items-center justify-center overflow-hidden rounded-lg  bg-background p-20 max-w-5xl "
         ref={containerRef}
@@ -235,7 +235,7 @@ const index = () => {
       <h2 className="text-6xl text-center font-bold my-4 pt-24">
         Social Media Integrations
       </h2>
-	  <h3 className="text-2xl font-medium text-center pt-10 opacity-50">Smartle AI delivers <span className="text-style-gradient">next-gen social media integration</span>, customized to <br />seamlessly fit your business needs.</h3>
+	  <h3 className="text-2xl font-medium text-center pt-4 opacity-50">Smartle AI delivers <span className="text-style-gradient">next-gen social media integration</span>, customized to <br />seamlessly fit your business needs.</h3>
 
       <div
         style={{ margin: "0 auto" }}
