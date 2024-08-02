@@ -52,7 +52,8 @@ const Banner = () => {
             </h1>
            
           </div>
-          <div className="flex items-center justify-left">
+          
+          <div className="py-1 text-center lg:text-start">
       <button
         className="inline-block p-2 my-3 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
