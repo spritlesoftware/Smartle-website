@@ -109,7 +109,7 @@ const Aboutus = () => {
                       >
                         &#10005; {/* X button */}
                       </button>
-                      <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+                      <InlineWidget url="https://calendly.com/smartle/30min" />
                     </div>
                   </div>
                 )}
@@ -313,7 +313,7 @@ const Aboutus = () => {
                       >
                         &#10005; {/* X button */}
                       </button>
-                      <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+                      <InlineWidget url="https://calendly.com/smartle/30min" />
                     </div>
                   </div>
                 )}

@@ -112,7 +112,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
             >
               &#10005; 
             </button>
-            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+            <InlineWidget url="https://calendly.com/smartle/30min" />
           </div>
         </div>
       )} */}

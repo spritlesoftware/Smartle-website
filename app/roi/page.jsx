@@ -300,7 +300,7 @@ const Roi = () => {
             {showCalendly && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-                  <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
                   <button
                     className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
                     onClick={handleCloseCalendly}
@@ -361,7 +361,7 @@ const Roi = () => {
                       >
                         &#10005; {/* X button */}
                       </button>
-                      <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+                      <InlineWidget url="https://calendly.com/smartle/30min" />
                     </div>
                   </div>
                 </>
