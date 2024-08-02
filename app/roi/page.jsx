@@ -134,7 +134,7 @@ const Roi = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4 ptb-60">
+      <div className="container mx-auto sm:px-4 mx-auto sm:px-4 ptb-60">
         <div className="flex flex-col flex-wrap  items-center justify-center">
           <h3
             className="text-center txt-blue mb-5 fs-30 fw-600"
@@ -146,7 +146,7 @@ const Roi = () => {
             Maximize your potential with Smartle AI
           </h4>
           <div
-            className="lg:w-3/4 pr-4 pl-4 bg-white lg:flex  justify-center"
+            className=" pr-4 pl-4 bg-white lg:flex  justify-center"
             style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
           >
             <div className="lg:w-1/2 pr-4 pl-4 p-6 mb-4 lg:mb-0">
