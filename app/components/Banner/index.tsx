@@ -69,7 +69,7 @@ const Banner = () => {
               &#10005; {/* X button */}
             </button>
             {/* Include your InlineWidget component here */}
-            <InlineWidget url="https://calendly.com/prabhu-m-spritle/smartle-ai-demo?month=2024-03" />
+            <InlineWidget url="https://calendly.com/smartle/30min" />
           </div>
         </div>
       )}
