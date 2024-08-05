@@ -299,7 +299,7 @@ const Roi = () => {
             </button>
             {showCalendly && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
                   <InlineWidget url="https://calendly.com/smartle/30min" />
                   <button
                     className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
@@ -354,7 +354,7 @@ const Roi = () => {
                     onClick={() => setShowsCalendly(false)}
                   ></div>
                   <div className="fixed inset-0 flex items-center justify-center z-60">
-                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
                       <button
                         className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
                         onClick={() => setShowsCalendly(false)}
