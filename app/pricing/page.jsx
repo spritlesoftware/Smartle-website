@@ -12,6 +12,7 @@ const Pricing = () => {
   const [showWidget, setShowWidget] = useState(false);
 
   const [overlayVisible, setOverlayVisible] = useState(false);
+  const [activeCard, setActiveCard] = useState(3);
   const [errors, setErrors] = useState({
     visitPM: '',
     orderPM: '',
@@ -22,6 +23,24 @@ const Pricing = () => {
     setOverlayVisible(!overlayVisible);
     setShowCalendly(true);
     setCalendlyVisibility(true);
+  };
+
+  const handleCardClick = (cardId) => {
+    setActiveCard(cardId);
+  };
+
+  const getCardClasses = (cardId) => {
+    return cardId === activeCard
+      ? 'lg:w-1/4 pr-4 pl-4 bg-blue p-6 br-14 box-shadow mb-4 lg:mb-0'
+      : 'lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0';
+  };
+
+  const getTextColor = (cardId) => {
+    return cardId === activeCard ? 'text-white' : 'text-gray';
+  };
+
+  const getButtonClasses = () => {
+    return 'relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-white text-gray-800 btn-rounded mt-3 w-90';
   };
 
   const handleCloseCalendly = () => {
@@ -141,301 +160,167 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto sm:px-4 pb-60">
-        <h2 className="text-center text-5xl" style={{ paddingBottom: "6%" }}>
+      <div className="container mx-auto sm:px-4 pb-20">
+        <h2 className="text-center text-5xl" style={{ paddingBottom: '6%' }}>
           Pricing that propels your success
         </h2>
-        <div className="flex flex-wrap  lg:w-5/6 pr-4 pl-4 mx-auto justify-center items-end">
-          <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0">
-            <h2 className="mb-3 fw-300">
-              $39<span className="fs-18 txt-gray">/month</span>
-            </h2>
-            <h3 className="mb-2 text-4xl font-bold">Starter</h3>
-            <p className="mb-4 txt-gray fs-15">5 days free trial</p>
-            <ul className="p-0" style={{ listStyle: "none" }}>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                500 replies/month
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                1,000 webpages stored
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>2 Stores
-      </li> */}
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>1 Member
-      </li> */}
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Standard Support
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Train your AI
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Sales Tracker
-      </li> */}
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Pro-Active AI Sales
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Embed Anywhere
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Embed Anywhere
-      </li> */}
-            </ul>
-            <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onClick={handleButtonClick}
-              >
-                Start FREE Trial
-              </button>
-              {showCalendly && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                  <InlineWidget url="https://calendly.com/smartle/30min" />
-                  <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                    onClick={handleCloseCalendly}
-                  >
-                    &#10005; {/* X button */}
-                  </button>
+        <div className="flex flex-wrap lg:w-5/6 pr-4 pl-4 mx-auto justify-center cursor-pointer">
+          {[{
+            id: 1,
+            price: '$39',
+            plan: 'Starter',
+            replies: '500 replies/month',
+            webpages: '1,000 webpages stored',
+            support: 'Standard Support',
+            trainAI: 'Train your AI',
+            proActiveSales: 'Pro-Active AI Sales',
+            embedAnywhere: 'Embed Anywhere'
+          },
+          {
+            id: 2,
+            price: '$99',
+            plan: 'Growth',
+            replies: '1,500 replies/month',
+            webpages: '5,000 webpages stored',
+            support: 'Standard Support',
+            trainAI: 'Train your AI',
+            proActiveSales: 'Pro-Active AI Sales',
+            embedAnywhere: 'Embed Anywhere'
+          },
+          {
+            id: 3,
+            price: '$199',
+            plan: 'Pro',
+            replies: '3,000 replies/month',
+            webpages: '15,000 webpages stored',
+            support: 'Priority Support',
+            trainAI: 'Train your AI',
+            upSelling: 'Up Selling',
+            mediaIntegration: 'Media Channel Integration',
+            crmIntegration: 'CRM tool Integration',
+            proActiveSales: 'Pro-Active AI Sales',
+            embedAnywhere: 'Embed Anywhere'
+          },
+          {
+            id: 4,
+            price: '$499',
+            plan: 'Scale',
+            replies: '7,000 replies/month',
+            webpages: '30,000 webpages stored',
+            support: 'Priority Support',
+            trainAI: 'Train your AI',
+            upSelling: 'Up Selling',
+            crossSelling: 'Cross Selling',
+            mediaIntegration: 'Media Channel Integration',
+            crmIntegration: 'CRM tool integration',
+            aiImageSearch: 'AI Image Search*',
+            proActiveSales: 'Pro-Active AI Sales',
+            embedAnywhere: 'Embed Anywhere'
+          }].map(card => (
+            <div
+              key={card.id}
+              className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(card.id)}`}
+              onClick={() => handleCardClick(card.id)}
+            >
+              {card.id === 3 && (
+                <div
+                  className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded-full py-2 px-4 fs-15 fw-100 float-end mb-3 ${activeCard === 3 ? 'bg-white text-black' : 'bg-blue text-white'
+                    }`}
+                >
+                  Most Popular
                 </div>
+              )}
+              <h2 className={`my-3 pt-2 fw-300 ${getTextColor(card.id)}`}>
+                {card.price}<span className="fs-18">/month</span>
+              </h2>
+              <h3 className={`mb-2 text-4xl font-bold ${getTextColor(card.id)}`}>{card.plan}</h3>
+              <p className={`mb-4 fs-15 ${getTextColor(card.id)}`}>5 days free trial</p>
+              <ul className="p-0" style={{ listStyle: 'none' }}>
+                <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                  <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                  {card.replies}
+                </li>
+                <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                  <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                  {card.webpages}
+                </li>
+                {card.support && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.support}
+                  </li>
+                )}
+                {card.trainAI && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.trainAI}
+                  </li>
+                )}
+                {card.upSelling && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.upSelling}
+                  </li>
+                )}
+                {card.crossSelling && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.crossSelling}
+                  </li>
+                )}
+                {card.mediaIntegration && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.mediaIntegration}
+                  </li>
+                )}
+                {card.crmIntegration && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.crmIntegration}
+                  </li>
+                )}
+                {card.aiImageSearch && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.aiImageSearch}
+                  </li>
+                )}
+                {card.embedAnywhere && (
+                  <li className={`fs-15 mb-2 ${getTextColor(card.id)}`}>
+                    <i className={`fa-solid fa-circle-check pe-2 ${activeCard === card.id ? 'text-white' : 'text-blue'}`} />
+                    {card.embedAnywhere}
+                  </li>
+                )}
+              </ul>
+              <div className="text-center">
+                <button
+                  className={getButtonClasses()}
+                  onClick={() => setShowCalendly(true)}
+                >
+                  Start FREE Trial
+                </button>
               </div>
-            )}
             </div>
-          </div>
-          <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0">
-            <h2 className="mb-3 fw-300">
-              $99<span className="fs-18 txt-gray">/month</span>
-            </h2>
-            <h3 className="mb-2 text-4xl font-bold ">Growth</h3>
-            <p className="mb-4 txt-gray fs-15">5 days free trial</p>
-            <ul className="p-0" style={{ listStyle: "none" }}>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                1,500 replies/month
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                5,000 webpages stored
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>5 Stores
-      </li> */}
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Unlimited Members
-      </li> */}
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Standard Support
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Train your AI
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Sales Tracker
-      </li> */}
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Pro-Active AI Sales
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Embed Anywhere
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Embed Anywhere
-      </li> */}
-            </ul>
-            <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onClick={handleButtonClick}
-              >
-                Start FREE Trial
-              </button>
-              {showCalendly && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                  <InlineWidget url="https://calendly.com/smartle/30min" />
-                  <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                    onClick={handleCloseCalendly}
-                  >
-                    &#10005; {/* X button */}
-                  </button>
-                </div>
+          ))}
+          {/* Overlay for Calendly */}
+          {showCalendly && (
+            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+              <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                <InlineWidget url="https://calendly.com/smartle/30min" />
+                <button
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                  onClick={() => setShowCalendly(false)}
+                >
+                  &#10005; {/* X button */}
+                </button>
               </div>
-            )}
             </div>
-          </div>
-          <div className="lg:w-1/4 pr-4 pl-4 bg-blue p-6 br-14 box-shadow mb-4 lg:mb-0">
-            <div className="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded rounded-full py-2 px-4 bg-white fs-15 fw-100 text-blue float-end mb-3">
-              Most Popular
-            </div>
-            <h2 className="my-3 pt-2 fw-300">
-              $199<span className="fs-18">/month</span>
-            </h2>
-            <h3 className="mb-2 text-4xl font-bold">Pro</h3>
-            <p className="mb-4 fs-15">5 days free trial</p>
-            <ul className="p-0" style={{ listStyle: "none" }}>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                3,000 replies/month
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                15,000 webpages stored
-              </li>
-              {/* <li class="txt-white fs-15 mb-2">
-        <i class="fa-solid fa-circle-check  pe-2"></i>10 Stores
-      </li> */}
-              {/* <li class="txt-white fs-15 mb-2">
-        <i class="fa-solid fa-circle-check pe-2"></i>Unlimited Members
-      </li> */}
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                Priority Support
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                Train your AI
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check pe-2" />
-                Up selling
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                Media Channel Integration
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check pe-2" />
-                CRM tool Integration
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check  pe-2" />
-                Pro-Active AI Sales
-              </li>
-              <li className="txt-white fs-15 mb-2">
-                <i className="fa-solid fa-circle-check pe-2" />
-                Embed Anywhere
-              </li>
-            </ul>
-            <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline bg-white py-2 btn-rounded mt-3 w-90"
-                onClick={handleButtonClick}
-              >
-                Start FREE Trial
-              </button>
-              {showCalendly && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                  <InlineWidget url="https://calendly.com/smartle/30min" />
-                  <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                    onClick={handleCloseCalendly}
-                  >
-                    &#10005; {/* X button */}
-                  </button>
-                </div>
-              </div>
-            )}
-            </div>
-          </div>
-          <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0 ps-4">
-            <h2 className="mb-3 fw-300">
-              $499<span className="fs-18 txt-gray">/month</span>
-            </h2>
-            <h3 className="text-4xl font-bold">Scale</h3>
-            <p className="mb-4 txt-gray fs-15">5 days free trial</p>
-            <ul className="p-0" style={{ listStyle: "none" }}>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                7,000 replies/month
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                30,000 webpages stored
-              </li>
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>20 Stores
-      </li> */}
-              {/* <li class="txt-gray fs-15 mb-2">
-        <i class="fa-solid fa-circle-check txt-blue pe-2"></i>Unlimited Members
-      </li> */}
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Priority Support
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Train your AI
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Up Selling
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Cross Selling
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Media Channel Integration
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                CRM tool integrtaion
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                AI Image Search*
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Pro-Active AI Sales
-              </li>
-              <li className="txt-gray fs-15 mb-2">
-                <i className="fa-solid fa-circle-check txt-blue pe-2" />
-                Embed Anywhere
-              </li>
-
-            </ul>
-            <div className="text-center">
-              <button
-                className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3 w-90"
-                onClick={handleButtonClick}
-              >
-                Start FREE Trial
-              </button>
-              {showCalendly && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                  <InlineWidget url="https://calendly.com/smartle/30min" />
-                  <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                    onClick={handleCloseCalendly}
-                  >
-                    &#10005; {/* X button */}
-                  </button>
-                </div>
-              </div>
-            )}
-            </div>
-          </div>
+          )}
         </div>
       </div>
+
+
       <div className="container mx-auto sm:px-4 ptb-60">
         <div
           className="flex flex-wrap  p-6"
@@ -456,7 +341,7 @@ const Pricing = () => {
                 Schedule a Call
                 <i className="fa-solid fa-arrow-right float-end ps-4 mt-1" />
               </button>
-             
+
             </div>
             {/* <button
       type="button"
@@ -662,18 +547,18 @@ const Pricing = () => {
                 Schedule Demo
               </button>
               {showCalendly && (
-              <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                  <InlineWidget url="https://calendly.com/smartle/30min" />
-                  <button
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                    onClick={handleCloseCalendly}
-                  >
-                    &#10005; {/* X button */}
-                  </button>
+                <div className="fixed inset-0 flex items-center justify-center z-50">
+                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                    <InlineWidget url="https://calendly.com/smartle/30min" />
+                    <button
+                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                      onClick={handleCloseCalendly}
+                    >
+                      &#10005; {/* X button */}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
             </div>
           </div>
           <div
