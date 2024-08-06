@@ -167,7 +167,6 @@ const Aboutus = () => {
             <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500 }}>Smartle AI</h2>
             <h6 style={{ fontWeight: 400, fontSize: "1.15rem" }} className="py-3" >
               Continuously learning, it adopts new strategies, while
-              <br />
               personalizing its interactions to cater to your unique style and
               needs, ensuring a seamless and tailored experience.
             </h6>

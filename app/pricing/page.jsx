@@ -198,18 +198,18 @@ const Pricing = () => {
                 Start FREE Trial
               </button>
               {showCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={handleCloseCalendly}>
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                      onClick={handleCloseCalendly}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/smartle/30min" />
-                  </div>
+              <div className="fixed inset-0 flex items-center justify-center z-50">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
+                  <button
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                    onClick={handleCloseCalendly}
+                  >
+                    &#10005; {/* X button */}
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
             </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0">
@@ -264,18 +264,18 @@ const Pricing = () => {
                 Start FREE Trial
               </button>
               {showCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={handleCloseCalendly}>
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                      onClick={handleCloseCalendly}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/smartle/30min" />
-                  </div>
+              <div className="fixed inset-0 flex items-center justify-center z-50">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
+                  <button
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                    onClick={handleCloseCalendly}
+                  >
+                    &#10005; {/* X button */}
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
             </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 bg-blue p-6 br-14 box-shadow mb-4 lg:mb-0">
@@ -339,18 +339,18 @@ const Pricing = () => {
                 Start FREE Trial
               </button>
               {showCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                      onClick={() => setShowCalendly(false)}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/smartle/30min" />
-                  </div>
+              <div className="fixed inset-0 flex items-center justify-center z-50">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
+                  <button
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                    onClick={handleCloseCalendly}
+                  >
+                    &#10005; {/* X button */}
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
             </div>
           </div>
           <div className="lg:w-1/4 pr-4 pl-4 mb-4 lg:mb-0 ps-4">
@@ -420,18 +420,18 @@ const Pricing = () => {
                 Start FREE Trial
               </button>
               {showCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={() => setShowCalendly(false)}>
-                  <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-                    <button
-                      className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                      onClick={() => setShowCalendly(false)}
-                    >
-                      &#10005; {/* X button */}
-                    </button>
-                    <InlineWidget url="https://calendly.com/smartle/30min" />
-                  </div>
+              <div className="fixed inset-0 flex items-center justify-center z-50">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
+                  <button
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                    onClick={handleCloseCalendly}
+                  >
+                    &#10005; {/* X button */}
+                  </button>
                 </div>
-              )}
+              </div>
+            )}
             </div>
           </div>
         </div>
@@ -456,21 +456,7 @@ const Pricing = () => {
                 Schedule a Call
                 <i className="fa-solid fa-arrow-right float-end ps-4 mt-1" />
               </button>
-              {isCalendlyVisible && (
-                <>
-                  <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50" onClick={handleCloseCalendly}>
-                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent z-60">
-                      <button
-                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                        onClick={handleCloseCalendly}
-                      >
-                        &#10005; {/* X button */}
-                      </button>
-                      <InlineWidget url="https://calendly.com/smartle/30min" />
-                    </div>
-                  </div>
-                </>
-              )}
+             
             </div>
             {/* <button
       type="button"
@@ -627,7 +613,7 @@ const Pricing = () => {
             </button>
             {showCalendly && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
-                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
                   <InlineWidget url="https://calendly.com/smartle/30min" />
                   <button
                     className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
@@ -641,12 +627,12 @@ const Pricing = () => {
             {overlayVisible && (
               <div
                 style={{
-                  position: 'fixed',
+                  position: "fixed",
                   top: 0,
                   left: 0,
-                  width: '100%',
-                  height: '100%',
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
                   zIndex: 40,
                 }}
                 onClick={handleCloseCalendly}
@@ -675,25 +661,19 @@ const Pricing = () => {
               >
                 Schedule Demo
               </button>
-              {showsCalendly && (
-                <>
-                  <div
-                    className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50"
-                    onClick={() => setShowsCalendly(false)}
-                  ></div>
-                  <div className="fixed inset-0 flex items-center justify-center z-60">
-                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 bg-transparent">
-                      <button
-                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                        onClick={() => setShowsCalendly(false)}
-                      >
-                        &#10005; {/* X button */}
-                      </button>
-                      <InlineWidget url="https://calendly.com/smartle/30min" />
-                    </div>
-                  </div>
-                </>
-              )}
+              {showCalendly && (
+              <div className="fixed inset-0 flex items-center justify-center z-50">
+                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                  <InlineWidget url="https://calendly.com/smartle/30min" />
+                  <button
+                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                    onClick={handleCloseCalendly}
+                  >
+                    &#10005; {/* X button */}
+                  </button>
+                </div>
+              </div>
+            )}
             </div>
           </div>
           <div
