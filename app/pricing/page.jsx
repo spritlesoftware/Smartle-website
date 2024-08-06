@@ -165,66 +165,69 @@ const Pricing = () => {
           Pricing that propels your success
         </h2>
         <div className="flex flex-wrap lg:w-5/6 pr-4 pl-4 mx-auto justify-center cursor-pointer">
-          {[{
-            id: 1,
-            price: '$39',
-            plan: 'Starter',
-            replies: '500 replies/month',
-            webpages: '1,000 webpages stored',
-            support: 'Standard Support',
-            trainAI: 'Train your AI',
-            proActiveSales: 'Pro-Active AI Sales',
-            embedAnywhere: 'Embed Anywhere'
-          },
-          {
-            id: 2,
-            price: '$99',
-            plan: 'Growth',
-            replies: '1,500 replies/month',
-            webpages: '5,000 webpages stored',
-            support: 'Standard Support',
-            trainAI: 'Train your AI',
-            proActiveSales: 'Pro-Active AI Sales',
-            embedAnywhere: 'Embed Anywhere'
-          },
-          {
-            id: 3,
-            price: '$199',
-            plan: 'Pro',
-            replies: '3,000 replies/month',
-            webpages: '15,000 webpages stored',
-            support: 'Priority Support',
-            trainAI: 'Train your AI',
-            upSelling: 'Up Selling',
-            mediaIntegration: 'Media Channel Integration',
-            crmIntegration: 'CRM tool Integration',
-            proActiveSales: 'Pro-Active AI Sales',
-            embedAnywhere: 'Embed Anywhere'
-          },
-          {
-            id: 4,
-            price: '$499',
-            plan: 'Scale',
-            replies: '7,000 replies/month',
-            webpages: '30,000 webpages stored',
-            support: 'Priority Support',
-            trainAI: 'Train your AI',
-            upSelling: 'Up Selling',
-            crossSelling: 'Cross Selling',
-            mediaIntegration: 'Media Channel Integration',
-            crmIntegration: 'CRM tool integration',
-            aiImageSearch: 'AI Image Search*',
-            proActiveSales: 'Pro-Active AI Sales',
-            embedAnywhere: 'Embed Anywhere'
-          }].map(card => (
+          {[
+            {
+              id: 1,
+              price: '$39',
+              plan: 'Starter',
+              replies: '500 replies/month',
+              webpages: '1,000 webpages stored',
+              support: 'Standard Support',
+              trainAI: 'Train your AI',
+              proActiveSales: 'Pro-Active AI Sales',
+              embedAnywhere: 'Embed Anywhere'
+            },
+            {
+              id: 2,
+              price: '$99',
+              plan: 'Growth',
+              replies: '1,500 replies/month',
+              webpages: '5,000 webpages stored',
+              support: 'Standard Support',
+              trainAI: 'Train your AI',
+              proActiveSales: 'Pro-Active AI Sales',
+              embedAnywhere: 'Embed Anywhere'
+            },
+            {
+              id: 3,
+              price: '$199',
+              plan: 'Pro',
+              replies: '3,000 replies/month',
+              webpages: '15,000 webpages stored',
+              support: 'Priority Support',
+              trainAI: 'Train your AI',
+              upSelling: 'Up Selling',
+              mediaIntegration: 'Media Channel Integration',
+              crmIntegration: 'CRM tool Integration',
+              proActiveSales: 'Pro-Active AI Sales',
+              embedAnywhere: 'Embed Anywhere'
+            },
+            {
+              id: 4,
+              price: '$499',
+              plan: 'Scale',
+              replies: '7,000 replies/month',
+              webpages: '30,000 webpages stored',
+              support: 'Priority Support',
+              trainAI: 'Train your AI',
+              upSelling: 'Up Selling',
+              crossSelling: 'Cross Selling',
+              mediaIntegration: 'Media Channel Integration',
+              crmIntegration: 'CRM tool integration',
+              aiImageSearch: 'AI Image Search*',
+              proActiveSales: 'Pro-Active AI Sales',
+              embedAnywhere: 'Embed Anywhere'
+            }
+          ].map(card => (
             <div
               key={card.id}
-              className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(card.id)}`}
+              className={`w-full sm:w-1/2 lg:w-1/3 p-4 ${getCardClasses(card.id)} `}
               onClick={() => handleCardClick(card.id)}
+              style={{ alignSelf: 'flex-start' }}
             >
               {card.id === 3 && (
                 <div
-                  className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded-full py-2 px-4 fs-15 fw-100 float-end mb-3 ${activeCard === 3 ? 'bg-white text-black' : 'bg-blue text-white'
+                  className={`inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded-full py-2 px-4 fs-15 fw-500 float-end mb-3 ${activeCard === 3 ? 'bg-white text-black' : 'bg-blue text-white'
                     }`}
                 >
                   Most Popular
@@ -295,7 +298,8 @@ const Pricing = () => {
               </ul>
               <div className="text-center">
                 <button
-                  className={getButtonClasses()}
+                  className={`py-1 px-5 rounded-full transition-colors duration-500 ${activeCard === card.id ? 'bg-white text-blue' : 'bg-blue text-white'
+                    }`}
                   onClick={() => setShowCalendly(true)}
                 >
                   Start FREE Trial
@@ -319,7 +323,6 @@ const Pricing = () => {
           )}
         </div>
       </div>
-
 
       <div className="container mx-auto sm:px-4 ptb-60">
         <div
