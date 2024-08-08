@@ -39,10 +39,10 @@ html {
   scroll-behavior: smooth !important;
 }
 
-.navbar {
+/* .navbar {
   border-bottom: 0.5px solid rgba(196, 196, 196, 0.75);
   ;
-}
+} */
 
 .hover-underline {
   display: inline-flex;

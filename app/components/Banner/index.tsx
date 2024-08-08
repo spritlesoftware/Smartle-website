@@ -29,7 +29,7 @@ const Banner = () => {
         <div className="mx-auto sm:mx-0" style={{ margin: "auto 0" }}>
           <div className="py-3 text-center lg:text-start" >
             <button className="text-blue bg-lightblue hover:shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider hover:text-white hover:bg-black">
-              Smartle.AI
+              Smartle.ai
             </button>
             {/* <AnimatedGradientText>
                 <span
@@ -58,7 +58,7 @@ const Banner = () => {
         className="inline-block p-2 my-3 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
-         Try Smartle AI
+         Try Smartle.ai
       </button>
       {showsCalendly && (
         <div className="fixed inset-0 flex items-center justify-center z-50">

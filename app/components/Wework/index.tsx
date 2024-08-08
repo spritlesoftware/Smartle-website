@@ -96,7 +96,7 @@ export default class MultipleItems extends Component {
         };
 
         return (
-            <div className="py-32">
+            <div className="py-16">
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8'>
                     <div className="text-center">
                         <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">Plugs into your existing tools</h3>
@@ -108,14 +108,22 @@ export default class MultipleItems extends Component {
                     {postData.map((items, i) => (
                         <div key={i}>
                             <motion.div
-                                className='m-3 py-14 my-10 text-center shadow-xl rounded-3xl'
-                                style={{ backgroundColor: items.bgColor }}
+                                className='m-3 py-14 my-10 text-center shadow-xl rounded-3xl cursor-pointer'
+                                style={{ backgroundColor: items.bgColor, height: '150px' }} // Fixed height for the box
                                 initial={{ opacity: 0, scale: 0.8 }} // Initial state
                                 animate={{ opacity: 1, scale: 1 }} // Animate to this state
                                 transition={{ duration: 0.5 }} // Transition duration
+                                whileHover={{ scale: 1.05 }} // Scale up slightly on hover
                             >
-                                <div className='relative'>
-                                    <Image src={items.imgSrc} alt={items.name} width={182} height={182} className="inline-block m-auto" />
+                                <div className='relative flex items-center justify-center h-full'>
+                                    <Image 
+                                        src={items.imgSrc} 
+                                        alt={items.name} 
+                                        width={182} 
+                                        height={182} 
+                                        className="inline-block" 
+                                        style={{ objectFit: 'contain', maxHeight: '280px', }} 
+                                    />
                                 </div>
                                 {/* Optionally include name and profession */}
                                 {/* <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>

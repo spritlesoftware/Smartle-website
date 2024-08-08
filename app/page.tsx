@@ -19,11 +19,11 @@ export default function Home() {
   return (
     <main>
       <Banner />
+      <Wework />
       <Cards/>
       <Dedicated />
       <Digital />
       <Beliefs />
-      <Wework />
       <Ourteam />
       {/* <Featured /> */}
       {/* <Manage /> */}

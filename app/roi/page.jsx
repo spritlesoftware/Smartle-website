@@ -125,10 +125,10 @@ const Roi = () => {
         >
           <div className="lg:w-3/4 pr-4 pl-4 text-center ">
             <h1 className="fs-48 txt-blk fw-600">
-              Calculate how much Smartle AI can boost your Income
+              Calculate how much Smartle.ai can boost your Income
             </h1>
             <p className="mt-4 fs-18">
-              Partnering with Smartle AI ensures the fastest path to increasing
+              Partnering with Smartle.ai ensures the fastest path to increasing
               E-Commerce revenue and guarantees a high return on investment.
             </p>
           </div>
@@ -143,7 +143,7 @@ const Roi = () => {
             CALCULATE YOUR ROI
           </h3>
           <h4 className="text-center txt-blk mb-5 fs-30 fw-300">
-            Maximize your potential with Smartle AI
+            Maximize your potential with Smartle.ai
           </h4>
           <div
             className=" pr-4 pl-4 bg-white lg:flex  justify-center"

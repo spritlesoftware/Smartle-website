@@ -147,12 +147,12 @@ const Pricing = () => {
               Mastering the Art of Sales-Driven AI Chat
             </h1>
             <h2 className="mt-4 text-xl lg:block hidden max-w-5xl" style={{ margin: "0 auto" }}>
-              At Smartle AI, we recognize the unique needs of every business.
+              At Smartle.ai, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
               and let's build your success story together.
             </h2>
             <p className="mt-4 fs-18 block lg:hidden py-4">
-              At Smartle AI, we recognize the unique needs of every business.
+              At Smartle.ai, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
               and <br /> let's build your success story together.
             </p>
@@ -362,7 +362,7 @@ const Pricing = () => {
             CALCULATE YOUR ROI
           </h3>
           <h4 className="text-center txt-blk mb-5 fs-30 fw-300">
-            Maximize your potential with Smartle AI
+            Maximize your potential with Smartle.ai
           </h4>
           <div
             className="lg:w-3/4 pr-4 pl-4 bg-white lg:flex  justify-center"

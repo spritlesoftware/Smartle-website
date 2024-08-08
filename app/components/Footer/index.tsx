@@ -309,7 +309,7 @@ const footer = () => {
           <div className="mt-4 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 xl:gap-x-8">
             <div>
               <h3 className="text-center md:text-start text-offwhite text-lg">
-                @2024 - All Rights Reserved by{" "}
+                &copy; 2024 - All Rights Reserved by{" "}
                 <Link href="https://adminmart.com/" target="_blank">
                   {" "}
                   Spritle Software
@@ -318,11 +318,11 @@ const footer = () => {
             </div>
             <div className="flex justify-center md:justify-end">
               <Link href="https://www.spritle.com/privacy-policy/">
-                <h3 className="text-offwhite pr-6">Privacy policy</h3>
+                <h3 className="text-offwhite pr-6">Privacy Policy</h3>
               </Link>
               <Link href="https://www.spritle.com/terms-conditions/">
                 <h3 className="text-offwhite pl-6 border-solid border-l border-footer">
-                  Terms & conditions
+                  Terms & Conditions
                 </h3>
               </Link>
             </div>

@@ -54,7 +54,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
             <div className="flex flex-1 items-center sm:justify-between">
               {/* LOGO */}
 
-              <div className="flex flex-shrink-0 items-center border-right">
+              <div className="flex flex-shrink-0 items-center">
                 {/* <a
                   href="/"
                   className="inline-block pt-1 pb-1 mr-4 text-lg whitespace-no-wrap flex items-center md:mb-0 text-decoration-none"
@@ -76,7 +76,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
 
               {/* LINKS */}
 
-              <div className="hidden lg:flex items-center border-right ">
+              <div className="hidden lg:flex items-center">
                 <div className="flex justify-end space-x-4">
                   {navigation.map((item) => (
                     <Link
@@ -86,7 +86,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
                         item.current
                           ? "bg-gray-900"
                           : "navlinks hover:text-black",
-                        "px-3 py-4 rounded-md text-lg font-normal"
+                        "px-3 py-4 rounded-md text-lg font-semibold"
                       )}
                       aria-current={item.href ? "page" : undefined}
                     >
@@ -98,7 +98,7 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
               <a className="hidden lg:block">
               <div>
               <button
-        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+        className="relative flex-grow max-w-full flex-1 px-4 inline-block align-middle text-center select-none border font-semibold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
         onClick={handleButtonClicks}
       >
          Start for Free

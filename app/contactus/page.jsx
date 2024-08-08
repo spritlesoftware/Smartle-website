@@ -219,20 +219,20 @@ const Contactus = () => {
 
   <div className="lg:w-2/5 lg:pl-4 py-2 lg:py-0 flex flex-col justify-center">
     <div>
-      <h6 className="font-bold">Want to get on a quick call? Ring us at</h6>
+      <h6 className="font-extrabold">Want to get on a quick call? Ring us at</h6>
       <div className="py-1">
       <div className="py-3" style={{paddingLeft:"5%"}}>
         <p className="flex items-center mb-2">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
-          <span className="font-bold">Ohio, USA:</span>&nbsp;+1 614 664 7677
+          <span className="font-semibold">Ohio, USA:</span>&nbsp;+1 614 664 7677
         </p>
         <p className="flex items-center mb-2">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
-          <span className="font-bold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
+          <span className="font-semibold" mb-1>Singapore:</span>&nbsp;+65 6652 5475
         </p>
         <p className="flex items-center mb-0">
           <i className="fas fa-phone mr-2" style={{color:'#00356b'}}></i>
-          <span className="font-bold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
+          <span className="font-semibold mb-1">Chennai, India:</span>&nbsp;+91 44 4784 3003
         </p>
       </div>
 
@@ -240,7 +240,7 @@ const Contactus = () => {
     </div>
 
     <div>
-      <h6 className="font-bold">Want to visit us? Here are the Google Maps directions</h6>
+      <h6 className="font-extrabold">Want to visit us? Here are the Google Maps directions</h6>
       <div className="py-3 flex flex-col space-y-2">
       <div className="py-3 flex flex-col space-y-2 mb-2" style={{paddingLeft:"5%"}}>
         <a
@@ -248,14 +248,14 @@ const Contactus = () => {
           href="https://www.google.com/maps/place/Spritle+software+LLC/@40.0044937,-83.1532564,17z/data=!3m1!4b1!4m6!3m5!1s0x8838978530ed0737:0xaa95bab488bbf005!8m2!3d40.0044937!4d-83.1532564!16s%2Fg%2F11rnntvpmb?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
-          <span className="font-bold">Ohio, USA</span>
+          <span className="font-semibold">Ohio, USA</span>
         </a>
         <a
           className="flex items-center" style={{color:'#00356b'}}
           href="https://www.google.co.in/maps/place/Spritle+Software/@1.3325619,103.8915719,17z/data=!3m1!5s0x31da19f66c9058fd:0x8871b496b404d2ba!4m6!3m5!1s0x31da1703646cca73:0xee6ab222437d335a!8m2!3d1.332946!4d103.8939974!16s%2Fg%2F11ffltwqh1?entry=ttu"
         >
           <i className="fas fa-flag mr-2"></i>
-          <span className="font-bold">Singapore</span>
+          <span className="font-semibold">Singapore</span>
         </a>
         <a
           className="flex items-centere" style={{color:'#00356b'}}
@@ -263,7 +263,7 @@ const Contactus = () => {
         >
           <i className="fas fa-flag  mr-2" style={{color:'#00356b'}}></i>
 
-          <span className="font-bold">Chennai, India</span>
+          <span className="font-semibold">Chennai, India</span>
         </a>
       </div>
       </div>
@@ -283,9 +283,9 @@ const Contactus = () => {
 </div>
 
 
-      <div className="container mx-auto sm:px-4 ptb-60">
+<div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
         <div
-          className="flex flex-wrap   justify-center  "
+          className="flex flex-wrap justify-center"
           style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
         >
           <div className="lg:w-1/2 pr-4 pl-4 p-12">
@@ -296,38 +296,39 @@ const Contactus = () => {
               Let us show you a quick DEMO tailored to your store. You’ll be
               impressed.
             </p>
-            <div className="flex items-center justify-center">
-            <button
-                className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+            <div className="flex justify-center">
+              <button
+                className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
                 onClick={handleButtonClicks}
-            >
+              >
                 Schedule Demo
-            </button>
-            {showsCalendly && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
+              </button>
+              {showsCalendly && (
+                <>
+                  <div
+                    className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50"
+                    onClick={() => setShowsCalendly(false)}
+                  ></div>
+                  <div className="fixed inset-0 flex items-center justify-center z-60">
                     <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                        <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                            onClick={handleCalendlyClose}
-                        >
-                            &#10005; {/* X button */}
-                        </button>
-                        <InlineWidget url="https://calendly.com/smartle/30min" />
+                      <button
+                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
+                        onClick={() => setShowsCalendly(false)}
+                      >
+                        &#10005; {/* X button */}
+                      </button>
+                      <InlineWidget url="https://calendly.com/smartle/30min" />
                     </div>
-                </div>
-            )}
-            {overlayVisible && (
-                <div
-                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
-                    onClick={handleCalendlyClose}
-                />
-            )}
-        </div>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
           <div
             className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
             style={{
-              background: "url(images/still-not-sure.webp)",
+              background:
+                "url(https://smartle-ai.s3.amazonaws.com/assets/img/still-not-sure.webp)",
               borderRadius: 10,
               backgroundSize: "cover",
             }}

@@ -60,7 +60,7 @@ const Beliefs = () => {
             className="text-2xl pt-2 mb-5 text-center sm:text-start"
             style={{ fontSize: "1.3rem" }}
           >
-            No matter where or how they speak, Smartle AI adapts to your
+            No matter where or how they speak, Smartle.ai adapts to your
             business, breaking the language barrier with its conversational AI
           </h5>
           <img
@@ -77,7 +77,7 @@ const Beliefs = () => {
             <span className="text-grey"> , not a textbook.</span>
           </h3>
           <h5 className="text-offwhite pt-2 mb-5 text-center sm:text-start text-xl">
-            No matter where or how they speak, Smartle AI adapts to your
+            No matter where or how they speak, Smartle.ai adapts to your
             business, breaking the language barrier with its conversational AI
           </h5>
           {/* <div className="text-center sm:text-start">
@@ -103,9 +103,9 @@ const Beliefs = () => {
             className="pt-2 mb-5 text-center sm:text-start"
             style={{ fontSize: "1.3rem" }}
           >
-            Every chat is an opportunity for Smartle AI to learn something new
+            Every chat is an opportunity for Smartle.ai to learn something new
             and with each response, it gets better at understanding what you
-            need. The longer you use Smartle AI, the better it becomes at
+            need. The longer you use Smartle.ai, the better it becomes at
             helping you make sales with its conversational AI for e-commerce
           </h5>
           <img src="/images/train-ai.webp" className="max-w-full" style={{height:"30%"}} />
@@ -120,9 +120,9 @@ const Beliefs = () => {
             your needs
           </h3>
           <h5 className="bluish pt-2 mb-5 text-center sm:text-start text-xl">
-            Every chat is an opportunity for Smartle AI to learn something new
+            Every chat is an opportunity for Smartle.ai to learn something new
             and with each response, it gets better at understanding what you
-            need. The longer you use Smartle AI, the better it becomes at
+            need. The longer you use Smartle.ai, the better it becomes at
             helping you make sales with its conversational AI for e-commerce
           </h5>
           {/* <div className="text-center sm:text-start">

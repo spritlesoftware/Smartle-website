@@ -16,7 +16,43 @@ interface datatype {
   paragraph: string;
   link: string;
 }
-
+const carouselData = [
+  {
+    bg: '#AFD5F0',
+    icon: FaSmile,
+    iconColor: '#0056A0',
+    title: 'Happier Shoppers',
+    description: 'Smartle.ai provides delightful conversations, making shopping experiences more engaging and enjoyable.',
+  },
+  {
+    bg: '#F8C8DC',
+    icon: FaHandSparkles,
+    iconColor: '#C2185B',
+    title: 'Effortless Assistance',
+    description: 'Get instant answers and product recommendations, leading to a smoother shopping experience.',
+  },
+  {
+    bg: '#FEDD9E',
+    icon: FaChartLine,
+    iconColor: '#F57F17',
+    title: 'Increased Efficiency',
+    description: 'Smartle.ai handles repetitive tasks, allowing your team to focus on more critical aspects of your business.',
+  },
+  {
+    bg: '#AFD5F0',
+    icon: FaClock,
+    iconColor: '#0056A0',
+    title: '24/7 Availability',
+    description: 'With Smartle.ai, you’re never alone. Your virtual assistant is available round-the-clock 24/7.',
+  },
+  {
+    bg: '#F8C8DC',
+    icon: FaDatabase,
+    iconColor: '#C2185B',
+    title: 'Data-Driven Insights',
+    description: 'Through Smartle.ai interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.',
+  },
+];
 const Aboutdata: datatype[] = [
   {
     heading: "83%",
@@ -66,8 +102,6 @@ const Aboutus = () => {
   };
 
 
-
-
   return (
     <div>
 
@@ -84,7 +118,7 @@ const Aboutus = () => {
                 Beyond Bots:
                 <span className="fw-300">
                   {" "}
-                  How Smartle AI is Making Your Store Smarter
+                  How Smartle.ai is Making Your Store Smarter
                 </span>
               </h1>
               {/* <button
@@ -98,7 +132,7 @@ const Aboutus = () => {
                   className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
                   onClick={handleButtonClick}
                 >
-                  Try Smartle AI For FREE
+                  Try Smartle.ai For FREE
                 </button>
                 {showCalendly && (
                   <div className="fixed inset-0 flex items-center justify-center z-50">
@@ -121,7 +155,6 @@ const Aboutus = () => {
                 )}
               </div>
 
-
             </div>
           </div>
         </div>
@@ -134,7 +167,7 @@ const Aboutus = () => {
               Imagine a world where conversation isn't confined to screens and
               buttons. Where you can chat, ask questions, and get things done
               with an AI as natural and engaging as a real person. That's the
-              world Smartle AI is building.
+              world Smartle.ai is building.
               <br />
               <br /> Our team consists of enthusiastic inventors with a single
               objective in mind: creating an AI assistant that understands&nbsp;
@@ -164,7 +197,7 @@ const Aboutus = () => {
             className="lg:w-2/5 pr-4 pl-4 py-5 flex flex-col justify-center"
             style={{ marginLeft: "2%" }}
           >
-            <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500 }}>Smartle AI</h2>
+            <h2 className="container fw-bold text-5xl fs-36 mb-2" style={{ fontWeight: 500 }}>Smartle.ai</h2>
             <h6 style={{ fontWeight: 400, fontSize: "1.15rem" }} className="py-3" >
               Continuously learning, it adopts new strategies, while
               personalizing its interactions to cater to your unique style and
@@ -174,113 +207,58 @@ const Aboutus = () => {
         </div>
 
         <div className="container mx-auto sm:px-4 pt-12 pb-12">
-          <div className="flex flex-wrap items-center justify-center bg-gradient-to-r from-[#E3F2FD] to-[#FCE4EC] p-6 rounded-md">
-            <h3 className="text-center text-4xl font-semibold mb-8 w-full">
-              Why customers win with Smartle?
-            </h3>
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation={false}
-              pagination={{ clickable: true }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-              }}
-              modules={[Pagination]}
-              className="swiper"
-              effect="slide"
-            >
-              <SwiperSlide>
-                <div className="bg-[#AFD5F0] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out flex flex-col items-center">
-                  <div className="flex items-center mb-4">
-                    <FaSmile className="text-2xl text-black mr-4" />
-                    <div className="text-center">
-                      <h3 className="text-2xl mb-2">Happier <br /> Shoppers</h3>
-                      <hr className="mx-auto my-2 w-1/2 border-gray-300 border-opacity-30" />
-                    </div>
+      <div className="flex flex-wrap items-center justify-center bg-gradient-to-r from-[#E3F2FD] to-[#FCE4EC] p-16 rounded-md">
+        <h3 className="text-center text-4xl font-semibold mb-8 w-full">
+          Why customers win with Smartle?
+        </h3>
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation={false}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          modules={[Pagination]}
+          className="swiper"
+          effect="slide"
+        >
+          {carouselData.map((card, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="bg-white p-6 rounded-lg shadow-lg flex flex-col cursor-pointer"
+                style={{ backgroundColor: card.bg, height:"250px" }}
+              >
+                <div className="flex items-start mb-4">
+                  <card.icon
+                    className="mr-3"
+                    style={{ color: card.iconColor, fontSize:"5rem" }}
+                  />
+                  <div>
+                    <h3 className="text-2xl mb-2">{card.title}</h3>
+                    <hr className="mb-2 w-1/2 border-gray-300 border-opacity-30" />
+                    <p className="text-black">
+                      {card.description}
+                    </p>
                   </div>
-                  <p className="text-center py-2 text-black">
-                    Smartle AI provides delightful conversations, making shopping experiences more engaging and enjoyable.
-                  </p>
                 </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="bg-[#F8C8DC] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out flex flex-col items-center">
-                  <div className="flex items-center mb-4">
-                    <FaHandSparkles className="text-2xl text-black mr-4" />
-                    <div className="text-center">
-                      <h3 className="text-2xl mb-2">Effortless <br /> Assistance</h3>
-                      <hr className="mx-auto my-2 w-1/2 border-gray-300 border-opacity-30" />
-                    </div>
-                  </div>
-                  <p className="text-center py-2 text-black">
-                    Get instant answers and product recommendations, leading to a smoother shopping experience.
-                  </p>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="bg-[#FEDD9E] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out flex flex-col items-center">
-                  <div className="flex items-center mb-4">
-                    <FaChartLine className="text-2xl text-black mr-4" />
-                    <div className="text-center">
-                      <h3 className="text-2xl mb-2">Increased <br /> Efficiency</h3>
-                      <hr className="mx-auto my-2 w-1/2 border-gray-300 border-opacity-30" />
-                    </div>
-                  </div>
-                  <p className="text-center py-2 text-black">
-                    Smartle AI handles repetitive tasks, allowing your team to focus on more critical aspects of your business.
-                  </p>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="bg-[#AFD5F0] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out flex flex-col items-center">
-                  <div className="flex items-center mb-4">
-                    <FaClock className="text-2xl text-black mr-4" />
-                    <div className="text-center">
-                      <h3 className="text-2xl mb-2">24/7 <br /> Availability</h3>
-                      <hr className="mx-auto my-2 w-1/2 border-gray-300 border-opacity-30" />
-                    </div>
-                  </div>
-                  <p className="text-center py-2 text-black">
-                    With Smartle AI, you’re never alone. Your virtual assistant is available round-the-clock 24/7.
-                  </p>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="bg-[#F8C8DC] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out flex flex-col items-center">
-                  <div className="flex items-center mb-4">
-                    <FaDatabase className="text-2xl text-black mr-4" />
-                    <div className="text-center">
-                      <h3 className="text-2xl mb-2">Data-Driven <br /> Insights</h3>
-                      <hr className="mx-auto my-2 w-1/2 border-gray-300 border-opacity-30" />
-                    </div>
-                  </div>
-                  <p className="text-center py-2 text-black">
-                    Through Smartle AI interactions, obtain useful consumer data that can be used to improve marketing strategies and product suggestions.
-                  </p>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-
-
-
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
 
 
         <div className="container mx-auto sm:px-4 ptb-60">
