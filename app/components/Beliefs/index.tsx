@@ -40,7 +40,7 @@ const Beliefs = () => {
             </h5>
           </div>
           <div className="flex justify-center items-end">
-            <img src="/images/belief-img-2.webp" className="h-[450px] lg:h-[500px] w-full object-cover" />
+            <img src="/images/belief-img-2.webp" className="h-[450px] lg:h-[700px] w-full lg:w-[700px] object-cover" />
           </div>
         </div>
         <div className="pt-12 px-10 sm:px-24 rounded-3xl flex flex-col justify-between" style={{backgroundColor:"#D6FFEB"}}>
@@ -64,6 +64,8 @@ const Beliefs = () => {
           </div>
         </div>
       </div>
+
+     
     </div>
   );
 };

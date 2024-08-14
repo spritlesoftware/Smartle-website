@@ -82,35 +82,34 @@ const Contactus = () => {
               Drop us a message and sit back for the magic to happen
             </p>
             <div className="flex items-center justify-center">
-              <button
-                className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-3 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
-                onClick={handleButtonClicks}
-              >
-                Try Smartle AI
-              </button>
-              {showsCalendly && (
-                 <div className="fixed inset-0 flex items-center justify-center z-50">
-                 <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
-                     <button
-                         className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
-                         onClick={handleCalendlyClose}
-                     >
-                         &#10005; {/* X button */}
-                     </button>
-                     <InlineWidget url="https://calendly.com/smartle/30min" />
-                 </div>
-             </div>
-              )}
-              {overlayVisible && (
-                <div
-                  className="fixed inset-0 z-40"
-                  style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                  }}
-                  onClick={handleCalendlyClose}
-                />
-              )}
-            </div>
+                <button
+                  className="inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-3"
+                  onClick={handleButtonClicks}
+                >
+                  Try Smartle.ai
+                </button>
+                {showsCalendly && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50">
+                    <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                      <button
+                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                        onClick={handleCalendlyClose}
+                      >
+                        &#10005; {/* X button */}
+                      </button>
+                      <InlineWidget url="https://calendly.com/smartle/30min" />
+                    </div>
+                  </div>
+                )}
+                {overlayVisible && (
+                  <div
+                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
+                    style={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.5)',}}
+                    onClick={handleCalendlyClose}
+                  />
+                )}
+              </div>
           </div>
         </div>
       </div>
@@ -283,58 +282,59 @@ const Contactus = () => {
 </div>
 
 
-<div className="container mx-auto sm:px-4 ptb-60 max-w-7xl">
-        <div
-          className="flex flex-wrap justify-center"
-          style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
-        >
-          <div className="lg:w-1/2 pr-4 pl-4 p-12">
-            <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
-              Still Not Sure?
-            </h3>
-            <p className="txt-blk fs-18 text-center">
-              Let us show you a quick DEMO tailored to your store. You’ll be
-              impressed.
-            </p>
-            <div className="flex justify-center">
-              <button
-                className="w-70 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded mt-4"
-                onClick={handleButtonClicks}
-              >
-                Schedule Demo
-              </button>
-              {showsCalendly && (
-                <>
-                  <div
-                    className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50"
-                    onClick={() => setShowsCalendly(false)}
-                  ></div>
-                  <div className="fixed inset-0 flex items-center justify-center z-60">
+<div className="container mx-auto sm:px-4 ptb-60">
+          <div
+            className="flex flex-wrap   justify-center  "
+            style={{ boxShadow: "0px 16px 48px 0px #D9D9D9", borderRadius: 10 }}
+          >
+            <div className="lg:w-1/2 pr-4 pl-4 p-12">
+              <h3 className="mb-3 txt-blk fs-40 fw-600 text-center">
+                Still Not Sure?
+              </h3>
+              <p className="txt-blk fs-18 text-center">
+                Let us show you a quick DEMO tailored to your store. You’ll be
+                impressed.
+              </p>
+              <div className="flex items-center justify-center">
+                <button
+                  className="my-3 inline-block text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+                  onClick={handleButtonClicks}
+                >
+                  Schedule Demo
+                </button>
+                {showsCalendly && (
+                  <div className="fixed inset-0 flex items-center justify-center z-50">
                     <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
                       <button
-                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white" // Increased font size to make the X button larger
-                        onClick={() => setShowsCalendly(false)}
+                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                        onClick={handleCalendlyClose}
                       >
                         &#10005; {/* X button */}
                       </button>
                       <InlineWidget url="https://calendly.com/smartle/30min" />
                     </div>
                   </div>
-                </>
-              )}
+                )}
+                {overlayVisible && (
+                  <div
+                    className="fixed inset-0 bg-gray-800 bg-opacity-50 z-40"
+                    style={{
+                      backgroundColor: 'rgba(0, 0, 0, 0.5)',}}
+                    onClick={handleCalendlyClose}
+                  />
+                )}
+              </div>
             </div>
+            <div
+              className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
+              style={{
+                background: "url(images/still-not-sure.webp)",
+                borderRadius: 10,
+                backgroundSize: "cover",
+              }}
+            />
           </div>
-          <div
-            className="lg:w-1/2 pr-4 pl-4 hidden lg:block"
-            style={{
-              background:
-                "url(https://smartle-ai.s3.amazonaws.com/assets/img/still-not-sure.webp)",
-              borderRadius: 10,
-              backgroundSize: "cover",
-            }}
-          />
         </div>
-      </div>
      
     </>
   );

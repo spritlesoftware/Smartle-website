@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import Slider from "react-slick";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"; // Import framer-motion
+import { motion } from "framer-motion";
+import { InlineWidget } from "react-calendly";
 
 // CAROUSEL DATA
 interface DataType {
@@ -52,59 +53,72 @@ const postData: DataType[] = [
 ];
 
 // CAROUSEL SETTINGS
-export default class MultipleItems extends Component {
-    render() {
-        const settings = {
-            dots: false,
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: false,
-            autoplay: true,
-            speed: 4000,
-            autoplaySpeed: 2000,
-            cssEase: "linear",
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
-                },
-                {
-                    breakpoint: 450,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                    }
+const MultipleItems: React.FC = () => {
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        speed: 4000,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
                 }
-            ]
-        };
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 450,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }
+        ]
+    };
 
-        return (
-            <div className="py-16">
+    const [showsCalendly, setShowsCalendly] = useState(false);
+    const [overlayVisible, setOverlayVisible] = useState(false);
+
+    const handleButtonClicks = () => {
+        setShowsCalendly(true);
+        setOverlayVisible(true);
+    };
+
+    const handleCalendlyClose = () => {
+        setShowsCalendly(false);
+        setOverlayVisible(false);
+    };
+
+    return (
+        <>
+            <div className="py-4">
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8'>
                     <div className="text-center">
-                        <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">Plugs into your existing tools</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-2">E-commerce ready</h3>
+                        {/* <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">Plugs into your existing tools</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-2">E-commerce ready</h3> */}
                     </div>
                 </div>
 
-                <Slider {...settings}>
+                <Slider {...settings}>  
                     {postData.map((items, i) => (
                         <div key={i}>
                             <motion.div
@@ -125,14 +139,69 @@ export default class MultipleItems extends Component {
                                         style={{ objectFit: 'contain', maxHeight: '280px', }} 
                                     />
                                 </div>
-                                {/* Optionally include name and profession */}
-                                {/* <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
-                                <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3> */}
                             </motion.div>
                         </div>
                     ))}
                 </Slider>
+
+                {/* Video Section */}
+                <div className="flex flex-col items-center justify-center w-full mt-16 px-4">
+                    <div className="text-center mb-8 max-w-4xl">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4"> Transform Your Shopping  Experience with Smartle AI Chat Assistance</h2>
+                        <p className="text-lg sm:text-xl text-gray-700 mb-4">
+                        Elevate your style effortlessly with Smartle AI Chat Assistance. Discover a new way to shop, where every recommendation is perfectly suited to your unique taste.
+                        </p>
+                        <button
+                            className="inline-block p-2 my-3 text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline btn-dark-blue btn-rounded"
+                            onClick={handleButtonClicks}
+                        >
+                            Try Smartle.ai
+                        </button>
+                        {showsCalendly && (
+                            <div className="fixed inset-0 flex items-center justify-center z-50">
+                                <div className="relative rounded-lg p-8 w-11/12 max-w-4xl my-8 max-h-screen bg-transparent">
+                                    <button
+                                        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl text-white"
+                                        onClick={handleCalendlyClose}
+                                    >
+                                        &#10005; {/* X button */}
+                                    </button>
+                                    {/* InlineWidget component */}
+                                    <InlineWidget url="https://calendly.com/smartle/30min" />
+                                </div>
+                            </div>
+                        )}
+                        {overlayVisible && (
+                            <div
+                                className="fixed inset-0 z-40"
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                }}
+                                onClick={handleCalendlyClose}
+                            />
+                        )}
+                    </div>
+                    <div className="relative w-full max-w-4xl h-auto aspect-video overflow-hidden rounded-lg cursor-pointer border-4 border-blue-500 shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <div 
+                            dangerouslySetInnerHTML={{ __html: `
+                                <script src="https://fast.wistia.com/embed/medias/l7use1c8qv.jsonp" async></script>
+                                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                        <div class="wistia_embed wistia_async_l7use1c8qv seo=true videoFoam=true" style="height:100%;position:relative;width:100%">
+                                            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                                <img src="https://fast.wistia.com/embed/medias/l7use1c8qv/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `}}
+                        />
+                    </div>
+                </div>
             </div>
-        );
-    }
+        </>
+    );
 }
+
+export default MultipleItems;
