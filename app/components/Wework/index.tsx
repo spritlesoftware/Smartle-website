@@ -95,37 +95,34 @@ const MultipleItems: React.FC = () => {
     };
 
     return (
-        <>
-            <div className="py-4 flex justify-center">
-                <div className='w-full max-w-[90%] md:max-w-[50%] lg:max-w-[50%]'>
-                    <Slider {...settings}>
-                        {postData.map((items, i) => (
-                            <div key={i}>
-                                <motion.div
-                                    className='m-3 py-10 text-center shadow-xl rounded-3xl cursor-pointer'
-                                    style={{ backgroundColor: items.bgColor, height: '130px' }} // Reduced height for the box
-                                    initial={{ opacity: 0, scale: 0.8 }} // Initial state
-                                    animate={{ opacity: 1, scale: 1 }} // Animate to this state
-                                    transition={{ duration: 0.5 }} // Transition duration
-                                    whileHover={{ scale: 1.05 }} // Scale up slightly on hover
-                                >
-                                    <div className='relative flex items-center justify-center h-full'>
-                                        <Image 
-                                            src={items.imgSrc} 
-                                            alt={items.name} 
-                                            width={182} 
-                                            height={122} 
-                                            className="inline-block" 
-                                            style={{ objectFit: 'contain', maxHeight: '50px', }} 
-                                        />
-                                    </div>
-                                </motion.div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
+        <div className="py-4 flex justify-center">
+            <div className='w-full max-w-[90%] md:max-w-[70%] lg:max-w-[70%]'>
+                <Slider {...settings}>
+                    {postData.map((items, i) => (
+                        <div key={i} className='px-5 flex justify-center'>
+                            <motion.div
+                                className='py-10 text-center cursor-pointer'
+                                initial={{ opacity: 0, scale: 0.8 }} // Initial state
+                                animate={{ opacity: 1, scale: 1 }} // Animate to this state
+                                transition={{ duration: 0.5 }} // Transition duration
+                                whileHover={{ scale: 1.05 }} // Scale up slightly on hover
+                            >
+                                <div className='relative flex items-center justify-center'>
+                                    <Image 
+                                        src={items.imgSrc} 
+                                        alt={items.name} 
+                                        width={182} 
+                                        height={122} 
+                                        className="inline-block" 
+                                        style={{ objectFit: 'contain' }} 
+                                    />
+                                </div>
+                            </motion.div>
+                        </div>
+                    ))}
+                </Slider>
             </div>
-        </>
+        </div>
     );
 }
 
