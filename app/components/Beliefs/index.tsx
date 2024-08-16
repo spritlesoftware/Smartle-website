@@ -82,9 +82,9 @@ const Beliefs = () => {
         </div>
       </div>
        {/* Video Section */}
-       <div className="flex flex-col items-center justify-center w-full mt-16 px-4">
+       <div className="flex flex-col items-center justify-center w-full mt-20 px-4">
           <div className="text-center mb-8 max-w-4xl">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">Transform Your Shopping Experience with Smartle AI Chat Assistance</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold text-black mb-4 mt-4">Transform Your Shopping Experience with Smartle AI Chat Assistance</h2>
             <p className="text-2xl font-medium text-center pt-4 opacity-50 mb-4">
               Elevate your style effortlessly with Smartle AI Chat Assistance. Discover a new way to shop, where every recommendation is perfectly suited to your unique taste.
             </p>
