@@ -97,7 +97,7 @@ const MultipleItems: React.FC = () => {
     return (
         <>
             <div className="py-4 flex justify-center">
-                <div className='w-full max-w-[90%] md:max-w-[70%] lg:max-w-[75%]'>
+                <div className='w-full max-w-[90%] md:max-w-[50%] lg:max-w-[50%]'>
                     <Slider {...settings}>
                         {postData.map((items, i) => (
                             <div key={i}>
