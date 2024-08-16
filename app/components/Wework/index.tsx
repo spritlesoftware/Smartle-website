@@ -99,7 +99,7 @@ const MultipleItems: React.FC = () => {
             <div className='w-full max-w-[90%] md:max-w-[70%] lg:max-w-[70%]'>
                 <Slider {...settings}>
                     {postData.map((items, i) => (
-                        <div key={i} className='px-5 flex justify-center'>
+                        <div key={i} className='px-4 flex justify-center'>
                             <motion.div
                                 className='py-10 text-center cursor-pointer'
                                 initial={{ opacity: 0, scale: 0.8 }} // Initial state
