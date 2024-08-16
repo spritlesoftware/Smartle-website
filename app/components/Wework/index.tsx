@@ -101,20 +101,23 @@ const MultipleItems: React.FC = () => {
                     {postData.map((items, i) => (
                         <div key={i} className='px-4 flex justify-center'>
                             <motion.div
-                                className='py-10 text-center cursor-pointer'
+                                className='text-center cursor-pointer'
                                 initial={{ opacity: 0, scale: 0.8 }} // Initial state
                                 animate={{ opacity: 1, scale: 1 }} // Animate to this state
                                 transition={{ duration: 0.5 }} // Transition duration
                                 whileHover={{ scale: 1.05 }} // Scale up slightly on hover
                             >
-                                <div className='relative flex items-center justify-center'>
-                                    <Image 
-                                        src={items.imgSrc} 
-                                        alt={items.name} 
-                                        width={182} 
-                                        height={122} 
-                                        className="inline-block" 
-                                        style={{ objectFit: 'contain' }} 
+                                <div
+                                    className='relative flex items-center justify-center bg-gray-200 p-4 rounded-lg'
+                                    style={{ width: '150px', height: '100px' }} // Container dimensions
+                                >
+                                    <Image
+                                        src={items.imgSrc}
+                                        alt={items.name}
+                                        width={150}
+                                        height={100}
+                                        className="object-contain"
+                                        style={{ maxWidth: '100%', maxHeight: '100%' }} // Ensure the image fits within the container
                                     />
                                 </div>
                             </motion.div>
