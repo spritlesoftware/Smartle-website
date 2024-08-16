@@ -15,7 +15,7 @@ const products: ProductType[] = [
     id: 1,
     section: "Quick Links",
     link: [
-      { name: "ROI Calculator", url: "/roi" },
+      // { name: "ROI Calculator", url: "/roi" },
       { name: "About Us", url: "/aboutus" },
       { name: "Pricing", url: "/pricing" },
       { name: "Blogs", url: "https://www.smartle.ai/blog/" }

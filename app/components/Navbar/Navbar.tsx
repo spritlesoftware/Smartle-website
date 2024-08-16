@@ -16,7 +16,7 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: "ROI Calculator", href: "/roi", current: false },
+  // { name: "ROI Calculator", href: "/roi", current: false },
   { name: "About us", href: "/aboutus", current: false },
   { name: "Pricing", href: "/pricing", current: false },
   { name: "Blogs", href: "https://www.smartle.ai/blog/", current: false },
