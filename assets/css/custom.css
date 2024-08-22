@@ -1019,14 +1019,14 @@ margin-bottom: 20px;
 
 /* Custom Scrollbar changes  */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #00356b;
   
-}
+} */
 
 
 
