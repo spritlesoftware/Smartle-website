@@ -8,7 +8,7 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'ROI', href: '/roi' },
+    // { name: 'ROI', href: '/roi' },
     { name: 'About Us', href: '/aboutus' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Blog', href: 'https://www.smartle.ai/blog/' },
