@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { InlineWidget } from 'react-calendly';
 import { FaSmile, FaHandSparkles, FaChartLine, FaClock, FaDatabase } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface datatype {
   heading: string;
@@ -164,9 +165,9 @@ const Aboutus = () => {
               Your AI partner
             </h2>
             <p style={{ textAlign: "left", fontSize: "1.15rem" }} className="py-3">
-              Imagine a world where conversation isn't confined to screens and
+              Imagine a world where conversation isn&apos;t confined to screens and
               buttons. Where you can chat, ask questions, and get things done
-              with an AI as natural and engaging as a real person. That's the
+              with an AI as natural and engaging as a real person. That&apos;s the
               world Smartle.ai is building.
               <br />
               <br /> Our team consists of enthusiastic inventors with a single
@@ -176,11 +177,15 @@ const Aboutus = () => {
             </p>
           </div>
           <div className="lg:w-1/3 pr-4 pl-4">
-            <img
-              src="/images/aboutus-2.png"
-              className="max-w-full h-auto"
-              style={{ width: "auto" }}
-            />
+           
+              <Image
+                src="/images/aboutus-2.png"
+                alt="About Us Image"
+                width={1200} // Adjust to the desired width
+                height={1200}
+                className="max-w-full h-auto"
+              />
+
           </div>
         </div>
         <div
@@ -188,10 +193,13 @@ const Aboutus = () => {
           style={{ overflow: "hidden" }}
         >
           <div className="lg:w-1/3 pr-4 pl-4 py-5">
-            <img
-              src="/images/aboutus-4.png"
-              className="max-w-full h-auto"
-            />
+          <Image
+                src="/images/aboutus-4.png"
+                alt="About Us Image"
+                width={1200}
+                height={1200}
+                className="max-w-full h-auto"
+              />
           </div>
           <div
             className="lg:w-2/5 pr-4 pl-4 py-5 flex flex-col justify-center"
