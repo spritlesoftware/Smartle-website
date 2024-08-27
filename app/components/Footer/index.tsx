@@ -50,31 +50,36 @@ const footer = () => {
       </h5>
     </div> */}
 
-          <div
-            className="col-span-4 flex flex-col items-center sm:items-start"
-            style={{
-              marginLeft: "1.5rem",
-              maxWidth: "1000px",
-              margin: "0 auto",
-            }}
-          >
-            <Link
-              href="/"
-              className="text-2xl sm:text-4xl font-semibold text-black"
-            >
-              <img
-                src="/images/logo-white.png"
-                alt="logo"
-                className="max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0" // Center the logo horizontally on mobile and tablet screens
-                style={{ width: 250, height: 100, marginTop: "-2rem" , marginLeft:"-1.5rem" }}
-              />
-            </Link>
-            <h5 className="text-white mb-5 sm:mb-0 sm:text-left">
-              Transform your shopping experience with Smartle's revolutionary
-              conversational AI chatbot for E-commerce crafted to boost sales by
-              converting potential chats into revenue.
-            </h5>
-          </div>
+<div
+    className="col-span-4 flex flex-col items-center sm:items-start"
+    style={{
+      marginLeft: "1.5rem",
+      maxWidth: "1000px",
+      margin: "0 auto",
+    }}
+  >
+    <Link
+      href="/"
+      className="text-2xl sm:text-4xl font-semibold text-black"
+    >
+      <div
+        className="relative max-w-full h-auto logo-color mt-1 mx-auto sm:ml-0"
+        style={{ width: 250, height: 100, marginTop: "-2rem", marginLeft: "-1.5rem" }}
+      >
+        <Image
+          src="/images/logo-white.png"
+          alt="logo"
+          layout="fill"       
+          objectFit="contain"
+        />
+      </div>
+    </Link>
+    <h5 className="text-white mb-5 sm:mb-0 sm:text-left">
+      Transform your shopping experience with Smartle&apos;s revolutionary
+      conversational AI chatbot for E-commerce crafted to boost sales by
+      converting potential chats into revenue.
+    </h5>
+  </div>
 
           {/* COLUMN-2/3 */}
 

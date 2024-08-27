@@ -8,6 +8,7 @@ import Drawerdata from "./Drawerdata";
 import Contactusform from "./Contactus";
 import { idText } from "typescript";
 import { InlineWidget } from "react-calendly";
+import Image from "next/image";
 
 interface NavigationItem {
   name: string;
@@ -62,16 +63,21 @@ const Navbar = ({setShowsCalendly , setOverlayVisible}:DrawerDataProps) => {
                   
                 </a> */}
                 <Link
-                  href="/"
-                  className="text-2xl sm:text-4xl font-semibold text-black"
-                >
-                  <img
-                    src="/images/new_logo .png"
-                    alt="logo"
-                    className="max-w-full h-auto logo-color mt-1"
-                    style={{ width: 150, height: 40 }}
-                  />
-                </Link>
+    href="/"
+    className="text-2xl sm:text-4xl font-semibold text-black"
+  >
+    <div
+      className="relative max-w-full h-auto logo-color mt-1"
+      style={{ width: 150, height: 40 }}
+    >
+      <Image
+        src="/images/new_logo .png"
+        alt="logo"
+        layout="fill"   
+        objectFit="contain"
+      />
+    </div>
+  </Link>
               </div>
 
               {/* LINKS */}

@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { InlineWidget } from 'react-calendly';
 
@@ -37,8 +38,15 @@ const Beliefs = () => {
         </div>
 
         <div className="flex justify-center items-end">
-          <img src="/images/belief-img-1.png" alt='belief-img-1' className="h-[350px] lg:h-[400px] w-full object-cover" />
-        </div>
+    <div className="relative h-[350px] lg:h-[400px] w-full">
+      <Image
+        src="/images/belief-img-1.png"
+        alt="belief-img-1"
+        layout="fill"       
+        objectFit="cover"  
+      />
+    </div>
+  </div>
       </div> 
       
       <div className="grid grid-cols-1 lg:grid-cols-2 my-16 mx-5 gap-5">
@@ -57,8 +65,15 @@ const Beliefs = () => {
             </h5>
           </div>
           <div className="flex justify-center items-end">
-            <img src="/images/belief-img-2.webp" alt='belief-img-2' className="h-[450px] lg:h-[700px] w-full lg:w-[700px] object-cover" />
-          </div>
+    <div className="relative h-[450px] lg:h-[700px] w-full lg:w-[700px]">
+      <Image
+        src="/images/belief-img-2.webp"
+        alt="belief-img-2"
+        layout="fill"       // Makes the image cover the entire container
+        objectFit="cover"  // Ensures the image maintains its aspect ratio and covers the container
+      />
+    </div>
+  </div>
         </div>
         <div className="pt-12 px-10 sm:px-24 rounded-3xl flex flex-col justify-between" style={{backgroundColor:"#D6FFEB"}}>
           <div>
@@ -77,8 +92,15 @@ const Beliefs = () => {
             </h5>
           </div>
           <div className="flex justify-center items-end">
-            <img src="/images/belief-img-3.png" alt='belief-img-3' className="h-[450px] lg:h-[500px] w-full object-cover" />
-          </div>
+    <div className="relative h-[450px] lg:h-[500px] w-full">
+      <Image
+        src="/images/belief-img-3.png"
+        alt="belief-img-3"
+        layout="fill"       // Fills the container
+        objectFit="cover"  // Ensures the image covers the container while maintaining its aspect ratio
+      />
+    </div>
+  </div>
         </div>
       </div>
        {/* Video Section */}

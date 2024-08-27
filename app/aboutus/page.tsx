@@ -181,7 +181,7 @@ const Aboutus = () => {
               <Image
                 src="/images/aboutus-2.png"
                 alt="About Us Image"
-                width={1200} // Adjust to the desired width
+                width={1200} 
                 height={1200}
                 className="max-w-full h-auto"
               />

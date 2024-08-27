@@ -149,12 +149,12 @@ const Pricing = () => {
             <h2 className="mt-4 text-xl lg:block hidden max-w-5xl" style={{ margin: "0 auto" }}>
               At Smartle.ai, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
-              and let's build your success story together.
+              and let&apos;s build your success story together.
             </h2>
             <p className="mt-4 fs-18 block lg:hidden py-4">
               At Smartle.ai, we recognize the unique needs of every business.
               Ready to transform your conversational AI journey? Choose a plan
-              and <br /> let's build your success story together.
+              and <br /> let&apos;s build your success story together.
             </p>
             <p />
           </div>
@@ -332,7 +332,7 @@ const Pricing = () => {
           <div className="pr-4 pl-4 max-lg-7xl">
             <h3 className="text-4xl font-bold ">Enterprise</h3>
             <p className="mb-2 text-xl mt-4" style={{ width: "80%" }}>
-              For organizations requiring more, please don't hesitate to contact
+              For organizations requiring more, please don&apos;t hesitate to contact
               us, and we will be glad to assist you in addressing your specific
               needs.
             </p>
@@ -399,7 +399,7 @@ const Pricing = () => {
                 </div>
                 <div className="mb-4">
                   <label className="mb-3">
-                    What is your store's Average Order Value (AOV)?
+                    What is your store&apos;s Average Order Value (AOV)?
                   </label>
                   <input
                     type="number"

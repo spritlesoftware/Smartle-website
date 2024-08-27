@@ -37,7 +37,7 @@ const Dedicated = () => {
               What our customers say about us{" "}
             </h2>
             <p className="font-medium text-lightblack text-2xl mt-5 text-center lg:text-start">
-              Smartle's AI assistant revolutionized the way the patient
+              Smartle&apos;s AI assistant revolutionized the way the patient
               interacts with our application and also stepped the game up in
               collecting medical data easily. Its adaptive learning benefits
               address the pain points of patients with diverse chronic

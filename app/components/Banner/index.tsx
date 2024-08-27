@@ -47,7 +47,7 @@ const Banner = () => {
               style={{ lineHeight: "3.5rem" }}
             >
               Turn your window shoppers into paying customers with{" "}
-              <span className="text-style-gradient">Smartle's Chat AI </span>
+              <span className="text-style-gradient">Smartle&apos;s Chat AI </span>
               Assistance
             </h1>
            
@@ -122,17 +122,17 @@ const Banner = () => {
                   <div className="notch-container" tabIndex={0}>
                     <div className="notch">
                       <div className="content">
+                       
                         <div className="left" style={{ margin: "auto 0" }}>
-                          {/* <div class="tile"> */}
-                          <img
-                            src="/images/Sicon.png"
-                            style={{
-                              height: 20,
-                              width: "20x",
-                              marginLeft: "1.2rem",
-                            }}
-                          />
-                          {/* </div> */}
+                          <div className="relative" style={{ marginLeft: '1.2rem' }}>
+                            <Image
+                              src="/images/Sicon.png"
+                              alt="Icon Image"
+                              width={20}  
+                              height={20}
+                              className="object-contain"
+                            />
+                          </div>
                           <div className="text" />
                         </div>
                         <div className="right" />
