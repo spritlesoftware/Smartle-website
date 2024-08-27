@@ -24,6 +24,7 @@ export default function RootLayout({
           // you might need to get a newer version
           src="https://kit.fontawesome.com/fbadad80a0.js"
           crossOrigin="anonymous"
+          async
         ></script>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"

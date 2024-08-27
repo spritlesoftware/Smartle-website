@@ -25,7 +25,9 @@ const Circle = forwardRef<
   );
 });
 
-const index = () => {
+Circle.displayName = 'Circle'
+
+const Index = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);
@@ -295,7 +297,7 @@ const index = () => {
 };
 
 
-export default index;
+export default Index;
 
 const Icons = {
  facebook: (props: IconProps) => (
