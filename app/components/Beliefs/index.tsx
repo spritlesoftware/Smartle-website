@@ -37,7 +37,7 @@ const Beliefs = () => {
         </div>
 
         <div className="flex justify-center items-end">
-          <img src="/images/belief-img-1.png" className="h-[350px] lg:h-[400px] w-full object-cover" />
+          <img src="/images/belief-img-1.png" alt='belief-img-1' className="h-[350px] lg:h-[400px] w-full object-cover" />
         </div>
       </div> 
       
@@ -57,7 +57,7 @@ const Beliefs = () => {
             </h5>
           </div>
           <div className="flex justify-center items-end">
-            <img src="/images/belief-img-2.webp" className="h-[450px] lg:h-[700px] w-full lg:w-[700px] object-cover" />
+            <img src="/images/belief-img-2.webp" alt='belief-img-2' className="h-[450px] lg:h-[700px] w-full lg:w-[700px] object-cover" />
           </div>
         </div>
         <div className="pt-12 px-10 sm:px-24 rounded-3xl flex flex-col justify-between" style={{backgroundColor:"#D6FFEB"}}>
@@ -77,7 +77,7 @@ const Beliefs = () => {
             </h5>
           </div>
           <div className="flex justify-center items-end">
-            <img src="/images/belief-img-3.png" className="h-[450px] lg:h-[500px] w-full object-cover" />
+            <img src="/images/belief-img-3.png" alt='belief-img-3' className="h-[450px] lg:h-[500px] w-full object-cover" />
           </div>
         </div>
       </div>
