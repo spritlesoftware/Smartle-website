@@ -43,7 +43,7 @@ const Aboutus = () => {
                         <div key={i} className='bg-white rounded-3xl mt-16 pt-10 pl-8 pb-10 pr-6 shadow-xl group card'>
                             <h4 className='text-4xl font-semibold  text-black mb-5 group-hover:text-white'>{item.heading}</h4>
                             {/* <Image src={item.imgSrc} alt={item.imgSrc} width={100} height={100} className="mb-5" /> */}
-                            <h4 className='text-lg font-normal text-black group-hover:text-offwhite mb-5'>{item.paragraph}</h4>
+                            <h4 className='text-xl font-normal text-black group-hover:text-offwhite mb-5'>{item.paragraph}</h4>
                             {/* <Link href="#" className='text-lg font-semibold group-hover:text-white text-blue hover-underline'>
                                 {item.link}
                                 <ChevronRightIcon width={20} height={20} />
