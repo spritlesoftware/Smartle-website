@@ -1361,3 +1361,62 @@ input[type="number"] {
   background-color: rgba(0, 0, 0, 0.5); 
   z-index: 10; 
 }
+
+/* Orbiting Circles */
+.relative {
+  position: relative;
+}
+
+.outer-circle, .inner-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dotted gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  width: 250px;
+  height: 250px;
+  animation: revolve 20s linear infinite;
+}
+
+.outer-circle {
+  width: 350px;
+  height: 350px;
+  animation: revolve 20s linear infinite reverse;
+}
+
+.icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem; 
+}
+
+.icon-wrapper.whatsapp {
+  transform: rotate(90deg) translateX(120px); 
+}
+
+.icon-wrapper.instagram {
+  transform: rotate(270deg) translateX(120px); 
+}
+
+.icon-wrapper.facebook {
+  transform: rotate(90deg) translateX(174px); 
+}
+
+.icon-wrapper.linkedin {
+  transform: rotate(270deg) translateX(170px); 
+}
+
+@keyframes revolve {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

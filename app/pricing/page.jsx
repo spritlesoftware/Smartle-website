@@ -139,7 +139,7 @@ const Pricing = () => {
       <div className="container mx-auto sm:px-4 ptb-120">
         <div className="flex flex-wrap  justify-center">
           <div
-            className="lg:w-full pr-4 pl-4 text-center ptb-120 bg-cover"
+            className="lg:w-full pr-4 pl-4 text-center ptb-120 bg-cover rounded-xl"
             style={{ background: "url(/images/pricing-banner.webp)" }}
           >
             <h1 className=" fs-48 txt-blk px-3">

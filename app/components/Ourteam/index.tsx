@@ -5,8 +5,9 @@ import { cn } from "@/lib/utils";
 import OrbitingCircles from "../magicui/orbiting-circles";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHubspot, faSalesforce } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faHubspot, faInstagram, faLinkedin, faSalesforce, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Image from "next/image";
+import { FaDiscord, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 const Circle = forwardRef<
   HTMLDivElement,
   { className?: string; children?: React.ReactNode }
@@ -232,56 +233,38 @@ const index = () => {
       </div>
       {/* ANIMATED BEAM ENDS */}
 
-      <h2 className="text-6xl text-center font-bold my-4 pt-24">
+      <h2 className="text-6xl text-center font-bold my-4 pt-16">
         Social Media Integrations
       </h2>
 	  <h3 className="text-2xl font-medium text-center pt-4 opacity-50">Smartle AI delivers next-gen social media integration, customized to <br />seamlessly fit your business needs.</h3>
 
-      <div
-        style={{ margin: "0 auto" }}
-        className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center rounded-lg overflow-hidden bg-background"
-      >
-        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-7xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-        Smartle.AI
-      </span>
-
-        {/* Inner Circles */}
-        <OrbitingCircles
-          className="h-[30px] w-[30px] border-none bg-black"
-          duration={20}
-          delay={20}
-          radius={80}
-        >
-          <Icons.whatsapp />
-        </OrbitingCircles>
-        <OrbitingCircles
-          className="h-[30px] w-[30px] border-none bg-black"
-          duration={20}
-          delay={10}
-          radius={80}
-        >
-          <Icons.instagram />
-        </OrbitingCircles>
-
-         
-        {/* Outer Circles (reverse) */}
-        <OrbitingCircles
-          className="h-[50px] w-[50px] border-none bg-black"
-          reverse radius={190}
-          duration={20}
-        >
-          <Icons.linkedin />
-        </OrbitingCircles>
-        <OrbitingCircles
-          className="h-[50px] w-[50px] border-none bg-black"
-          reverse
-          radius={190}
-          duration={20}
-          delay={20}
-        >
+    <div style={{ margin: "0 auto" }}
+         className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center rounded-lg overflow-hidden bg-background">
+      {/* Outer Circle */}
+      <div className="outer-circle">
+        <div className="icon-wrapper facebook">
           <Icons.facebook />
-        </OrbitingCircles>
+        </div>
+        <div className="icon-wrapper linkedin">
+          <Icons.linkedin />
+        </div>
       </div>
+
+      {/* Inner Circle */}
+      <div className="inner-circle">
+        <div className="icon-wrapper whatsapp">
+          <Icons.whatsapp />
+        </div>
+        <div className="icon-wrapper instagram">
+          <Icons.instagram />
+        </div>
+      </div>
+
+      {/* Centered Text */}
+      <div className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+        Smartle.ai
+      </div>
+    </div>
       
     </>
 

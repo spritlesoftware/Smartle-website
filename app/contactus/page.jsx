@@ -71,14 +71,14 @@ const Contactus = () => {
     <>
       <div className="container mx-auto sm:px-4 ptb-120">
         <div
-          className="flex flex-wrap justify-center ptb-120 bg-cover items-center"
+          className="flex flex-wrap justify-center ptb-120 bg-cover items-center rounded-xl"
           style={{ background: "url(images/roi-banner.webp)" }}
         >
           <div className="lg:w-3/4 pr-4 pl-4 text-center">
             <h1 className="fs-48 txt-blk fw-600" style={{ fontSize: 80 }}>
               Get in touch!
             </h1>
-            <p className="text-center my-2">
+            <p className="text-center my-2 text-xl">
               Drop us a message and sit back for the magic to happen
             </p>
             <div className="flex items-center justify-center">
