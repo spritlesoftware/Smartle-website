@@ -3,11 +3,14 @@
 // This enables autocomplete, go to definition, etc.
 
 import { createClient } from 'https://cdn.skypack.dev/@supabase/supabase-js';
-const supabaseUrl = Deno.env.get('API_URL');
-const supabaseKey = Deno.env.get('API_ANON_KEY');
+const supabaseUrl = Deno.env.get('SUPABASE_URL');
+const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY');
+
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 const  POSTMARK_API_KEY = Deno.env.get('POSTMARK_API_KEY')
+
+
 async function fetchLastEnteredData() {
   try {
     const { data, error } = await supabase
@@ -43,10 +46,9 @@ const handler = async (_request: Request): Promise<Response> => {
       "X-Postmark-Server-Token": `${POSTMARK_API_KEY}` 
     },
     body: JSON.stringify({
-      "From": "prabhu.m@spritle.com",
+      "From": "prabakaran.m@spritle.com",
       "To": email,
-      "Cc": "prabhu.m@spritle.com",
-      "Bcc": "prabakaran.m@spritle.com",
+      "Cc": "prabakaran.m@spritle.com",
       "Subject": "Thanks for contacting us!",
       "HtmlBody": "Thank you for reaching out to us, We appreciate your interest. We will get back to you shortly!",
     })
