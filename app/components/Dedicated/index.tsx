@@ -41,7 +41,7 @@ const Dedicated = () => {
               interacts with our application and also stepped the game up in
               collecting medical data easily. Its adaptive learning benefits
               address the pain points of patients with diverse chronic
-              conditions.In summary, Smartle.ai has significantly enhanced our
+              conditions. In summary, Smartle.ai has significantly enhanced our
               ability to provide personalized care, making it an indispensable
               tool for our practice..
             </p>
